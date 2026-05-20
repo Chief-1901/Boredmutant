@@ -1,0 +1,41 @@
+# Bored Mutant
+
+> Custom AI tools for small businesses. Independent automation studio run by one engineer. Fixed scope, fixed fee, agreed in writing before any payment. Timeline depends on scope — agreed upfront, never open-ended. Built around the tools the business already uses (CRMs, AMS, MLS, accounting, email, document workflows). Typical clients are 5–50 person professional services firms: insurance agencies, real estate brokerages, accounting firms, and similar.
+
+Contact: contact@boredmutant.com
+Booking: https://cal.com/boredmutant (15-minute intro call)
+
+## What we build
+
+- **Insurance agencies** — quote and policy data flowing between carrier portals and the agency AMS automatically; ACORDs and certificates generated in seconds.
+- **Real estate brokerages** — listings, contracts, and client follow-ups handled automatically across CRM, MLS, and email.
+- **Accounting & professional services** — invoices, document collection, and client onboarding automated end-to-end, in the firm's own format.
+- **Other industries** — same pattern. Wherever staff are re-typing the same data between systems, the work can be automated. Every build is custom to the client's workflow.
+
+## How we work
+
+1. 15-minute call — the prospect shows the manual task wasting the most time.
+2. Build — fixed price and timeline agreed in writing, before any payment.
+3. Handover — short handover and 30 days of support included.
+
+## Why
+
+- Work directly with the engineer who writes the code. No account managers, no handoffs.
+- Fixed price and fixed timeline agreed before any payment changes hands.
+- Built around existing tools — clients don't change how they work.
+
+## How we're different
+
+- Engineer, not an agency. The person on the call writes the code.
+- Custom code, not a vendor subscription. Runs on your accounts; you own the repository.
+- Fixed fee agreed before any payment.
+- (For technical readers: most recent solo project was a 56,000-line autonomous AI system, shipped in under four months.)
+
+## Pages
+
+- [Home](https://boredmutant.com/) — landing page covering offer, target customers, process, and contact.
+
+## Contact
+
+- Email: contact@boredmutant.com
+- Booking: https://cal.com/boredmutant

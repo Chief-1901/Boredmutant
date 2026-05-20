@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+.vite
+
+# Vercel
+.vercel
+
+# Local design bundle
+_design
+_design.tar.gz
+_preview*.log
