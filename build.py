@@ -26,14 +26,17 @@ ORG = {
     "url": f"{SITE}/",
     "logo": f"{SITE}/logo.png",
     "image": f"{SITE}/og-image.png",
-    "email": "contact@boredmutant.com",
     "foundingDate": "2025",
-    "description": ("BoredMutant builds automated document chasing systems for accounting firms and "
-                    "staffing agencies. Escalating email reminders sent from the firm's own mailbox "
-                    "that stop the moment a document arrives."),
+    "description": ("BoredMutant builds automated client document collection systems for CPA firms, "
+                    "accounting firms and staffing agencies. Escalating email reminders sent from the "
+                    "firm's own mailbox that stop the moment a document arrives, with no client "
+                    "portal."),
     "areaServed": {"@type": "Country", "name": "United States"},
+    # Booking URL rather than an email address: there is no monitored inbox, and
+    # publishing a dead one in schema invites mail that nobody will ever read.
     "contactPoint": {"@type": "ContactPoint", "contactType": "sales",
-                     "email": "contact@boredmutant.com", "availableLanguage": "English"},
+                     "url": "https://cal.com/boredmutant/automations",
+                     "availableLanguage": "English"},
 }
 
 def crumbs(items):
@@ -260,7 +263,6 @@ def llms_full():
            "",
            f"Canonical: {SITE}/",
            "Booking: https://cal.com/boredmutant/automations",
-           "Contact: contact@boredmutant.com",
            ""]
     for p in PAGES:
         url = SITE + "/" if p["path"] == "/" else SITE + p["path"]

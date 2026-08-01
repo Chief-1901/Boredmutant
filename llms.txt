@@ -3,7 +3,6 @@
 > BoredMutant builds automated client document collection systems for CPA firms, accounting firms and staffing agencies in the United States. Unlike client-portal tools, it needs no portal and no new software: everything happens in ordinary email. The system is installed inside the firm's own mailbox: it tracks which client owes which document, sends escalating firm-approved reminder emails on a set schedule, stops automatically the moment the document arrives, and hands the thread to staff if the client replies with a question. Setup takes about a week. Every build starts with a two-day dry run. Month to month, cancel anytime.
 
 Canonical URL: https://www.boredmutant.com/
-Contact: contact@boredmutant.com
 Booking: https://cal.com/boredmutant/automations (15-minute intro call)
 
 ## What the product does
