@@ -72,9 +72,9 @@ PAGES = [
         title="Document collection for CPA and staffing firms | BoredMutant",
         desc=("Automated client document collection for CPA firms and staffing agencies. Escalating "
               "reminders from your own mailbox. No client portal to log into."),
-        og_title="Automated document chasing for accounting and staffing firms",
-        og_desc=("An automated reminder system inside your firm's own mailbox. It chases the clients "
-                 "who owe you documents and stops the second a file arrives."),
+        og_title="Client document collection, without the client portal",
+        og_desc=("Escalating reminders that send from your firm's own mailbox and stop the second the "
+                 "document arrives. For CPA firms and staffing agencies."),
         graph=[ORG,
                service("Automated document chasing",
                        ("An escalating email reminder system installed inside a firm's own mailbox. It "
@@ -95,7 +95,7 @@ PAGES = [
         title="How automated document collection works | BoredMutant",
         desc=("A step-by-step walkthrough of the document collection workflow: the daily pass, the "
               "reply branches, the escalation templates and the Friday digest."),
-        og_title="How the document chaser actually works",
+        og_title="How automated document collection actually works",
         og_desc=("The whole workflow drawn out: the daily pass, the reply branches, the escalation "
                  "templates and the Friday digest."),
         graph=[crumbs([("Home", "/"), ("How it works", "/how-it-works")]),
@@ -109,9 +109,9 @@ PAGES = [
         path="/document-chasing-for-accounting-firms", nav="ACC", priority="0.9",
         title="Client document collection for CPA firms | BoredMutant",
         desc=("Tax document collection for CPA firms and preparers: 1099s, K-1s, bank statements and "
-              "signed 8879s, chased automatically from your own mailbox."),
-        og_title="Document chasing for accounting firms",
-        og_desc=("Stop paying preparers to write 'just following up'. Automated escalation for 1099s, "
+              "signed 8879s, chased from your own mailbox."),
+        og_title="Client document collection for CPA firms",
+        og_desc=("Stop paying preparers to write 'just following up'. Automated collection of 1099s, "
                  "K-1s, bank statements and signed 8879s, all from your own mailbox."),
         graph=[crumbs([("Home", "/"), ("Accounting firms", "/document-chasing-for-accounting-firms")]),
                service("Document chasing for accounting firms",
@@ -125,8 +125,8 @@ PAGES = [
         path="/document-chasing-for-staffing-agencies", nav="STF", priority="0.9",
         title="Document collection for staffing agencies | BoredMutant",
         desc=("Onboarding paperwork and I-9 collection for staffing agencies. Certifications, "
-              "references and timesheets chased automatically from your own mailbox."),
-        og_title="Document chasing for staffing agencies",
+              "references and timesheets chased from your own mailbox."),
+        og_title="Onboarding document collection for staffing agencies",
         og_desc=("I-9s, certifications, references and timesheets chased automatically from your own "
                  "mailbox, so start dates stop slipping."),
         graph=[crumbs([("Home", "/"), ("Staffing agencies", "/document-chasing-for-staffing-agencies")]),
