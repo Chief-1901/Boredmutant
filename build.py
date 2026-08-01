@@ -165,7 +165,7 @@ TPL = """<!doctype html>
 <meta property="og:image" content="{site}/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Automated document chasing by BoredMutant" />
+<meta property="og:image:alt" content="Automated client document collection by BoredMutant" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{og_title}" />
