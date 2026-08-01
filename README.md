@@ -88,7 +88,7 @@ redirect, and the security headers.
 
 ## Booking and contact
 
-The booking link is `https://cal.com/boredmutant` and the contact address is
+The booking link is `https://cal.com/boredmutant/automations` and the contact address is
 `contact@boredmutant.com`. Both appear in the page bodies, `src/header.html`,
 `src/footer.html`, `llms.txt` and the JSON-LD in `build.py`. If either changes,
 grep for it — there is no single config constant.
