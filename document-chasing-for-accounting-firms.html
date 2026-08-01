@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Document chasing for accounting firms | BoredMutant</title>
-<meta name="description" content="Automated chasing of 1099s, K-1s, bank statements and signed 8879s, sent from your firm's own mailbox. Stops the moment the document arrives." />
+<title>Client document collection for CPA firms | BoredMutant</title>
+<meta name="description" content="Tax document collection for CPA firms and preparers: 1099s, K-1s, bank statements and signed 8879s, chased automatically from your own mailbox." />
 
 <link rel="canonical" href="https://www.boredmutant.com/document-chasing-for-accounting-firms" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
@@ -68,6 +68,44 @@
         "name": "Accounting firms and tax preparers"
       },
       "description": "Automated escalating email reminders for the source documents and signatures that block tax preparation and filing: 1099s, K-1s, bank statements, prior-year returns, signed 8879s and engagement letters, sent from the firm's own mailbox."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.boredmutant.com/document-chasing-for-accounting-firms#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will this annoy clients we've had for twenty years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if your templates do. The escalation is written by you and it is per-client adjustable, so long-standing clients can be set to a gentler cadence or excluded entirely. In practice most firms find the opposite problem: clients prefer a predictable reminder to a partner calling them in April."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work with our practice management system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It doesn't need to. The chaser runs off a list (a CSV export, a spreadsheet, or whatever your tracker already is) and sends through your existing mailbox. If you later want it reading directly from your practice management system, that's a separate build once the chaser is earning its keep."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens during the busiest two weeks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nothing different, which is the point. It does not get tired or quietly deprioritize the small clients when the large ones are loud. If anything you will want to shorten the intervals as a deadline approaches, which is a one-line change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is doing this if it's one engineer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The build is one person, deliberately. It runs on your own mailbox and your own infrastructure, so it is not dependent on us continuing to exist. It is also month to month, so you are never locked into finding out."
+          }
+        }
+      ]
     }
   ]
 }
@@ -610,8 +648,8 @@ footer a:hover{text-decoration:underline}
 <section class="phero">
   <div class="wrap">
     <p class="crumb mono"><a href="/">Home</a> <span>/</span> Accounting firms</p>
-    <h1>Document chasing for accounting firms.</h1>
-    <p class="lede">Your preparers cannot start a return until the client sends the file. So somebody senior spends their week writing "just following up" emails instead of preparing returns. This replaces that person's worst job with three emails that send themselves from your own mailbox.</p>
+    <h1>Client document collection for CPA firms.</h1>
+    <p class="lede">Your preparers cannot start a return until the client sends the file. So somebody senior spends their week writing "just following up" emails instead of preparing returns. This replaces that person's worst job with three emails that send themselves from your own mailbox. No portal for clients to log into, no new software for your staff to learn.</p>
     <div class="cta-row" style="margin-top:28px">
       <a class="btn lg" href="https://cal.com/boredmutant/automations">Book a 15-minute call</a>
       <a class="btn ghost lg" href="/how-it-works">See the workflow</a>
@@ -622,9 +660,9 @@ footer a:hover{text-decoration:underline}
 <section>
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">The season</p>
+      <p class="tag mono">Tax season</p>
       <h2>The chase has a calendar, and it is not a forgiving one.</h2>
-      <p class="lede">Every deadline is preceded by a few weeks where the bottleneck is not your capacity. It is a client who has not sent a bank statement.</p>
+      <p class="lede">Every filing deadline is preceded by a few weeks where the bottleneck is not your capacity. It is a client who has not sent a bank statement. Firms lose three to five hours per client to document collection before a single return gets started.</p>
     </div>
     <div class="board" id="board">
       <div class="datecard">
@@ -654,7 +692,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="head">
       <p class="tag mono">What gets chased</p>
-      <h2>The same five things, from the same fifteen clients, every year.</h2>
+      <h2>The same five tax documents, from the same fifteen clients, every year.</h2>
     </div>
     <div class="two" id="cards">
       <div class="card">
@@ -740,6 +778,7 @@ footer a:hover{text-decoration:underline}
     <p class="lede">Fifteen minutes on your real chase list, and you will see which clients should already have been chased twice. If it isn't a fit, you leave with a cleaner tracker anyway.</p>
     <a class="btn lg" href="https://cal.com/boredmutant/automations">Book a 15-minute call</a>
     <p class="alt">Prefer email? <a href="mailto:contact@boredmutant.com?subject=Accounting%20firm%20enquiry">contact@boredmutant.com</a></p>
+    <p class="alt">See <a href="/how-it-works">how the document collection workflow works</a>, or the same system for <a href="/document-chasing-for-staffing-agencies">staffing agencies</a>.</p>
   </div>
 </section>
 </main>

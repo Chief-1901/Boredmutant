@@ -28,7 +28,7 @@
       ]
     },
     {
-      "source": "/(robots.txt|sitemap.xml|llms.txt)",
+      "source": "/(robots.txt|sitemap.xml|llms.txt|llms-full.txt)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, s-maxage=3600" }]
     },
     {

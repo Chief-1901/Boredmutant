@@ -1,0 +1,179 @@
+# BoredMutant, full site content
+
+> Automated client document collection for CPA firms and staffing agencies. Escalating reminders send from the firm's own mailbox and stop the moment the document arrives. No client portal, no new software for clients to learn.
+
+Canonical: https://www.boredmutant.com/
+Booking: https://cal.com/boredmutant/automations
+Contact: contact@boredmutant.com
+
+
+---
+
+## Document collection for CPA and staffing firms
+
+URL: https://www.boredmutant.com/
+
+**Q: Is our client data safe?**
+
+A: Attachments never leave your inbox. The system tracks names, email addresses and document titles only. It never opens, stores or moves the files themselves. Everything sends through your own mailbox using your own credentials.
+
+**Q: What if the AI writes something wrong to a client?**
+
+A: It can't, because it doesn't write. You approve three fixed templates once, in your firm's voice. The system only decides when to send them and when to stop. No generated text ever reaches a client.
+
+**Q: What happens when a client replies with a question?**
+
+A: That client's chase pauses instantly and the thread goes to your staff, flagged for attention. The system only chases silence, so once a client has actually replied it steps back.
+
+**Q: Do our clients need to learn new software?**
+
+A: No. They reply to your email with the file attached, the way they always have.
+
+**Q: How long until it's running?**
+
+A: About a week from the call. Ten minutes of your time to hand over the list, one round of template approval, then two days in dry-run mode where you watch every email it would have sent before any real one goes out.
+
+**Q: What if we want to stop?**
+
+A: Cancel any time, because it's month to month. Your clients were never on a platform and your data never left your systems, so nothing needs migrating. You go back to chasing manually.
+
+Accounting & staffing firms · United States
+
+We chase the documents your clients forget. An automated reminder system installed inside your firm's own mailbox. It escalates on your schedule and stops the second the file arrives. Book a 15-minute call See how it works Live in about a week · Two-day dry run first · Month to month Live chase · Meridian Tax & Co Bank statements Day 1 · 9:02 AMfrom your mailbox Hi Sarah, a reminder that we still need your 2025 bank statements to keep your return on track. Reply to this email with the files attached. Day 4 · 9:02 AMfollow-up 2 of 3 Sarah, a quick nudge on those bank statements. The deadline is close and we can't start without them. Day 8 · Final noticeescalation 3 of 3 We're unable to file without your bank statements. Please send them today, or call the office so we can plan around it. bank_statements_2025.pdf · received 4:47 PM Chase stopped Templates approved by you 0 staff minutes spent How it works
+
+Four moving parts. Nothing for your clients to learn. Your clients keep receiving normal email from your firm and replying like they always have. Everything below happens on your side. 01
+
+Your list Send your existing tracker or a plain CSV: client, document, deadline. CSVExcelGoogle Sheet 02 · Engine
+
+Three approved templates Polite, firm, final. Written in your firm's voice and signed off by you once. No generated textYour schedule 03
+
+Your mailbox sends Reminders leave under your name, your address and your signature, not ours. Microsoft 365Google Workspace 04
+
+The client replies What happens next depends on what they send. Two outcomes, both automatic. File detectedQuestion detected ■ Document arrives → chase stops The moment the file lands, that client's sequence shuts itself off. No apology email from a colleague who didn't know it had already arrived. ↗ Question arrives → your staff take over The sequence pauses instantly and the thread lands with a human, flagged. See the full workflow, step by step The schedule
+
+You set the rhythm once. It runs until the file arrives. Default escalation, adjustable per client and per document type Day 1Polite reminder Day 4Firmer follow-up Day 8Final notice StopFile received Every Friday you get one digest email: what arrived this week, what's still outstanding, and who gets chased next. That's the whole reporting burden. DataAttachments never leave your inbox. We track names, addresses and document titles. Nothing else. IdentityEverything sends from your mailbox with your signature. Clients never see our name. Dry runTwo days where you watch every email it would have sent. Nothing ships until you say so. CommitmentMonth to month, cancel any time. There is no annual contract. Who it's for
+
+Two industries where the chase never ends. Both have the same problem: work that can't start until a client sends something, and staff paid to ask for it repeatedly. CPA and accounting firms
+
+Extension season without the inbox babysitting Every hour a preparer spends writing "just following up" is an hour of billable work that didn't happen. 1099sK-1sBank statementsSigned 8879sPrior-year returns Client document collection for CPA firms Staffing agencies
+
+Start dates that stop slipping Every late piece of onboarding paperwork is a placement that moves and a client asking why. I-9sCertificationsReferencesCompliance docsTimesheets Onboarding document collection for staffing agencies Pricing
+
+One setup fee, one small retainer, agreed before you pay anything. Founding rate · 3 slots per industry
+
+Founding client $990 one-time setup then $250 / month Full document chaser, built against your tracker and your deadlines Three escalation templates in your firm's voice Two-day dry run before a single real email sends Friday digest, every week Unlimited clients and document types In exchange, if it works: a testimonial and one introduction. That's the entire deal.
+
+Standard $1,500+ one-time setup then $300–$400 / month Everything in the founding build Priority support and template changes Quarterly tune-up of escalation timing The rate once the founding slots are gone. They fill in order. Questions
+
+What every firm owner asks first.
+
+Fifteen minutes. Bring your messiest tracker. We'll walk through your real chase list and show you exactly what the system would send, to whom, and when. If it isn't a fit, you leave with a cleaner tracker anyway. Book a 15-minute call Prefer email? contact@boredmutant.com
+
+
+---
+
+## How automated document collection works
+
+URL: https://www.boredmutant.com/how-it-works
+
+Home / How it works
+
+The whole system, drawn out. There is no dashboard and no client portal. This is the actual shape of what gets installed: a scheduled workflow that reads your chase list, checks what came back, and sends the next reminder in your own words, or stops. ~1 weekFrom the first call to live, including the dry run 3 templatesWritten by you, approved once, never rewritten by the system 0 loginsNobody has an account to create, staff or client The daily run
+
+One pass, every weekday morning. Each open item is evaluated on its own. Watch it run. The pulse follows a single document from the list to the send. Document chaser · daily pass ▶ Run the flow ◷Schedule triggerEvery weekday at 09:00 in your firm's timezone. Mon–Fri 01Read the chase listPulls every open item: client, document, deadline, current stage, date last contacted. 02Filter: what is actually due?Skips anything already received, paused by your staff, or not yet at its next step. 03Check the threadReads inbound mail on each open thread since the last run. Subject, sender, whether a file is attached, though never the contents of the file. Attachment arrived ✓Stop the sequenceItem marked received. No further mail on it, ever. Goes into Friday's digest as complete. Silence →Advance a stageMove the item to the next escalation step and continue below. Reply, but no file !Pause and hand to staffThread flagged in your inbox for a human. The system sends nothing further on that item until someone resumes it. 04Select the approved templateStage 1 polite, stage 2 firm, stage 3 final. Your wording, merged with the client name, document and deadline. 05Send from your mailboxAuthenticated as your firm. Your address, your signature, and it lands in your own Sent folder like any other email. 06Write back to the logRecords the stage, timestamp and message id, then sets when this item is next due. ↺ Repeats the next weekday until the document arrives, a human steps in, or you stop it Every item is handled independently. One client going quiet has no effect on anyone else's sequence. The weekly run
+
+One email on Friday, and that's the reporting. Friday digest ▶ Run the flow ◷Weekly triggerFriday, late afternoon. Fri 16:00 01Aggregate the weekReceived, still outstanding, paused for a human, and what is due next week. 02Compose the digestFour short lists, in the body of one email. ✓Send to whoever should see itPartner, office manager, or both. Proof of work, every week, without asking anyone for a status update. Never writesEvery word a client reads was written and approved by your firm. The system chooses timing, not language. Files stay closedIt detects that an attachment exists. It does not open, download, store or forward it. Never over-sendsOnce a document is received, that sequence is finished. There is no fourth email. Only your listIt only contacts people on the list you handed over, about documents you listed. What's actually built
+
+The diagram is the part that takes an afternoon. Workflow engines are a commodity, and the shape above is not where the work is. These are the parts that take a week and are specific to your firm. Mailbox layer
+
+Sending as you, safely Authenticating against your Microsoft 365 or Google Workspace tenant with least-privilege access, threading replies correctly so conversations don't fragment, and making sure everything lands in your Sent folder rather than arriving from a stranger. Reply handling
+
+Telling a document from a question An out-of-office is not a reply, and "sending tomorrow" is not a document. Getting this boundary right is what keeps the system from either nagging someone who already answered or going quiet on someone who didn't. State
+
+Knowing where every item stands One record per client per document: stage, last contact, next due date, who paused it and why. This is what makes the Friday digest possible and what stops two staff members chasing the same person. Your wording
+
+Three templates that sound like your firm Drafted with you, not for you. Firms that chase gently and firms that chase hard both work, but the escalation has to match how you actually speak to clients, or your staff will quietly turn it off. Before anything real sends Every new firm runs two full days in dry-run mode. The workflow executes exactly as above, but instead of sending, it writes each message it would have sent into a file for you to read. Nobody receives anything until you have looked at that file and said go.
+
+See it run against your own chase list. Send your tracker over before the call and I'll have your real clients mapped onto the flow above by the time we talk. Book a 15-minute call Prefer email? contact@boredmutant.com See what this collects for CPA and accounting firms or for staffing agencies.
+
+
+---
+
+## Client document collection for CPA firms
+
+URL: https://www.boredmutant.com/document-chasing-for-accounting-firms
+
+**Q: Will this annoy clients we've had for twenty years?**
+
+A: Only if your templates do. The escalation is written by you and it is per-client adjustable, so long-standing clients can be set to a gentler cadence or excluded entirely. In practice most firms find the opposite problem: clients prefer a predictable reminder to a partner calling them in April.
+
+**Q: Does it work with our practice management system?**
+
+A: It doesn't need to. The chaser runs off a list (a CSV export, a spreadsheet, or whatever your tracker already is) and sends through your existing mailbox. If you later want it reading directly from your practice management system, that's a separate build once the chaser is earning its keep.
+
+**Q: What happens during the busiest two weeks?**
+
+A: Nothing different, which is the point. It does not get tired or quietly deprioritize the small clients when the large ones are loud. If anything you will want to shorten the intervals as a deadline approaches, which is a one-line change.
+
+**Q: Who is doing this if it's one engineer?**
+
+A: The build is one person, deliberately. It runs on your own mailbox and your own infrastructure, so it is not dependent on us continuing to exist. It is also month to month, so you are never locked into finding out.
+
+Home / Accounting firms
+
+Client document collection for CPA firms. Your preparers cannot start a return until the client sends the file. So somebody senior spends their week writing "just following up" emails instead of preparing returns. This replaces that person's worst job with three emails that send themselves from your own mailbox. No portal for clients to log into, no new software for your staff to learn. Book a 15-minute call See the workflow Tax season
+
+The chase has a calendar, and it is not a forgiving one. Every filing deadline is preceded by a few weeks where the bottleneck is not your capacity. It is a client who has not sent a bank statement. Firms lose three to five hours per client to document collection before a single return gets started. Business returns March 15 S-corps and partnerships. K-1s that don't arrive here cascade into every individual return that depends on them. Individual returns April 15 The volume peak. This is where "we're still waiting on the client" turns into extensions you did not want to file. Extensions Sept 15 · Oct 15 The same chase, on returns everyone has already mentally closed. The easiest documents in your firm to forget about. Why timing matters Setup takes about a week, and an escalation sequence needs a head start to do anything useful. A chaser switched on the week of a deadline is a chaser that sends one polite email and runs out of runway. What gets chased
+
+The same five tax documents, from the same fifteen clients, every year. Source documents
+
+The ones that block preparation entirely Nothing starts without them, so every day of delay is a day of your schedule compressing into the last two weeks. 1099sK-1sBank statementsBrokerage statementsPrior-year returnsFixed asset schedules Signatures and confirmations
+
+The ones that block filing Worse than source documents, because the work is already done and sitting there. Pure margin lost to somebody not opening an email. Signed 8879sEngagement lettersPayment authorizationsExtension approvalsRepresentation letters Different documents, different rhythms. An 8879 gets chased harder and faster than a prior-year return. You set that per document type, once. Tone is set per client. The client of twenty years and the one who onboarded in January do not get the same third email. Partner-level items stay manual. Anything you would rather handle yourself is not on the list. Client dataAttachments never leave your inbox. We track names, addresses and document titles only, never the files themselves. Your identityEvery email sends from your firm's mailbox with your signature. Clients never see a third party. No new softwareClients reply to a normal email with a normal attachment, exactly as they always have. Two-day dry runYou read every message it would have sent before a single real one goes out. Getting started
+
+Ten minutes of your time, then about a week. From first call to live Day 015-minute call with your real tracker Day 1–3Build, and you draft three templates Day 4–5Dry run: you read what it would send LiveFirst real chase goes out The only real work on your side is handing over the list and deciding how your firm sounds when it asks twice. Questions
+
+What partners ask.
+
+Bring the list you are most behind on. Fifteen minutes on your real chase list, and you will see which clients should already have been chased twice. If it isn't a fit, you leave with a cleaner tracker anyway. Book a 15-minute call Prefer email? contact@boredmutant.com See how the document collection workflow works, or the same system for staffing agencies.
+
+
+---
+
+## Document collection for staffing agencies
+
+URL: https://www.boredmutant.com/document-chasing-for-staffing-agencies
+
+**Q: Is chasing I-9s automatically a compliance problem?**
+
+A: The system sends reminders and detects that a file arrived. It does not verify, complete, review or store I-9 documentation, and it makes no eligibility determination. Your existing process and your existing reviewers are unchanged; they get the paperwork sooner. We are not employment lawyers, and if your counsel wants to see exactly what sends and when, the dry-run output is a document you can hand them.
+
+**Q: Does it work with our ATS?**
+
+A: No. Whatever spreadsheet your coordinator actually keeps is the input, and the sends go through your existing mailbox. Reading directly from the ATS is a later conversation, once the chaser has proved itself.
+
+**Q: Can different recruiters have different signatures?**
+
+A: Yes. Each candidate's sequence sends under the recruiter who owns them, from that recruiter's mailbox, in their signature. To the candidate it looks exactly like the person they have been talking to all along, because it is.
+
+**Q: What about candidates who go completely dark?**
+
+A: After the final escalation, the item stops chasing and appears in your Friday digest as unresolved with the full contact history. That is the moment for a recruiter to make a phone call, which is what should have been happening on day eight anyway, rather than on day thirty when someone noticed.
+
+Home / Staffing agencies
+
+Onboarding document collection for staffing agencies. A placement is not a placement until the new hire paperwork is in. Every day a certification or an I-9 sits unsent, a start date moves and a client wonders whether you have this under control. This chases it for you, from your own mailbox, with no onboarding portal for candidates to log into. Book a 15-minute call See the workflow Where placements stall
+
+The offer is the easy part. The onboarding paperwork is where the week goes. Unlike a tax deadline, your chase has no calendar. It is a rolling queue, one per candidate, each on its own clock. That is the kind of tracking humans are worst at. 01SourcedCandidate identified and screened. No documents needed yet. 02SubmittedClient reviewing. References and work history start getting asked for. 03 · StallOffer acceptedI-9, certifications, licenses, background consent. Everything now depends on a person who has already mentally moved on. 04 · StallOnboardingCompliance documents and client-specific forms. Missing one moves the start date. 05PlacedWorking. Now it is timesheets, weekly, forever. The expensive detail The two stalling stages happen after the candidate has said yes, which is exactly when a recruiter's attention has moved to the next requisition. Nobody is negligent; the queue is invisible unless somebody is paid to stare at it. What gets chased
+
+Before the start date, and after it. Before the start date
+
+One-time, and it blocks the start date Every one of these blocks a start. The escalation is short and firm because the deadline is a date somebody already promised a client. I-9 and supporting IDCertifications and licensesReferencesBackground check consentClient-specific onboarding formsDirect deposit details After the start date
+
+Weekly, and it never ends Lower stakes per instance, far higher volume. This is the queue that quietly consumes a coordinator's Monday, every Monday. Weekly timesheetsClient sign-offExpense receiptsCertification renewalsCompliance re-attestations Renewals are just chases with a future start date. A certification expiring in ninety days becomes a sequence that begins on its own, thirty days out. Escalation can route to the recruiter, not just the candidate. The third unanswered email about an I-9 is more useful in your recruiter's inbox than in the candidate's. Timesheet chasing runs on its own weekly cycle, separate from onboarding, so the two queues never interfere. Candidate dataAttachments never leave your inbox. We track names, addresses and document titles only, never the documents themselves. Your identityEvery reminder sends from your agency's mailbox with your recruiter's signature. Candidates never see a third party. No new softwareCandidates reply to a normal email with a normal attachment, the same way they reply to their recruiter now. Two-day dry runTwo days of sends written to a file instead of an inbox, for you to read line by line. Getting started
+
+Ten minutes of your time, then about a week. From first call to live Day 015-minute call with your real onboarding queue Day 1–3Build, and you draft three templates Day 4–5Dry run: you read what it would send LiveFirst real chase goes out Most agencies start with the pre-start-date queue, because that is where a missed document costs a start date rather than an hour. Questions
+
+What agency owners ask.
+
+Bring your onboarding queue to a 15-minute call. We'll take the placements currently stuck on paperwork and price out what a week of chasing them properly looks like. Book a 15-minute call Prefer email? contact@boredmutant.com See how the document collection workflow works, or the same system for CPA and accounting firms.

@@ -5,7 +5,8 @@ Run:  python3 build.py
 Output: index.html, how-it-works.html, document-chasing-for-accounting-firms.html,
         document-chasing-for-staffing-agencies.html, sitemap.xml
 """
-import json, pathlib, datetime
+import html as html_mod
+import json, pathlib, re
 
 SRC = pathlib.Path("src")
 OUT = pathlib.Path(".")
@@ -40,6 +41,23 @@ def crumbs(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + u}
         for i, (n, u) in enumerate(items)]}
 
+# Pull the FAQ straight out of the page body so the schema can never drift from the
+# copy a visitor reads. Google rejects FAQPage markup that disagrees with the page.
+FAQ_RE = re.compile(
+    r"<details>\s*<summary>(.*?)</summary>\s*<p class=\"ans\">(.*?)</p>\s*</details>", re.S)
+
+def _plain(s):
+    return " ".join(html_mod.unescape(re.sub(r"<[^>]+>", "", s)).split())
+
+def faq_schema(body, canonical):
+    pairs = FAQ_RE.findall(body)
+    if not pairs:
+        return None
+    return {"@type": "FAQPage", "@id": canonical + "#faq",
+            "mainEntity": [{"@type": "Question", "name": _plain(q),
+                            "acceptedAnswer": {"@type": "Answer", "text": _plain(a)}}
+                           for q, a in pairs]}
+
 def service(name, desc, audience):
     return {"@type": "Service", "name": name, "serviceType": "Business process automation",
             "provider": {"@id": f"{SITE}/#org"},
@@ -51,9 +69,9 @@ PAGES = [
     dict(
         out="index.html", body="home.body.html", js="home.js", path="/",
         nav=None, priority="1.0",
-        title="Automated document chasing for accounting and staffing firms",
-        desc=("An automated reminder system inside your firm's own mailbox. It chases clients who owe "
-              "you documents and stops the moment the file arrives."),
+        title="Document collection for CPA and staffing firms | BoredMutant",
+        desc=("Automated client document collection for CPA firms and staffing agencies. Escalating "
+              "reminders from your own mailbox. No client portal to log into."),
         og_title="Automated document chasing for accounting and staffing firms",
         og_desc=("An automated reminder system inside your firm's own mailbox. It chases the clients "
                  "who owe you documents and stops the second a file arrives."),
@@ -74,9 +92,9 @@ PAGES = [
     dict(
         out="how-it-works.html", body="how.body.html", js="how.js", path="/how-it-works",
         nav="HOW", priority="0.9",
-        title="How the document chaser works | BoredMutant",
-        desc=("A step-by-step diagram of the document chasing workflow: the daily pass, the reply "
-              "branches, the escalation templates and the Friday digest."),
+        title="How automated document collection works | BoredMutant",
+        desc=("A step-by-step walkthrough of the document collection workflow: the daily pass, the "
+              "reply branches, the escalation templates and the Friday digest."),
         og_title="How the document chaser actually works",
         og_desc=("The whole workflow drawn out: the daily pass, the reply branches, the escalation "
                  "templates and the Friday digest."),
@@ -89,9 +107,9 @@ PAGES = [
     dict(
         out="document-chasing-for-accounting-firms.html", body="acc.body.html", js="page.js",
         path="/document-chasing-for-accounting-firms", nav="ACC", priority="0.9",
-        title="Document chasing for accounting firms | BoredMutant",
-        desc=("Automated chasing of 1099s, K-1s, bank statements and signed 8879s, sent from your firm's "
-              "own mailbox. Stops the moment the document arrives."),
+        title="Client document collection for CPA firms | BoredMutant",
+        desc=("Tax document collection for CPA firms and preparers: 1099s, K-1s, bank statements and "
+              "signed 8879s, chased automatically from your own mailbox."),
         og_title="Document chasing for accounting firms",
         og_desc=("Stop paying preparers to write 'just following up'. Automated escalation for 1099s, "
                  "K-1s, bank statements and signed 8879s, all from your own mailbox."),
@@ -105,9 +123,9 @@ PAGES = [
     dict(
         out="document-chasing-for-staffing-agencies.html", body="stf.body.html", js="page.js",
         path="/document-chasing-for-staffing-agencies", nav="STF", priority="0.9",
-        title="Document chasing for staffing agencies | BoredMutant",
-        desc=("Automated chasing of I-9s, certifications, references and timesheets, sent from your "
-              "agency's own mailbox. Stops start dates slipping."),
+        title="Document collection for staffing agencies | BoredMutant",
+        desc=("Onboarding paperwork and I-9 collection for staffing agencies. Certifications, "
+              "references and timesheets chased automatically from your own mailbox."),
         og_title="Document chasing for staffing agencies",
         og_desc=("I-9s, certifications, references and timesheets chased automatically from your own "
                  "mailbox, so start dates stop slipping."),
@@ -201,12 +219,16 @@ def render(p):
     for key, token in (("HOW", "__NAV_HOW__"), ("ACC", "__NAV_ACC__"), ("STF", "__NAV_STF__")):
         header = header.replace(token, ' aria-current="page"' if p["nav"] == key else "")
     canonical = SITE + "/" if p["path"] == "/" else SITE + p["path"]
-    jsonld = json.dumps({"@context": "https://schema.org", "@graph": p["graph"]}, indent=2)
+    body = (SRC / p["body"]).read_text(encoding="utf-8").strip()
+    graph = list(p["graph"])
+    faq = faq_schema(body, canonical)
+    if faq:
+        graph.append(faq)
+    jsonld = json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2)
     html = TPL.format(
         title=p["title"], desc=p["desc"], canonical=canonical, site=SITE,
         og_title=p["og_title"], og_desc=p["og_desc"], jsonld=jsonld, css=CSS,
-        header=header, footer=FOOTER, nav_js=NAV_JS,
-        body=(SRC / p["body"]).read_text(encoding="utf-8").strip(),
+        header=header, footer=FOOTER, nav_js=NAV_JS, body=body,
         js=(SRC / p["js"]).read_text(encoding="utf-8").strip(),
     )
     # newline="\n" so a build on Windows does not rewrite every line with CRLF
@@ -224,8 +246,42 @@ def sitemap():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n",
         encoding="utf-8", newline="\n")
 
+def llms_full():
+    """Every page's body copy as plain markdown.
+
+    AI crawlers ingest this far more reliably than they parse HTML, and it is
+    generated from the same partials as the pages so the two cannot disagree.
+    """
+    out = ["# BoredMutant, full site content",
+           "",
+           "> Automated client document collection for CPA firms and staffing agencies. "
+           "Escalating reminders send from the firm's own mailbox and stop the moment the "
+           "document arrives. No client portal, no new software for clients to learn.",
+           "",
+           f"Canonical: {SITE}/",
+           "Booking: https://cal.com/boredmutant/automations",
+           "Contact: contact@boredmutant.com",
+           ""]
+    for p in PAGES:
+        url = SITE + "/" if p["path"] == "/" else SITE + p["path"]
+        body = (SRC / p["body"]).read_text(encoding="utf-8")
+        out += ["", "---", "", f"## {p['title'].split(' | ')[0]}", "", f"URL: {url}", ""]
+        # <details> renders as one run-on line once tags are stripped, so pull the
+        # FAQ out first and re-emit it as explicit Q/A pairs.
+        for q, a in FAQ_RE.findall(body):
+            out.append(f"**Q: {_plain(q)}**\n\nA: {_plain(a)}\n")
+        body = FAQ_RE.sub("", body)
+        for chunk in re.split(r"(?=<h[123])", body):
+            text = _plain(chunk)
+            if text:
+                out.append(text + "\n")
+    (OUT / "llms-full.txt").write_text("\n".join(out).rstrip() + "\n",
+                                       encoding="utf-8", newline="\n")
+
 if __name__ == "__main__":
     for p in PAGES:
         print(f"{p['out']:52s} {render(p):>7,d} bytes")
     sitemap()
     print("sitemap.xml written")
+    llms_full()
+    print(f"llms-full.txt written ({(OUT / 'llms-full.txt').stat().st_size:,d} bytes)")

@@ -1,6 +1,6 @@
 # BoredMutant
 
-> BoredMutant builds automated document-chasing systems for accounting firms and staffing agencies in the United States. The system is installed inside the firm's own mailbox: it tracks which client owes which document, sends escalating firm-approved reminder emails on a set schedule, stops automatically the moment the document arrives, and hands the thread to staff if the client replies with a question. Setup takes about a week. Every build starts with a two-day dry run. Month to month, cancel anytime.
+> BoredMutant builds automated client document collection systems for CPA firms, accounting firms and staffing agencies in the United States. Unlike client-portal tools, it needs no portal and no new software: everything happens in ordinary email. The system is installed inside the firm's own mailbox: it tracks which client owes which document, sends escalating firm-approved reminder emails on a set schedule, stops automatically the moment the document arrives, and hands the thread to staff if the client replies with a question. Setup takes about a week. Every build starts with a two-day dry run. Month to month, cancel anytime.
 
 Canonical URL: https://www.boredmutant.com/
 Contact: contact@boredmutant.com
@@ -44,3 +44,7 @@ BoredMutant is an independent automation studio founded in 2025 and run by a sin
 - [How it works](https://www.boredmutant.com/how-it-works): the full workflow drawn out: the daily pass, the reply branches (file received vs. human question vs. silence), the escalation templates, and the Friday digest.
 - [Document chasing for accounting firms](https://www.boredmutant.com/document-chasing-for-accounting-firms): 1099s, K-1s, bank statements, prior-year returns, signed 8879s and engagement letters, mapped to the March 15 / April 15 / September 15 / October 15 deadline calendar.
 - [Document chasing for staffing agencies](https://www.boredmutant.com/document-chasing-for-staffing-agencies): I-9s, certifications, licenses, references, background check consent and weekly timesheets, mapped to the placement pipeline.
+
+## Optional
+
+- [Full site content](https://www.boredmutant.com/llms-full.txt): every page's body copy as plain text, including all fourteen FAQ questions and answers.
