@@ -1,14 +1,18 @@
-node_modules
-dist
 .DS_Store
 .env
 .env.local
-.vite
 
 # Vercel
 .vercel
 
-# Local design bundle
+# Python build cache
+__pycache__
+
+# Local scratch left over from the superseded React build
 _design
 _design.tar.gz
 _preview*.log
+
+# Source drop for this migration — its contents now live at the repo root
+claude updated/
+.gstack/

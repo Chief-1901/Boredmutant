@@ -1,0 +1,4 @@
+# build.py writes LF. Keep LF in the working tree too, so a rebuild on Windows
+# never shows up as a whole-file diff under core.autocrlf=true.
+* text=auto eol=lf
+*.png binary

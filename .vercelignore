@@ -1,0 +1,7 @@
+# Build inputs, not runtime files. build.py inlines src/base.css and the per-page
+# JS directly into each HTML page, so nothing under src/ is fetched by the browser.
+# Excluding them keeps /src/base.css and /build.py from being publicly served.
+src
+build.py
+README.md
+__pycache__

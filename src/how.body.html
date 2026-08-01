@@ -1,0 +1,152 @@
+<section class="phero">
+  <div class="wrap">
+    <p class="crumb mono"><a href="/">Home</a> <span>/</span> How it works</p>
+    <h1>The whole system, drawn out.</h1>
+    <p class="lede">There is no dashboard and no client portal. This is the actual shape of what gets installed: a scheduled workflow that reads your chase list, checks what came back, and sends the next reminder in your own words, or stops.</p>
+    <div class="stats">
+      <div class="stat"><b>~1 week</b><span>From the first call to live, including the dry run</span></div>
+      <div class="stat"><b>3 templates</b><span>Written by you, approved once, never rewritten by the system</span></div>
+      <div class="stat"><b>0 logins</b><span>Nobody has an account to create, staff or client</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="tag mono">The daily run</p>
+      <h2>One pass, every weekday morning.</h2>
+      <p class="lede">Each open item is evaluated on its own. Watch it run. The pulse follows a single document from the list to the send.</p>
+    </div>
+
+    <div class="wf" id="wf1">
+      <div class="wf-head">
+        <span class="t"><i aria-hidden="true"></i>Document chaser · daily pass</span>
+        <button class="replay" type="button" data-replay="wf1">▶ Run the flow</button>
+      </div>
+
+      <div class="lane">
+        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Schedule trigger</b><span>Every weekday at 09:00 in your firm's timezone. <code>Mon–Fri</code></span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Read the chase list</b><span>Pulls every open item: client, document, deadline, current stage, date last contacted.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Filter: what is actually due?</b><span>Skips anything already received, paused by your staff, or not yet at its next step.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">03</span><span class="tx"><b>Check the thread</b><span>Reads inbound mail on each open thread since the last run. Subject, sender, whether a file is attached, though never the contents of the file.</span></span></div>
+        <div class="fork-in" aria-hidden="true"></div>
+      </div>
+
+      <div class="fork">
+        <div class="arm a-ok">
+          <span class="cond">Attachment arrived</span>
+          <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Stop the sequence</b><span>Item marked received. No further mail on it, ever. Goes into Friday's digest as complete.</span></span></div>
+        </div>
+        <div class="arm">
+          <span class="cond">Silence</span>
+          <div class="wfn"><span class="ico" aria-hidden="true">→</span><span class="tx"><b>Advance a stage</b><span>Move the item to the next escalation step and continue below.</span></span></div>
+        </div>
+        <div class="arm a-warn">
+          <span class="cond">Reply, but no file</span>
+          <div class="wfn"><span class="ico" aria-hidden="true">!</span><span class="tx"><b>Pause and hand to staff</b><span>Thread flagged in your inbox for a human. The system sends nothing further on that item until someone resumes it.</span></span></div>
+        </div>
+      </div>
+
+      <div class="lane">
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">04</span><span class="tx"><b>Select the approved template</b><span>Stage 1 polite, stage 2 firm, stage 3 final. Your wording, merged with the client name, document and deadline.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">05</span><span class="tx"><b>Send from your mailbox</b><span>Authenticated as your firm. Your address, your signature, and it lands in your own Sent folder like any other email.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">06</span><span class="tx"><b>Write back to the log</b><span>Records the stage, timestamp and message id, then sets when this item is next due.</span></span></div>
+      </div>
+
+      <p class="loop">↺ Repeats the next weekday until the document arrives, a human steps in, or you stop it</p>
+      <p class="wf-note">Every item is handled independently. One client going quiet has no effect on anyone else's sequence.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag mono">The weekly run</p>
+      <h2>One email on Friday, and that's the reporting.</h2>
+    </div>
+
+    <div class="wf" id="wf2">
+      <div class="wf-head">
+        <span class="t"><i aria-hidden="true"></i>Friday digest</span>
+        <button class="replay" type="button" data-replay="wf2">▶ Run the flow</button>
+      </div>
+      <div class="lane">
+        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Weekly trigger</b><span>Friday, late afternoon. <code>Fri 16:00</code></span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Aggregate the week</b><span>Received, still outstanding, paused for a human, and what is due next week.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Compose the digest</b><span>Four short lists, in the body of one email.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Send to whoever should see it</b><span>Partner, office manager, or both. Proof of work, every week, without asking anyone for a status update.</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap grid">
+    <div class="item"><b>Never writes</b><p>Every word a client reads was written and approved by your firm. The system chooses timing, not language.</p></div>
+    <div class="item"><b>Files stay closed</b><p>It detects that an attachment exists. It does not open, download, store or forward it.</p></div>
+    <div class="item"><b>Never over-sends</b><p>Once a document is received, that sequence is finished. There is no fourth email.</p></div>
+    <div class="item"><b>Only your list</b><p>It only contacts people on the list you handed over, about documents you listed.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="tag mono">What's actually built</p>
+      <h2>The diagram is the part that takes an afternoon.</h2>
+      <p class="lede">Workflow engines are a commodity, and the shape above is not where the work is. These are the parts that take a week and are specific to your firm.</p>
+    </div>
+    <div class="two">
+      <div class="card">
+        <span class="k">Mailbox layer</span>
+        <h3>Sending as you, safely</h3>
+        <p>Authenticating against your Microsoft 365 or Google Workspace tenant with least-privilege access, threading replies correctly so conversations don't fragment, and making sure everything lands in your Sent folder rather than arriving from a stranger.</p>
+      </div>
+      <div class="card">
+        <span class="k">Reply handling</span>
+        <h3>Telling a document from a question</h3>
+        <p>An out-of-office is not a reply, and "sending tomorrow" is not a document. Getting this boundary right is what keeps the system from either nagging someone who already answered or going quiet on someone who didn't.</p>
+      </div>
+      <div class="card">
+        <span class="k">State</span>
+        <h3>Knowing where every item stands</h3>
+        <p>One record per client per document: stage, last contact, next due date, who paused it and why. This is what makes the Friday digest possible and what stops two staff members chasing the same person.</p>
+      </div>
+      <div class="card">
+        <span class="k">Your wording</span>
+        <h3>Three templates that sound like your firm</h3>
+        <p>Drafted with you, not for you. Firms that chase gently and firms that chase hard both work, but the escalation has to match how you actually speak to clients, or your staff will quietly turn it off.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Before anything real sends</b>
+      <p>Every new firm runs two full days in dry-run mode. The workflow executes exactly as above, but instead of sending, it writes each message it <em>would</em> have sent into a file for you to read. Nobody receives anything until you have looked at that file and said go.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>See it run against your own chase list.</h2>
+    <p class="lede">Send your tracker over before the call and I'll have your real clients mapped onto the flow above by the time we talk.</p>
+    <a class="btn lg" href="https://cal.com/boredmutant">Book a 15-minute call</a>
+    <p class="alt">Prefer email? <a href="mailto:contact@boredmutant.com?subject=How%20it%20works">contact@boredmutant.com</a></p>
+  </div>
+</section>

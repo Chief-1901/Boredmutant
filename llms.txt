@@ -1,0 +1,46 @@
+# BoredMutant
+
+> BoredMutant builds automated document-chasing systems for accounting firms and staffing agencies in the United States. The system is installed inside the firm's own mailbox: it tracks which client owes which document, sends escalating firm-approved reminder emails on a set schedule, stops automatically the moment the document arrives, and hands the thread to staff if the client replies with a question. Setup takes about a week. Every build starts with a two-day dry run. Month to month, cancel anytime.
+
+Canonical URL: https://www.boredmutant.com/
+Contact: contact@boredmutant.com
+Booking: https://cal.com/boredmutant (15-minute intro call)
+
+## What the product does
+
+1. **Load the list.** The firm sends its existing tracker or a plain CSV: client, document, deadline.
+2. **Approve three templates:** polite, firmer, final. Written in the firm's own voice and approved once. The system generates no text of its own; it only decides *when* to send and when to stop.
+3. **Send from the firm's mailbox.** Reminders go out under the firm's name, address and signature, via Microsoft 365 or Google Workspace. Clients never see BoredMutant's name.
+4. **React to the reply.** If the document arrives, that client's chase shuts off automatically. If the client replies with a question, the chase pauses and the thread is routed to a human, flagged.
+5. **Friday digest.** One weekly email: what arrived, what is outstanding, who gets chased next.
+
+Default escalation schedule: day 1 polite reminder, day 4 firmer follow-up, day 8 final notice, then stop on receipt. Adjustable per client and per document type.
+
+## Who it is for
+
+- **Accounting firms:** chasing 1099s, K-1s, bank statements, signed 8879s and prior-year returns, especially around extension deadlines.
+- **Staffing agencies:** chasing I-9s, certifications, references, compliance documents and timesheets before start dates.
+
+## Data handling
+
+- Attachments never leave the firm's inbox. BoredMutant never opens, stores or moves the files themselves.
+- The system tracks names, email addresses and document titles only.
+- All email sends through the firm's own mailbox using the firm's own credentials.
+- Every new firm runs two days in dry-run mode, watching every email the system *would* have sent, before any real message goes out.
+
+## Pricing
+
+- **Founding client:** $990 one-time setup, then $250/month. Limited to three slots per industry. Includes the full chaser, three escalation templates, the two-day dry run, the weekly digest, and unlimited clients and document types.
+- **Standard:** $1,500+ one-time setup, then $300–$400/month. Adds priority support and a quarterly tune-up of escalation timing.
+- Month to month. No annual contract.
+
+## Who runs it
+
+BoredMutant is an independent automation studio founded in 2025 and run by a single engineer, who is also the person on every call. It is deliberately small: clients talk to the person who built their system.
+
+## Pages
+
+- [Home](https://www.boredmutant.com/): the offer, how the system works, who it is for, pricing, and common questions.
+- [How it works](https://www.boredmutant.com/how-it-works): the full workflow drawn out: the daily pass, the reply branches (file received vs. human question vs. silence), the escalation templates, and the Friday digest.
+- [Document chasing for accounting firms](https://www.boredmutant.com/document-chasing-for-accounting-firms): 1099s, K-1s, bank statements, prior-year returns, signed 8879s and engagement letters, mapped to the March 15 / April 15 / September 15 / October 15 deadline calendar.
+- [Document chasing for staffing agencies](https://www.boredmutant.com/document-chasing-for-staffing-agencies): I-9s, certifications, licenses, references, background check consent and weekly timesheets, mapped to the placement pipeline.

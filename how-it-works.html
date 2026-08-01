@@ -4,26 +4,26 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Automated document chasing for accounting and staffing firms</title>
-<meta name="description" content="An automated reminder system inside your firm's own mailbox. It chases clients who owe you documents and stops the moment the file arrives." />
+<title>How the document chaser works | BoredMutant</title>
+<meta name="description" content="A step-by-step diagram of the document chasing workflow: the daily pass, the reply branches, the escalation templates and the Friday digest." />
 
-<link rel="canonical" href="https://www.boredmutant.com/" />
+<link rel="canonical" href="https://www.boredmutant.com/how-it-works" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <meta name="theme-color" content="#0f1113" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="BoredMutant" />
-<meta property="og:url" content="https://www.boredmutant.com/" />
-<meta property="og:title" content="Automated document chasing for accounting and staffing firms" />
-<meta property="og:description" content="An automated reminder system inside your firm's own mailbox. It chases the clients who owe you documents and stops the second a file arrives." />
+<meta property="og:url" content="https://www.boredmutant.com/how-it-works" />
+<meta property="og:title" content="How the document chaser actually works" />
+<meta property="og:description" content="The whole workflow drawn out: the daily pass, the reply branches, the escalation templates and the Friday digest." />
 <meta property="og:image" content="https://www.boredmutant.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Automated document chasing by BoredMutant" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Automated document chasing for accounting and staffing firms" />
-<meta name="twitter:description" content="An automated reminder system inside your firm's own mailbox. It chases the clients who owe you documents and stops the second a file arrives." />
+<meta name="twitter:title" content="How the document chaser actually works" />
+<meta name="twitter:description" content="The whole workflow drawn out: the daily pass, the reply branches, the escalation templates and the Friday digest." />
 <meta name="twitter:image" content="https://www.boredmutant.com/og-image.png" />
 
 <link rel="icon" href="/logo-mark.svg" type="image/svg+xml" />
@@ -36,61 +36,33 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.boredmutant.com/#org",
-      "name": "BoredMutant",
-      "alternateName": "Bored Mutant",
-      "url": "https://www.boredmutant.com/",
-      "logo": "https://www.boredmutant.com/logo.png",
-      "image": "https://www.boredmutant.com/og-image.png",
-      "email": "contact@boredmutant.com",
-      "foundingDate": "2025",
-      "description": "BoredMutant builds automated document chasing systems for accounting firms and staffing agencies. Escalating email reminders sent from the firm's own mailbox that stop the moment a document arrives.",
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "email": "contact@boredmutant.com",
-        "availableLanguage": "English"
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.boredmutant.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How it works",
+          "item": "https://www.boredmutant.com/how-it-works"
+        }
+      ]
     },
     {
-      "@type": "Service",
-      "name": "Automated document chasing",
-      "serviceType": "Business process automation",
-      "provider": {
-        "@id": "https://www.boredmutant.com/#org"
+      "@type": "WebPage",
+      "url": "https://www.boredmutant.com/how-it-works",
+      "name": "How the document chaser works",
+      "description": "A step-by-step walkthrough of the automated document chasing workflow.",
+      "isPartOf": {
+        "@id": "https://www.boredmutant.com/#website"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "audience": {
-        "@type": "BusinessAudience",
-        "name": "Accounting firms and staffing agencies"
-      },
-      "description": "An escalating email reminder system installed inside a firm's own mailbox. It tracks which client owes which document, sends firm-approved reminder templates on a set schedule, stops automatically when the document arrives, and hands the thread to staff when a client replies with a question.",
-      "@id": "https://www.boredmutant.com/#service",
-      "offers": {
-        "@type": "Offer",
-        "name": "Founding client build",
-        "price": "990",
-        "priceCurrency": "USD",
-        "description": "One-time setup, then $250 per month. Month to month, cancel anytime."
+      "about": {
+        "@id": "https://www.boredmutant.com/#service"
       }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.boredmutant.com/#website",
-      "url": "https://www.boredmutant.com/",
-      "name": "BoredMutant",
-      "publisher": {
-        "@id": "https://www.boredmutant.com/#org"
-      },
-      "inLanguage": "en-US"
     }
   ]
 }
@@ -618,7 +590,7 @@ footer a:hover{text-decoration:underline}
       <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
     <nav class="nav-links" id="sitenav" aria-label="Main">
-      <a href="/how-it-works">How it works</a>
+      <a href="/how-it-works" aria-current="page">How it works</a>
       <a href="/document-chasing-for-accounting-firms">Accounting firms</a>
       <a href="/document-chasing-for-staffing-agencies">Staffing agencies</a>
       <a href="/#pricing">Pricing</a>
@@ -630,276 +602,156 @@ footer a:hover{text-decoration:underline}
 
 <main id="main">
 <div id="top"></div>
-<div id="top"></div>
-
-<!-- ========== HERO ========== -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow mono"><span class="pip" aria-hidden="true"></span>Accounting &amp; staffing firms · United States</p>
-      <h1>We <em>chase</em> the documents your clients forget.</h1>
-      <p class="lede">An automated reminder system installed inside your firm's own mailbox. It escalates on your schedule and stops the second the file arrives.</p>
-      <div class="cta-row">
-        <a class="btn lg" href="https://cal.com/boredmutant">Book a 15-minute call</a>
-        <a class="btn ghost lg" href="#how">See how it works</a>
-      </div>
-      <p class="cta-meta">Live in about a week · Two-day dry run first · Month to month</p>
-    </div>
-
-    <div class="inbox" role="img" aria-label="Animated example: three escalating reminder emails are sent on day 1, day 4 and day 8, the client sends the file, and the chase stops automatically.">
-      <div class="inbox-bar">
-        <span class="who"><span class="led" aria-hidden="true"></span>Live chase · Meridian Tax &amp; Co</span>
-        <span class="who">Bank statements</span>
-      </div>
-      <div class="inbox-body" id="demo">
-        <div class="msg" data-step="0">
-          <div class="m-top"><b>Day 1 · 9:02 AM</b><span>from your mailbox</span></div>
-          <p>Hi Sarah, a reminder that we still need your 2025 bank statements to keep your return on track. Reply to this email with the files attached.</p>
-        </div>
-        <div class="msg" data-step="1">
-          <div class="m-top"><b>Day 4 · 9:02 AM</b><span>follow-up 2 of 3</span></div>
-          <p>Sarah, a quick nudge on those bank statements. The deadline is close and we can't start without them.</p>
-        </div>
-        <div class="msg esc" data-step="2">
-          <div class="m-top"><b>Day 8 · Final notice</b><span>escalation 3 of 3</span></div>
-          <p>We're unable to file without your bank statements. Please send them today, or call the office so we can plan around it.</p>
-        </div>
-        <div class="attach" data-step="3">bank_statements_2025.pdf · received 4:47 PM</div>
-        <div class="halt" data-step="4">Chase stopped</div>
-      </div>
-      <div class="inbox-foot">
-        <span>Templates approved by you</span>
-        <span>0 staff minutes spent</span>
-      </div>
+<section class="phero">
+  <div class="wrap">
+    <p class="crumb mono"><a href="/">Home</a> <span>/</span> How it works</p>
+    <h1>The whole system, drawn out.</h1>
+    <p class="lede">There is no dashboard and no client portal. This is the actual shape of what gets installed: a scheduled workflow that reads your chase list, checks what came back, and sends the next reminder in your own words, or stops.</p>
+    <div class="stats">
+      <div class="stat"><b>~1 week</b><span>From the first call to live, including the dry run</span></div>
+      <div class="stat"><b>3 templates</b><span>Written by you, approved once, never rewritten by the system</span></div>
+      <div class="stat"><b>0 logins</b><span>Nobody has an account to create, staff or client</span></div>
     </div>
   </div>
 </section>
 
-<!-- ========== HOW IT WORKS (flow) ========== -->
-<section id="how">
+<section>
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">How it works</p>
-      <h2>Four moving parts. Nothing for your clients to learn.</h2>
-      <p class="lede">Your clients keep receiving normal email from your firm and replying like they always have. Everything below happens on your side.</p>
+      <p class="tag mono">The daily run</p>
+      <h2>One pass, every weekday morning.</h2>
+      <p class="lede">Each open item is evaluated on its own. Watch it run. The pulse follows a single document from the list to the send.</p>
     </div>
 
-    <div class="flow" id="flow">
-      <div class="node">
-        <span class="n-num">01</span>
-        <h3>Your list</h3>
-        <p>Send your existing tracker or a plain CSV: client, document, deadline.</p>
-        <div class="chips"><span>CSV</span><span>Excel</span><span>Google Sheet</span></div>
+    <div class="wf" id="wf1">
+      <div class="wf-head">
+        <span class="t"><i aria-hidden="true"></i>Document chaser · daily pass</span>
+        <button class="replay" type="button" data-replay="wf1">▶ Run the flow</button>
       </div>
-      <div class="conn c1" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
 
-      <div class="node engine">
-        <span class="n-num">02 · Engine</span>
-        <h3>Three approved templates</h3>
-        <p>Polite, firm, final. Written in your firm's voice and signed off by you once.</p>
-        <div class="chips"><span>No generated text</span><span>Your schedule</span></div>
+      <div class="lane">
+        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Schedule trigger</b><span>Every weekday at 09:00 in your firm's timezone. <code>Mon–Fri</code></span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Read the chase list</b><span>Pulls every open item: client, document, deadline, current stage, date last contacted.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Filter: what is actually due?</b><span>Skips anything already received, paused by your staff, or not yet at its next step.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">03</span><span class="tx"><b>Check the thread</b><span>Reads inbound mail on each open thread since the last run. Subject, sender, whether a file is attached, though never the contents of the file.</span></span></div>
+        <div class="fork-in" aria-hidden="true"></div>
       </div>
-      <div class="conn c2" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
 
-      <div class="node">
-        <span class="n-num">03</span>
-        <h3>Your mailbox sends</h3>
-        <p>Reminders leave under your name, your address and your signature, not ours.</p>
-        <div class="chips"><span>Microsoft 365</span><span>Google Workspace</span></div>
-      </div>
-      <div class="conn c3" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
-
-      <div class="node">
-        <span class="n-num">04</span>
-        <h3>The client replies</h3>
-        <p>What happens next depends on what they send. Two outcomes, both automatic.</p>
-        <div class="chips"><span>File detected</span><span>Question detected</span></div>
-      </div>
-    </div>
-
-    <div class="branch" id="branch">
-      <div class="out stop">
-        <span class="ic" aria-hidden="true">■</span>
-        <div>
-          <b>Document arrives → chase stops</b>
-          <p>The moment the file lands, that client's sequence shuts itself off. No apology email from a colleague who didn't know it had already arrived.</p>
+      <div class="fork">
+        <div class="arm a-ok">
+          <span class="cond">Attachment arrived</span>
+          <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Stop the sequence</b><span>Item marked received. No further mail on it, ever. Goes into Friday's digest as complete.</span></span></div>
+        </div>
+        <div class="arm">
+          <span class="cond">Silence</span>
+          <div class="wfn"><span class="ico" aria-hidden="true">→</span><span class="tx"><b>Advance a stage</b><span>Move the item to the next escalation step and continue below.</span></span></div>
+        </div>
+        <div class="arm a-warn">
+          <span class="cond">Reply, but no file</span>
+          <div class="wfn"><span class="ico" aria-hidden="true">!</span><span class="tx"><b>Pause and hand to staff</b><span>Thread flagged in your inbox for a human. The system sends nothing further on that item until someone resumes it.</span></span></div>
         </div>
       </div>
-      <div class="out hand">
-        <span class="ic" aria-hidden="true">↗</span>
-        <div>
-          <b>Question arrives → your staff take over</b>
-          <p>The sequence pauses instantly and the thread lands with a human, flagged.</p>
-        </div>
-      </div>
-    </div>
 
-    <p class="wf-more" style="max-width:none;text-align:left;margin-top:26px">
-      <a class="btn ghost" href="/how-it-works">See the full workflow, step by step</a>
-    </p>
+      <div class="lane">
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">04</span><span class="tx"><b>Select the approved template</b><span>Stage 1 polite, stage 2 firm, stage 3 final. Your wording, merged with the client name, document and deadline.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">05</span><span class="tx"><b>Send from your mailbox</b><span>Authenticated as your firm. Your address, your signature, and it lands in your own Sent folder like any other email.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+
+        <div class="wfn"><span class="ico" aria-hidden="true">06</span><span class="tx"><b>Write back to the log</b><span>Records the stage, timestamp and message id, then sets when this item is next due.</span></span></div>
+      </div>
+
+      <p class="loop">↺ Repeats the next weekday until the document arrives, a human steps in, or you stop it</p>
+      <p class="wf-note">Every item is handled independently. One client going quiet has no effect on anyone else's sequence.</p>
+    </div>
   </div>
 </section>
 
-<!-- ========== SCHEDULE ========== -->
 <section style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">The schedule</p>
-      <h2>You set the rhythm once. It runs until the file arrives.</h2>
+      <p class="tag mono">The weekly run</p>
+      <h2>One email on Friday, and that's the reporting.</h2>
     </div>
 
-    <div class="tl" id="tl">
-      <p class="mono muted">Default escalation, adjustable per client and per document type</p>
-      <div class="tl-rail"><span class="tl-fill"></span></div>
-      <div class="tl-marks">
-        <div class="tl-mark"><b>Day 1</b><span>Polite reminder</span></div>
-        <div class="tl-mark"><b>Day 4</b><span>Firmer follow-up</span></div>
-        <div class="tl-mark"><b>Day 8</b><span>Final notice</span></div>
-        <div class="tl-mark"><b>Stop</b><span>File received</span></div>
+    <div class="wf" id="wf2">
+      <div class="wf-head">
+        <span class="t"><i aria-hidden="true"></i>Friday digest</span>
+        <button class="replay" type="button" data-replay="wf2">▶ Run the flow</button>
       </div>
-      <p class="tl-note"><strong>Every Friday</strong> you get one digest email: what arrived this week, what's still outstanding, and who gets chased next. That's the whole reporting burden.</p>
+      <div class="lane">
+        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Weekly trigger</b><span>Friday, late afternoon. <code>Fri 16:00</code></span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Aggregate the week</b><span>Received, still outstanding, paused for a human, and what is due next week.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Compose the digest</b><span>Four short lists, in the body of one email.</span></span></div>
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Send to whoever should see it</b><span>Partner, office manager, or both. Proof of work, every week, without asking anyone for a status update.</span></span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ========== TRUST BAND ========== -->
 <section class="trust">
   <div class="wrap grid">
-    <div class="item"><b>Data</b><p>Attachments never leave your inbox. We track names, addresses and document titles. Nothing else.</p></div>
-    <div class="item"><b>Identity</b><p>Everything sends from your mailbox with your signature. Clients never see our name.</p></div>
-    <div class="item"><b>Dry run</b><p>Two days where you watch every email it <em>would</em> have sent. Nothing ships until you say so.</p></div>
-    <div class="item"><b>Commitment</b><p>Month to month, cancel any time. There is no annual contract.</p></div>
+    <div class="item"><b>Never writes</b><p>Every word a client reads was written and approved by your firm. The system chooses timing, not language.</p></div>
+    <div class="item"><b>Files stay closed</b><p>It detects that an attachment exists. It does not open, download, store or forward it.</p></div>
+    <div class="item"><b>Never over-sends</b><p>Once a document is received, that sequence is finished. There is no fourth email.</p></div>
+    <div class="item"><b>Only your list</b><p>It only contacts people on the list you handed over, about documents you listed.</p></div>
   </div>
 </section>
 
-<!-- ========== WHO IT'S FOR ========== -->
-<section id="who">
+<section>
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">Who it's for</p>
-      <h2>Two industries where the chase never ends.</h2>
-      <p class="lede">Both have the same problem: work that can't start until a client sends something, and staff paid to ask for it repeatedly.</p>
+      <p class="tag mono">What's actually built</p>
+      <h2>The diagram is the part that takes an afternoon.</h2>
+      <p class="lede">Workflow engines are a commodity, and the shape above is not where the work is. These are the parts that take a week and are specific to your firm.</p>
     </div>
-    <div class="two" id="who-cards">
+    <div class="two">
       <div class="card">
-        <span class="k">Accounting firms</span>
-        <h3>Extension season without the inbox babysitting</h3>
-        <p>Every hour a preparer spends writing "just following up" is an hour of billable work that didn't happen.</p>
-        <ul><li>1099s</li><li>K-1s</li><li>Bank statements</li><li>Signed 8879s</li><li>Prior-year returns</li></ul>
+        <span class="k">Mailbox layer</span>
+        <h3>Sending as you, safely</h3>
+        <p>Authenticating against your Microsoft 365 or Google Workspace tenant with least-privilege access, threading replies correctly so conversations don't fragment, and making sure everything lands in your Sent folder rather than arriving from a stranger.</p>
       </div>
       <div class="card">
-        <span class="k">Staffing agencies</span>
-        <h3>Start dates that stop slipping</h3>
-        <p>Every late compliance document is a placement that moves and a client asking why.</p>
-        <ul><li>I-9s</li><li>Certifications</li><li>References</li><li>Compliance docs</li><li>Timesheets</li></ul>
+        <span class="k">Reply handling</span>
+        <h3>Telling a document from a question</h3>
+        <p>An out-of-office is not a reply, and "sending tomorrow" is not a document. Getting this boundary right is what keeps the system from either nagging someone who already answered or going quiet on someone who didn't.</p>
       </div>
+      <div class="card">
+        <span class="k">State</span>
+        <h3>Knowing where every item stands</h3>
+        <p>One record per client per document: stage, last contact, next due date, who paused it and why. This is what makes the Friday digest possible and what stops two staff members chasing the same person.</p>
+      </div>
+      <div class="card">
+        <span class="k">Your wording</span>
+        <h3>Three templates that sound like your firm</h3>
+        <p>Drafted with you, not for you. Firms that chase gently and firms that chase hard both work, but the escalation has to match how you actually speak to clients, or your staff will quietly turn it off.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Before anything real sends</b>
+      <p>Every new firm runs two full days in dry-run mode. The workflow executes exactly as above, but instead of sending, it writes each message it <em>would</em> have sent into a file for you to read. Nobody receives anything until you have looked at that file and said go.</p>
     </div>
   </div>
 </section>
 
-<!-- ========== PRICING ========== -->
-<section id="pricing" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <p class="tag mono">Pricing</p>
-      <h2>One setup fee, one small retainer, agreed before you pay anything.</h2>
-    </div>
-    <div class="prices" id="prices">
-      <div class="price lead">
-        <span class="flag">Founding rate · 3 slots per industry</span>
-        <h3>Founding client</h3>
-        <p class="amt">$990 <small>one-time setup</small></p>
-        <p class="per">then $250 / month</p>
-        <ul>
-          <li>Full document chaser, built against your tracker and your deadlines</li>
-          <li>Three escalation templates in your firm's voice</li>
-          <li>Two-day dry run before a single real email sends</li>
-          <li>Friday digest, every week</li>
-          <li>Unlimited clients and document types</li>
-        </ul>
-        <p class="fin">In exchange, if it works: a testimonial and one introduction. That's the entire deal.</p>
-      </div>
-      <div class="price">
-        <h3>Standard</h3>
-        <p class="amt">$1,500+ <small>one-time setup</small></p>
-        <p class="per">then $300–$400 / month</p>
-        <ul>
-          <li>Everything in the founding build</li>
-          <li>Priority support and template changes</li>
-          <li>Quarterly tune-up of escalation timing</li>
-        </ul>
-        <p class="fin">The rate once the founding slots are gone. They fill in order.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FOUNDER ========== -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <p class="tag mono">Who's behind this</p>
-      <h2>One engineer. You talk to the person who builds it.</h2>
-    </div>
-    <div class="founder">
-      <div class="avatar" aria-hidden="true">ADD<br>PHOTO<br>HERE</div>
-      <div>
-        <h3>[Your name], founder</h3>
-        <p>Years inside US back-office operations before building automation full time. Most recent solo project: a 56,000-line autonomous AI system shipped in under four months.</p>
-        <p><strong>BoredMutant is new, and I'd rather say so than pretend otherwise.</strong> That's why the founding rate exists, why every build starts in dry-run mode, and why it's month to month. You should be able to leave the moment it stops earning its keep.</p>
-        <p class="links">
-          <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
-          <a href="mailto:contact@boredmutant.com">contact@boredmutant.com</a>
-          <a href="https://cal.com/boredmutant">Book a call</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FAQ ========== -->
-<section id="faq" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <p class="tag mono">Questions</p>
-      <h2>What every firm owner asks first.</h2>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Is our client data safe?</summary>
-        <p class="ans">Attachments never leave your inbox. The system tracks names, email addresses and document titles only. It never opens, stores or moves the files themselves. Everything sends through your own mailbox using your own credentials.</p>
-      </details>
-      <details>
-        <summary>What if the AI writes something wrong to a client?</summary>
-        <p class="ans">It can't, because it doesn't write. You approve three fixed templates once, in your firm's voice. The system only decides when to send them and when to stop. No generated text ever reaches a client.</p>
-      </details>
-      <details>
-        <summary>What happens when a client replies with a question?</summary>
-        <p class="ans">That client's chase pauses instantly and the thread goes to your staff, flagged for attention. The system only chases silence, so once a client has actually replied it steps back.</p>
-      </details>
-      <details>
-        <summary>Do our clients need to learn new software?</summary>
-        <p class="ans">No. They reply to your email with the file attached, the way they always have.</p>
-      </details>
-      <details>
-        <summary>How long until it's running?</summary>
-        <p class="ans">About a week from the call. Ten minutes of your time to hand over the list, one round of template approval, then two days in dry-run mode where you watch every email it would have sent before any real one goes out.</p>
-      </details>
-      <details>
-        <summary>What if we want to stop?</summary>
-        <p class="ans">Cancel any time, because it's month to month. Your clients were never on a platform and your data never left your systems, so nothing needs migrating. You go back to chasing manually.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FINAL CTA ========== -->
 <section class="final">
   <div class="wrap">
-    <h2>Fifteen minutes. Bring your messiest tracker.</h2>
-    <p class="lede">We'll walk through your real chase list and show you exactly what the system would send, to whom, and when. If it isn't a fit, you leave with a cleaner tracker anyway.</p>
+    <h2>See it run against your own chase list.</h2>
+    <p class="lede">Send your tracker over before the call and I'll have your real clients mapped onto the flow above by the time we talk.</p>
     <a class="btn lg" href="https://cal.com/boredmutant">Book a 15-minute call</a>
-    <p class="alt">Prefer email? <a href="mailto:contact@boredmutant.com?subject=Document%20chaser">contact@boredmutant.com</a></p>
+    <p class="alt">Prefer email? <a href="mailto:contact@boredmutant.com?subject=How%20it%20works">contact@boredmutant.com</a></p>
   </div>
 </section>
 </main>
@@ -966,77 +818,71 @@ footer a:hover{text-decoration:underline}
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function nodesOf(wf) {
+    // document order = execution order; the fork's three arms light together
+    return Array.prototype.slice.call(wf.querySelectorAll('.wfn'));
+  }
+
+  function play(wf) {
+    var nodes = nodesOf(wf);
+    if (reduced) { nodes.forEach(function (n) { n.classList.add('lit'); }); return; }
+    if (wf.dataset.busy === '1') return;
+    wf.dataset.busy = '1';
+    nodes.forEach(function (n) { n.classList.remove('lit'); });
+    wf.classList.remove('running');
+    void wf.offsetWidth;            // restart the wire animations
+    wf.classList.add('running');
+
+    var step = 620;
+    nodes.forEach(function (n, i) {
+      setTimeout(function () { n.classList.add('lit'); }, 220 + i * step);
+    });
+    setTimeout(function () {
+      wf.classList.remove('running');
+      wf.dataset.busy = '0';
+    }, 400 + nodes.length * step);
+  }
+
   function init() {
-    // ---- shared scroll reveal (one observer, unobserve after firing) ----
-    var targets = document.querySelectorAll('.node, .out, .card, .price');
+    var canvases = document.querySelectorAll('.wf');
+    if (!canvases.length) return;
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-replay]'), function (b) {
+      b.addEventListener('click', function () {
+        var wf = document.getElementById(b.getAttribute('data-replay'));
+        if (wf) play(wf);
+      });
+    });
+
     if (reduced || !('IntersectionObserver' in window)) {
-      Array.prototype.forEach.call(targets, function (el) { el.classList.add('on'); });
-      document.getElementById('tl').classList.add('on');
-      startDemo(true);
+      Array.prototype.forEach.call(canvases, function (wf) {
+        nodesOf(wf).forEach(function (n) { n.classList.add('lit'); });
+      });
       return;
     }
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
-        var el = e.target;
-        io.unobserve(el);
+        io.unobserve(e.target);
+        play(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -12% 0px' });
 
-        if (el.id === 'flow') { el.classList.add('run'); return; }
-        if (el.id === 'tl')   { el.classList.add('on');  return; }
+    Array.prototype.forEach.call(canvases, function (wf) { io.observe(wf); });
 
-        // stagger siblings within a group
-        var group = Array.prototype.filter.call(el.parentNode.children, function (c) {
-          return c.classList.contains('node') || c.classList.contains('out') ||
-                 c.classList.contains('card') || c.classList.contains('price');
-        });
-        var i = group.indexOf(el);
-        setTimeout(function () { el.classList.add('on'); }, Math.max(0, i) * 90);
+    // generic reveals shared with the rest of the site
+    var rev = document.querySelectorAll('.card, .out, .price');
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io2.unobserve(e.target);
+        e.target.classList.add('on');
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-
-    Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
-    ['flow', 'tl'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) io.observe(el);
-    });
-
-    startDemo(false);
+    Array.prototype.forEach.call(rev, function (el) { io2.observe(el); });
   }
 
-  // ---- hero inbox loop ----
-  function startDemo(staticMode) {
-    var steps = document.querySelectorAll('#demo [data-step]');
-    if (!steps.length) return;
-    if (staticMode) {
-      Array.prototype.forEach.call(steps, function (s) { s.classList.add('on'); });
-      return;
-    }
-    var beats = [350, 1900, 3550, 5450, 6250];
-    var cycle = 9800;
-    var timers = [];
-    function run() {
-      timers.forEach(clearTimeout); timers = [];
-      Array.prototype.forEach.call(steps, function (s) { s.classList.remove('on'); });
-      Array.prototype.forEach.call(steps, function (el, i) {
-        timers.push(setTimeout(function () { el.classList.add('on'); }, beats[i]));
-      });
-    }
-    run();
-    var loop = setInterval(run, cycle);
-
-    // pause the loop when the hero is off-screen, which saves main-thread work
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        es.forEach(function (e) {
-          if (e.isIntersecting && !loop) { run(); loop = setInterval(run, cycle); }
-          else if (!e.isIntersecting && loop) { clearInterval(loop); loop = null; }
-        });
-      }, { threshold: 0 }).observe(document.getElementById('demo'));
-    }
-  }
-
-  // defer setup until after first paint so it never competes with LCP
   if ('requestIdleCallback' in window) requestIdleCallback(init, { timeout: 1200 });
   else window.addEventListener('load', init);
 })();
