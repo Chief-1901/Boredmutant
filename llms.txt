@@ -1,49 +1,41 @@
-# BoredMutant
+# Project Aham by BoredMutant
 
-> BoredMutant builds automated client document collection systems for CPA firms, accounting firms and staffing agencies in the United States. Unlike client-portal tools, it needs no portal and no new software: everything happens in ordinary email. The system is installed inside the firm's own mailbox: it tracks which client owes which document, sends escalating firm-approved reminder emails on a set schedule, stops automatically the moment the document arrives, and hands the thread to staff if the client replies with a question. Setup takes about a week. Every build starts with a two-day dry run. Month to month, cancel anytime.
+> Project Aham is an early-stage, WhatsApp-first service transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
 
 Canonical URL: https://www.boredmutant.com/
-Booking: https://cal.com/boredmutant/automations (15-minute intro call)
+Project: https://github.com/Chief-1901/Boredmutant
+Conversation: https://cal.com/boredmutant/automations
 
-## What the product does
+## Product direction
 
-1. **Load the list.** The firm sends its existing tracker or a plain CSV: client, document, deadline.
-2. **Approve three templates:** polite, firmer, final. Written in the firm's own voice and approved once. The system generates no text of its own; it only decides *when* to send and when to stop.
-3. **Send from the firm's mailbox.** Reminders go out under the firm's name, address and signature, via Microsoft 365 or Google Workspace. Clients never see BoredMutant's name.
-4. **React to the reply.** If the document arrives, that client's chase shuts off automatically. If the client replies with a question, the chase pauses and the thread is routed to a human, flagged.
-5. **Friday digest.** One weekly email: what arrived, what is outstanding, who gets chased next.
+- Consumers describe a real-world service need in WhatsApp, including relevant location, timing and budget constraints.
+- A central orchestrator is designed to find eligible participating businesses and ask their agents for current availability and structured offers.
+- Offers should state scope, price, timing, terms and expiry. Consumers compare offers and authorize actions according to their preferences and time-bounded mandates.
+- A booking is reported as confirmed only after the provider's authoritative booking path confirms it and the result is recorded.
+- Businesses are intended to configure services, availability, pricing and escalation rules. Onboarding may begin conversationally, but WhatsApp, calendar or booking connections can require a secure provider handoff or browser-based authorization.
 
-Default escalation schedule: day 1 polite reminder, day 4 firmer follow-up, day 8 final notice, then stop on receipt. Adjustable per client and per document type.
+## Safety and transaction rules
 
-## Who it is for
+- LLMs may interpret requests, ask clarifying questions, summarize offers and draft communication.
+- Deterministic application rules govern authorization, transaction state and side effects. A model cannot approve spending, fabricate availability or confirm a booking.
+- Ambiguous, unsupported or out-of-policy cases should be declined or escalated to a person.
+- A2A is the primary agent interoperability direction; UCP compatibility is intended where capabilities match, with MCP and REST for tools and integrations.
 
-- **Accounting firms:** chasing 1099s, K-1s, bank statements, signed 8879s and prior-year returns, especially around extension deadlines.
-- **Staffing agencies:** chasing I-9s, certifications, references, compliance documents and timesheets before start dates.
+## Current implementation
 
-## Data handling
+- The repository has a Fastify API, separate worker process, shared Zod schemas, transaction and policy primitives, and PostgreSQL migrations for the planned production data model.
+- A deterministic local demo uses Node's built-in SQLite support and mock offers/bookings. It is not a production booking service.
+- A WhatsApp Cloud API adapter and webhook routes are present. The current local inbound flow calls no LLM; it is restricted to the configured demo phone.
+- Live customer transactions, verified business onboarding, production provider integrations and production use of PostgreSQL remain future work. The project is not production-ready.
 
-- Attachments never leave the firm's inbox. BoredMutant never opens, stores or moves the files themselves.
-- The system tracks names, email addresses and document titles only.
-- All email sends through the firm's own mailbox using the firm's own credentials.
-- Every new firm runs two days in dry-run mode, watching every email the system *would* have sent, before any real message goes out.
+## Initial scope and limits
 
-## Pricing
+The first planned transaction patterns are fixed-price appointments, quote-required services and consultations. Hyderabad is the first operational market, while the architecture is intended to support additional geographies and service categories after validation.
 
-- **Founding client:** $990 one-time setup, then $250/month. Limited to three slots per industry. Includes the full chaser, three escalation templates, the two-day dry run, the weekly digest, and unlimited clients and document types.
-- **Standard:** $1,500+ one-time setup, then $300–$400/month. Adds priority support and a quarterly tune-up of escalation timing.
-- Month to month. No annual contract.
+Healthcare is limited to administrative appointment handling only after privacy, consent, provider verification and operational review. No diagnosis, triage or medical advice. The initial release does not include arbitrary outreach to non-member businesses, holding customer funds, or unreviewed payment processing.
 
-## Who runs it
+## Technical context
 
-BoredMutant is an independent automation studio founded in 2025 and run by a single engineer, who is also the person on every call. It is deliberately small: clients talk to the person who built their system.
+- [Repository README](https://github.com/Chief-1901/Boredmutant/blob/main/README.md)
 
-## Pages
-
-- [Home](https://www.boredmutant.com/): the offer, how the system works, who it is for, pricing, and common questions.
-- [How it works](https://www.boredmutant.com/how-it-works): the full workflow drawn out: the daily pass, the reply branches (file received vs. human question vs. silence), the escalation templates, and the Friday digest.
-- [Document chasing for accounting firms](https://www.boredmutant.com/document-chasing-for-accounting-firms): 1099s, K-1s, bank statements, prior-year returns, signed 8879s and engagement letters, mapped to the March 15 / April 15 / September 15 / October 15 deadline calendar.
-- [Document chasing for staffing agencies](https://www.boredmutant.com/document-chasing-for-staffing-agencies): I-9s, certifications, licenses, references, background check consent and weekly timesheets, mapped to the placement pipeline.
-
-## Optional
-
-- [Full site content](https://www.boredmutant.com/llms-full.txt): every page's body copy as plain text, including all fourteen FAQ questions and answers.
+The full product and technical specification is maintained with the Project Aham working materials and is not published on this site.
