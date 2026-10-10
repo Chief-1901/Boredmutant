@@ -1,6 +1,6 @@
-# BoredMutant, full site content
+# BoredMutant and Project Aham, full site content
 
-> Automated client document collection for CPA firms and staffing agencies. Escalating reminders send from the firm's own mailbox and stop the moment the document arrives. No client portal, no new software for clients to learn.
+> Project Aham is an early-stage WhatsApp-first network for coordinating local service requests, provider offers, authorization and provider-confirmed bookings. Hyderabad first.
 
 Canonical: https://www.boredmutant.com/
 Booking: https://cal.com/boredmutant/automations
@@ -8,69 +8,39 @@ Booking: https://cal.com/boredmutant/automations
 
 ---
 
-## Document collection for CPA and staffing firms
+## Project Aham
 
 URL: https://www.boredmutant.com/
 
-**Q: Is our client data safe?**
+Introducing Project Aham
 
-A: Attachments never leave your inbox. The system tracks names, email addresses and document titles only. It never opens, stores or moves the files themselves. Everything sends through your own mailbox using your own credentials.
+Real-world services, arranged by agents. Project Aham is a WhatsApp-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses. Talk about Project Aham How the network works Hyderabad first · Built for many service categories · Early development Illustrative request WhatsApp → agents 01 · Requestconsumer Find a car service near Kondapur tomorrow afternoon, under ₹8,000. 02 · Discoverorchestrator Eligible business agents are asked for current availability and a structured offer. 03 · Compareconsumer approval Offers are checked against the consumer's preferences and authorization limits. Provider confirms the booking Outcome sent on WhatsApp Illustrative product flow No live bookings yet The network
 
-**Q: What if the AI writes something wrong to a client?**
+A familiar chat on the surface. Clear rules underneath. People use WhatsApp to describe what they need. Project Aham coordinates the request, business responses, approvals and booking state behind the conversation. 01 · Consumer
 
-A: It can't, because it doesn't write. You approve three fixed templates once, in your firm's voice. The system only decides when to send them and when to stop. No generated text ever reaches a client.
+Describe the job Share the service, area, timing and budget in a WhatsApp conversation. The agent asks for essential missing details. WhatsApp firstConsumer Agent 02 · Orchestrator
 
-**Q: What happens when a client replies with a question?**
+Find eligible providers The network routes structured requests to participating businesses with a matching service and location. Business registryA2A direction 03 · Business
 
-A: That client's chase pauses instantly and the thread goes to your staff, flagged for attention. The system only chases silence, so once a client has actually replied it steps back.
+Return a real offer A business agent checks its configured rules and availability, then responds with scope, price, timing and terms. Business AgentFresh availability 04 · Authorization
 
-**Q: Do our clients need to learn new software?**
+Approve, then confirm Deterministic policy checks decide what is allowed. The provider's confirmed result is recorded before the consumer is told it's booked. Explicit approvalAuditable state ■ Models interpret and communicate AI can clarify a request, summarize offers and draft a response. It cannot authorize spending, invent availability or confirm a booking. ↗ Software enforces rules and records actions Transaction state, user mandates, business policies and provider confirmations govern side effects. For service businesses
 
-A: No. They reply to your email with the file attached, the way they always have. There is no link to click, no upload screen, no account to create and no password to reset. That matters more than it sounds: every extra step between a client and sending you a file is a step some of them will not complete, and the clients slowest to send documents are usually the least comfortable with new software.
+Make your services understandable to authorized agents. A participating business configures its services, availability, pricing rules, booking terms and escalation path. Its agent can answer within those rules and hand uncertain cases to a person. Business setup
 
-**Q: There are document collection tools for $20 a month. Why not use one of those?**
+Start with a conversation Onboarding is designed to collect a structured business profile and service catalog conversationally, with owner review before public activation. Services and areasHours and capacityPricing rulesHuman escalation Supported patterns, planned
 
-A: For a lot of jobs you should. If you need to collect a form from thirty people once, a self-serve tool is cheaper and faster than anything custom, and we would rather you spent twenty dollars than nine hundred. Two things tend to change the answer. The first is where the documents end up: those tools price by storage because clients upload into their platform, which means a third party is holding your clients' bank statements or your candidates' ID. Nothing is stored here, because the file goes straight into your own inbox. The second is who the email appears to come from. A generic tool sends from its own system and asks your client to click a link and upload; this sends from your mailbox and asks them to hit reply. If your list is short and your documents are ordinary, buy the cheap tool. If a partner has to sign off on where client data lives, and the reminder has to look like it came from your firm, that is a different purchase.
+Appointments, quotes and consultations The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered. DiscoverOfferAuthorizeBook or escalate Connecting a business WhatsApp account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat. Where the project stands
 
-**Q: How long until it's running?**
+Building the transaction foundation first. Project Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo. Current foundation and product boundary BuiltLocal deterministic transaction demo and API foundations NextReliable asynchronous workflows and real integrations LaterVerified business onboarding and pilot bookings TodayDemo offers and bookings are mock data, not live transactions Not production-ready: the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work. WhatsApp-firstConsumers and business owners can begin with a familiar messaging channel. Secure integration steps may still need a handoff. Real offers onlyAvailability and terms must come from the provider. Ambiguous or unsupported cases go to a person. Permission before actionUser mandates and business policies are checked in deterministic software before a transaction can proceed. Hyderabad firstThe architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad. A careful first release
 
-A: About a week from the call. Ten minutes of your time to hand over the list, one round of template approval, then two days in dry-run mode where you watch every email it would have sent before any real one goes out.
+A broad foundation, a deliberately limited launch. Designed for the first release
 
-**Q: What if we want to stop?**
+Three reusable transaction patterns Fixed-price appointments, quote-required services, and consultations give the network a controlled starting point. General services, auto repair and home repair may be piloted only after category checks. Not an initial promise
 
-A: Cancel any time, because it's month to month. Your clients were never on a platform and your data never left your systems, so nothing needs migrating. You go back to chasing manually.
+No blanket automation or open-ended commitments Healthcare is limited to administrative appointment handling after privacy and safety review. No diagnosis, medical advice, arbitrary business outreach, customer fund custody or unapproved payment handling.
 
-Accounting & staffing firms
-
-We chase the documents your clients forget. An automated reminder system installed inside your firm's own mailbox. It escalates on your schedule and stops the second the file arrives. Book a 15-minute call See how it works Live in about a week · Two-day dry run first · Month to month Live chase · Meridian Tax & Co Bank statements Day 1 · 9:02 AMfrom your mailbox Hi Sarah, a reminder that we still need your 2025 bank statements to keep your return on track. Reply to this email with the files attached. Day 4 · 9:02 AMfollow-up 2 of 3 Sarah, a quick nudge on those bank statements. The deadline is close and we can't start without them. Day 8 · Final noticeescalation 3 of 3 We're unable to file without your bank statements. Please send them today, or call the office so we can plan around it. bank_statements_2025.pdf · received 4:47 PM Chase stopped Templates approved by you 0 staff minutes spent How it works
-
-Four moving parts. Nothing for your clients to learn. Your clients keep receiving normal email from your firm and replying like they always have. Everything below happens on your side. 01
-
-Your list Send your existing tracker or a plain CSV: client, document, deadline. CSVExcelGoogle Sheet 02 · Engine
-
-Three approved templates Polite, firm, final. Written in your firm's voice and signed off by you once. No generated textYour schedule 03
-
-Your mailbox sends Reminders leave under your name, your address and your signature, not ours. Microsoft 365Google Workspace 04
-
-The client replies What happens next depends on what they send. Two outcomes, both automatic. File detectedQuestion detected ■ Document arrives → chase stops The moment the file lands, that client's sequence shuts itself off. No apology email from a colleague who didn't know it had already arrived. ↗ Question arrives → your staff take over The sequence pauses instantly and the thread lands with a human, flagged. See the full workflow, step by step The schedule
-
-You set the rhythm once. It runs until the file arrives. Default escalation, adjustable per client and per document type Day 1Polite reminder Day 4Firmer follow-up Day 8Final notice StopFile received Every Friday you get one digest email: what arrived this week, what's still outstanding, and who gets chased next. That's the whole reporting burden. Your files never moveThere is no storage tier here, because nothing is stored. Documents arrive in your inbox and stay there. We track names, addresses and document titles. Nothing else. It comes from youEvery reminder sends from your mailbox with your signature and lands in your Sent folder. Clients never see a third party's name. Dry runTwo days where you watch every email it would have sent. Nothing ships until you say so. CommitmentMonth to month, cancel any time. There is no annual contract. Who it's for
-
-Two industries where the chase never ends. Both have the same problem: work that can't start until a client sends something, and staff paid to ask for it repeatedly. CPA and accounting firms
-
-Extension season without the inbox babysitting Every hour a preparer spends writing "just following up" is an hour of billable work that didn't happen. 1099sK-1sBank statementsSigned 8879sPrior-year returns Client document collection for CPA firms Staffing agencies
-
-Start dates that stop slipping Every late piece of onboarding paperwork is a placement that moves and a client asking why. I-9sCertificationsReferencesCompliance docsTimesheets Onboarding document collection for staffing agencies Pricing
-
-One setup fee, one small retainer, agreed before you pay anything. Founding rate · 3 slots per industry
-
-Founding client $990 one-time setup then $250 / month Full document chaser, built against your tracker and your deadlines Three escalation templates in your firm's voice Two-day dry run before a single real email sends Friday digest, every week Unlimited clients and document types In exchange, if it works: a testimonial and one introduction. That's the entire deal.
-
-Standard $1,500+ one-time setup then $300–$400 / month Everything in the founding build Priority support and template changes Quarterly tune-up of escalation timing The rate once the founding slots are gone. They fill in order. Questions
-
-What every firm owner asks first.
-
-Fifteen minutes. Bring your messiest tracker. We'll walk through your real chase list and show you exactly what the system would send, to whom, and when. If it isn't a fit, you leave with a cleaner tracker anyway. Book a 15-minute call Fifteen minutes, no obligation. Pick a time that suits you.
+Help shape a more useful way to book local services. Project Aham is being built around clear offers, explicit permission and reliable provider confirmation. If you're exploring the idea as a service business or integration partner, start a conversation. Talk about Project Aham A BoredMutant project · Hyderabad first · Early development
 
 
 ---
