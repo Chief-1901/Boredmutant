@@ -72,25 +72,22 @@ PAGES = [
     dict(
         out="index.html", body="home.body.html", js="home.js", path="/",
         nav=None, priority="1.0",
-        title="Document collection for CPA and staffing firms | BoredMutant",
-        desc=("Automated client document collection for CPA firms and staffing agencies. Escalating "
-              "reminders from your own mailbox. No client portal to log into."),
-        og_title="Client document collection, without the client portal",
-        og_desc=("Escalating reminders that send from your firm's own mailbox and stop the second the "
-                 "document arrives. For CPA firms and staffing agencies."),
-        graph=[ORG,
-               service("Automated document chasing",
-                       ("An escalating email reminder system installed inside a firm's own mailbox. It "
-                        "tracks which client owes which document, sends firm-approved reminder templates "
-                        "on a set schedule, stops automatically when the document arrives, and hands the "
-                        "thread to staff when a client replies with a question."),
-                       "Accounting firms and staffing agencies") | {
-                   "@id": f"{SITE}/#service",
-                   "offers": {"@type": "Offer", "name": "Founding client build", "price": "990",
-                              "priceCurrency": "USD",
-                              "description": "One-time setup, then $250 per month. Month to month, cancel anytime."}},
+        title="Project Aham | WhatsApp-First Agent Transaction Network",
+        desc=("Project Aham is an early-stage WhatsApp-first network for coordinating local service "
+              "requests, provider offers, authorization and bookings. Hyderabad first."),
+        og_title="Project Aham: real-world services, arranged by agents",
+        og_desc=("A WhatsApp-first service network in development, with clear offers, explicit "
+                 "authorization and provider-confirmed bookings. Hyderabad first."),
+        graph=[ORG | {
+                   "description": ("BoredMutant is building Project Aham, a WhatsApp-first network that "
+                                  "coordinates service requests, provider offers, user authorization and "
+                                  "bookings through centrally managed consumer and business agents."),
+                   "areaServed": {"@type": "City", "name": "Hyderabad"}},
+               {"@type": "WebPage", "url": f"{SITE}/", "name": "Project Aham",
+                "description": "An early-stage WhatsApp-first network for coordinating local service requests, provider offers, authorization and bookings.",
+                "isPartOf": {"@id": f"{SITE}/#website"}},
                {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/", "name": "BoredMutant",
-                "publisher": {"@id": f"{SITE}/#org"}, "inLanguage": "en-US"}],
+                "publisher": {"@id": f"{SITE}/#org"}, "inLanguage": "en-IN"}],
     ),
     dict(
         out="how-it-works.html", body="how.body.html", js="how.js", path="/how-it-works",
@@ -165,7 +162,7 @@ TPL = """<!doctype html>
 <meta property="og:image" content="{site}/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Automated client document collection by BoredMutant" />
+<meta property="og:image:alt" content="BoredMutant website preview" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{og_title}" />
@@ -262,11 +259,10 @@ def llms_full():
     AI crawlers ingest this far more reliably than they parse HTML, and it is
     generated from the same partials as the pages so the two cannot disagree.
     """
-    out = ["# BoredMutant, full site content",
+    out = ["# BoredMutant and Project Aham, full site content",
            "",
-           "> Automated client document collection for CPA firms and staffing agencies. "
-           "Escalating reminders send from the firm's own mailbox and stop the moment the "
-           "document arrives. No client portal, no new software for clients to learn.",
+           "> Project Aham is an early-stage WhatsApp-first network for coordinating local service "
+           "requests, provider offers, authorization and provider-confirmed bookings. Hyderabad first.",
            "",
            f"Canonical: {SITE}/",
            "Booking: https://cal.com/boredmutant/automations",
