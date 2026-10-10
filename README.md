@@ -1,7 +1,8 @@
 # BoredMutant — boredmutant.com
 
-Four-page static marketing site for BoredMutant, an automated document-chasing
-service for accounting firms and staffing agencies.
+Four-page static site for BoredMutant. The homepage introduces Project Aham, an
+early-stage WhatsApp-first agent transaction network. The three secondary pages
+retain the site's earlier document-chasing content and were not revised here.
 
 No framework, no npm, no runtime dependencies. `build.py` assembles each page from
 partials in `src/` and inlines the CSS and JS, so every published page is a single
@@ -26,12 +27,11 @@ Append `.html` when clicking around locally.
 build.py                  the whole build: page list, metadata, JSON-LD, template
 src/
   base.css                every style on the site, inlined into each page
-  header.html             shared header + mobile nav markup (__NAV_*__ tokens
-                          are replaced with aria-current="page" per page)
+  header.html             shared header + mobile nav markup
   footer.html             shared footer
   nav.js                  mobile hamburger menu, inlined into every page
-  home.body.html          ─┐
-  how.body.html            │ page bodies, one per published page
+  home.body.html          ─┐ Project Aham landing page
+  how.body.html            │ legacy document-chasing page bodies
   acc.body.html            │
   stf.body.html           ─┘
   abt.body.html           About page — written but NOT published, see below
