@@ -78,7 +78,8 @@ Verified with no horizontal overflow at 320, 360, 390, 414, 768, 899, 900 and
 
 ## Deploy
 
-Vercel, connected to this repo's `main` branch. There is no build step: `vercel.json`
+Vercel's existing Git integration is connected to this repo's `main` branch, so
+commits to `main` trigger deployment automatically. There is no build step: `vercel.json`
 sets `framework`, `buildCommand`, `installCommand` and `outputDirectory` to `null`,
 so the repo root is served as-is. `.vercelignore` keeps `src/` and `build.py` out of
 the deployment, so build inputs are never publicly served.
