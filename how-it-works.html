@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>How automated document collection works | BoredMutant</title>
-<meta name="description" content="A step-by-step walkthrough of the document collection workflow: the daily pass, the reply branches, the escalation templates and the Friday digest." />
+<title>How Aham works | BoredMutant</title>
+<meta name="description" content="How Aham arranges a booking: describe the need on WhatsApp, the orchestrator finds eligible businesses, business agents return structured offers, you approve, and the provider confirms the booking." />
 
 <link rel="canonical" href="https://www.boredmutant.com/how-it-works" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
@@ -14,16 +14,16 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="BoredMutant" />
 <meta property="og:url" content="https://www.boredmutant.com/how-it-works" />
-<meta property="og:title" content="How automated document collection actually works" />
-<meta property="og:description" content="The whole workflow drawn out: the daily pass, the reply branches, the escalation templates and the Friday digest." />
+<meta property="og:title" content="How Aham works" />
+<meta property="og:description" content="The booking flow step by step: request, discover, compare, approve, and a provider-confirmed booking. Models interpret; deterministic software enforces." />
 <meta property="og:image" content="https://www.boredmutant.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="BoredMutant website preview" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="How automated document collection actually works" />
-<meta name="twitter:description" content="The whole workflow drawn out: the daily pass, the reply branches, the escalation templates and the Friday digest." />
+<meta name="twitter:title" content="How Aham works" />
+<meta name="twitter:description" content="The booking flow step by step: request, discover, compare, approve, and a provider-confirmed booking. Models interpret; deterministic software enforces." />
 <meta name="twitter:image" content="https://www.boredmutant.com/og-image.png" />
 
 <!-- The favicon was previously the 330x47 wordmark. Google requires a square icon and
@@ -62,14 +62,60 @@
     {
       "@type": "WebPage",
       "url": "https://www.boredmutant.com/how-it-works",
-      "name": "How the document chaser works",
-      "description": "A step-by-step walkthrough of the automated document chasing workflow.",
+      "name": "How Aham works",
+      "description": "A step-by-step walkthrough of how Aham coordinates a service booking across consumer and business agents.",
       "isPartOf": {
         "@id": "https://www.boredmutant.com/#website"
       },
       "about": {
-        "@id": "https://www.boredmutant.com/#service"
+        "@id": "https://www.boredmutant.com/#org"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.boredmutant.com/how-it-works#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Aham live yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. Aham is in early development in Hyderabad, and the flows shown on this site are illustrative. If you're a consumer or a service business who wants to shape the pilot, talk to us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do businesses need to install an app or change how they work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Businesses participate through their existing WhatsApp presence plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who handles payment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do, directly with the provider, on terms you approved. Aham coordinates discovery, offers and booking state \u2014 it never holds your money or pays on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the agent book something I didn't approve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Deterministic software checks your preferences and spending mandates before anything can proceed, and a booking is only reported as confirmed after the provider confirms it through their own booking path."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why Hyderabad first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Starting in one city lets us get the transaction patterns right with real businesses before expanding. The architecture is designed to support more categories and geographies after validation."
+          }
+        }
+      ]
     }
   ]
 }
@@ -592,174 +638,172 @@ footer a:hover{text-decoration:underline}
 
 <header class="site">
   <div class="wrap nav">
-    <a class="mark" href="/" aria-label="Project Aham by BoredMutant"><img class="logo" src="/logo-mark.svg" alt="BoredMutant" width="330" height="47" /></a>
+    <a class="mark" href="/" aria-label="Aham by BoredMutant"><img class="logo" src="/logo-mark.svg" alt="BoredMutant" width="330" height="47" /></a>
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav" aria-label="Open menu">
       <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
     <nav class="nav-links" id="sitenav" aria-label="Main">
-      <a href="/#model">How it works</a>
-      <a href="/#businesses">For businesses</a>
-      <a href="/#stage">Project stage</a>
-      <a href="/#scope">Initial scope</a>
-      <a class="btn sm nav-book" href="https://cal.com/boredmutant/automations">Talk about Project Aham</a>
+      <a href="/how-it-works">How it works</a>
+      <a href="/about">About</a>
+      <a class="btn sm nav-book" href="https://cal.com/boredmutant/automations">Talk about Aham</a>
     </nav>
-    <a class="btn sm nav-cta" href="https://cal.com/boredmutant/automations">Talk about Project Aham</a>
+    <a class="btn sm nav-cta" href="https://cal.com/boredmutant/automations">Talk about Aham</a>
   </div>
 </header>
 
 <main id="main">
 <div id="top"></div>
+<!-- ========== HOW IT WORKS HERO ========== -->
 <section class="phero">
   <div class="wrap">
     <p class="crumb mono"><a href="/">Home</a> <span>/</span> How it works</p>
-    <h1>The whole system, drawn out.</h1>
-    <p class="lede">There is no dashboard and no client portal. This is the actual shape of what gets installed: a scheduled workflow that reads your chase list, checks what came back, and sends the next reminder in your own words, or stops.</p>
-    <div class="stats">
-      <div class="stat"><b>~1 week</b><span>From the first call to live, including the dry run</span></div>
-      <div class="stat"><b>3 templates</b><span>Written by you, approved once, never rewritten by the system</span></div>
-      <div class="stat"><b>0 logins</b><span>Nobody has an account to create, staff or client</span></div>
-    </div>
+    <h1>From a WhatsApp message to a confirmed booking.</h1>
+    <p class="lede">Aham coordinates five steps between your request and a provider-confirmed booking. You see a familiar chat; the network enforces the rules underneath.</p>
   </div>
 </section>
 
-<section>
+<!-- ========== THE FIVE STEPS ========== -->
+<section id="steps" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">The daily run</p>
-      <h2>One pass, every weekday morning.</h2>
-      <p class="lede">Each open item is evaluated on its own. Watch it run. The pulse follows a single document from the list to the send.</p>
+      <p class="tag mono">The booking flow</p>
+      <h2>Five steps. One approval that matters: yours.</h2>
     </div>
 
-    <div class="wf" id="wf1">
-      <div class="wf-head">
-        <span class="t"><i aria-hidden="true"></i>Document chaser · daily pass</span>
-        <button class="replay" type="button" data-replay="wf1">▶ Run the flow</button>
+    <div class="flow" id="flow">
+      <div class="node">
+        <span class="n-num">01 · You</span>
+        <h3>Describe the job</h3>
+        <p>Tell Aham what you need on WhatsApp — the service, area, timing and budget. Your consumer agent asks for anything essential that's missing.</p>
+        <div class="chips"><span>WhatsApp</span><span>Consumer agent</span></div>
       </div>
+      <div class="conn c1" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
 
-      <div class="lane">
-        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Schedule trigger</b><span>Every weekday at 09:00 in your firm's timezone. <code>Mon–Fri</code></span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-
-        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Read the chase list</b><span>Pulls every open item: client, document, deadline, current stage, date last contacted.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-
-        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Filter: what is actually due?</b><span>Skips anything already received, paused by your staff, or not yet at its next step.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-
-        <div class="wfn"><span class="ico" aria-hidden="true">03</span><span class="tx"><b>Check the thread</b><span>Reads inbound mail on each open thread since the last run. Subject, sender, whether a file is attached, though never the contents of the file.</span></span></div>
-        <div class="fork-in" aria-hidden="true"></div>
+      <div class="node engine">
+        <span class="n-num">02 · Orchestrator</span>
+        <h3>Find eligible businesses</h3>
+        <p>The orchestrator routes a structured request to participating businesses with a matching service and location — no broadcast spam, no cold calls.</p>
+        <div class="chips"><span>Business registry</span><span>Structured request</span></div>
       </div>
+      <div class="conn c2" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
 
-      <div class="fork">
-        <div class="arm a-ok">
-          <span class="cond">Attachment arrived</span>
-          <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Stop the sequence</b><span>Item marked received. No further mail on it, ever. Goes into Friday's digest as complete.</span></span></div>
+      <div class="node">
+        <span class="n-num">03 · Businesses</span>
+        <h3>Return real offers</h3>
+        <p>Each business agent checks its configured rules and live availability, then responds with scope, price, timing and terms. Nothing is invented.</p>
+        <div class="chips"><span>Business agent</span><span>Live availability</span></div>
+      </div>
+      <div class="conn c3" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
+
+      <div class="node">
+        <span class="n-num">04 · You</span>
+        <h3>Compare and approve</h3>
+        <p>Offers arrive side by side in chat. You compare and approve one — deterministic checks run against your preferences and spending mandates first.</p>
+        <div class="chips"><span>Explicit approval</span><span>Your mandate</span></div>
+      </div>
+      <div class="conn c1" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
+
+      <div class="node engine">
+        <span class="n-num">05 · Provider</span>
+        <h3>Booking confirmed</h3>
+        <p>The provider confirms through their own authoritative booking path. Only then is the booking recorded and reported to you as confirmed.</p>
+        <div class="chips"><span>Provider-confirmed</span><span>Recorded</span></div>
+      </div>
+    </div>
+
+    <div class="branch" id="branch">
+      <div class="out stop">
+        <span class="ic" aria-hidden="true">■</span>
+        <div>
+          <b>Models interpret and communicate</b>
+          <p>AI clarifies requests, summarizes offers and drafts messages. It cannot authorize spending, invent availability, or confirm a booking.</p>
         </div>
-        <div class="arm">
-          <span class="cond">Silence</span>
-          <div class="wfn"><span class="ico" aria-hidden="true">→</span><span class="tx"><b>Advance a stage</b><span>Move the item to the next escalation step and continue below.</span></span></div>
-        </div>
-        <div class="arm a-warn">
-          <span class="cond">Reply, but no file</span>
-          <div class="wfn"><span class="ico" aria-hidden="true">!</span><span class="tx"><b>Pause and hand to staff</b><span>Thread flagged in your inbox for a human. The system sends nothing further on that item until someone resumes it.</span></span></div>
+      </div>
+      <div class="out hand">
+        <span class="ic" aria-hidden="true">↗</span>
+        <div>
+          <b>Software enforces rules and records actions</b>
+          <p>Transaction state, your mandates, business policies and provider confirmations govern every side effect — in deterministic code, not in a model's judgment.</p>
         </div>
       </div>
-
-      <div class="lane">
-        <div class="wire" aria-hidden="true"><i></i></div>
-        <div class="wfn"><span class="ico" aria-hidden="true">04</span><span class="tx"><b>Select the approved template</b><span>Stage 1 polite, stage 2 firm, stage 3 final. Your wording, merged with the client name, document and deadline.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-
-        <div class="wfn"><span class="ico" aria-hidden="true">05</span><span class="tx"><b>Send from your mailbox</b><span>Authenticated as your firm. Your address, your signature, and it lands in your own Sent folder like any other email.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-
-        <div class="wfn"><span class="ico" aria-hidden="true">06</span><span class="tx"><b>Write back to the log</b><span>Records the stage, timestamp and message id, then sets when this item is next due.</span></span></div>
-      </div>
-
-      <p class="loop">↺ Repeats the next weekday until the document arrives, a human steps in, or you stop it</p>
-      <p class="wf-note">Every item is handled independently. One client going quiet has no effect on anyone else's sequence.</p>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<!-- ========== TRANSACTION PATTERNS ========== -->
+<section id="patterns" style="padding-top:0">
   <div class="wrap">
     <div class="head">
-      <p class="tag mono">The weekly run</p>
-      <h2>One email on Friday, and that's the reporting.</h2>
-    </div>
-
-    <div class="wf" id="wf2">
-      <div class="wf-head">
-        <span class="t"><i aria-hidden="true"></i>Friday digest</span>
-        <button class="replay" type="button" data-replay="wf2">▶ Run the flow</button>
-      </div>
-      <div class="lane">
-        <div class="wfn t-trig"><span class="ico" aria-hidden="true">◷</span><span class="tx"><b>Weekly trigger</b><span>Friday, late afternoon. <code>Fri 16:00</code></span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-        <div class="wfn"><span class="ico" aria-hidden="true">01</span><span class="tx"><b>Aggregate the week</b><span>Received, still outstanding, paused for a human, and what is due next week.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-        <div class="wfn"><span class="ico" aria-hidden="true">02</span><span class="tx"><b>Compose the digest</b><span>Four short lists, in the body of one email.</span></span></div>
-        <div class="wire" aria-hidden="true"><i></i></div>
-        <div class="wfn t-ok"><span class="ico" aria-hidden="true">✓</span><span class="tx"><b>Send to whoever should see it</b><span>Partner, office manager, or both. Proof of work, every week, without asking anyone for a status update.</span></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="trust">
-  <div class="wrap grid">
-    <div class="item"><b>Never writes</b><p>Every word a client reads was written and approved by your firm. The system chooses timing, not language.</p></div>
-    <div class="item"><b>Files stay closed</b><p>It detects that an attachment exists. It does not open, download, store or forward it.</p></div>
-    <div class="item"><b>Never over-sends</b><p>Once a document is received, that sequence is finished. There is no fourth email.</p></div>
-    <div class="item"><b>Only your list</b><p>It only contacts people on the list you handed over, about documents you listed.</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head">
-      <p class="tag mono">What's actually built</p>
-      <h2>The diagram is the part that takes an afternoon.</h2>
-      <p class="lede">Workflow engines are a commodity, and the shape above is not where the work is. These are the parts that take a week and are specific to your firm.</p>
+      <p class="tag mono">What you can book</p>
+      <h2>Three transaction patterns to start.</h2>
+      <p class="lede">Aham launches with a deliberately limited set of booking patterns. Each one has its own readiness checks before it is offered.</p>
     </div>
     <div class="two">
       <div class="card">
-        <span class="k">Mailbox layer</span>
-        <h3>Sending as you, safely</h3>
-        <p>Authenticating against your Microsoft 365 or Google Workspace tenant with least-privilege access, threading replies correctly so conversations don't fragment, and making sure everything lands in your Sent folder rather than arriving from a stranger.</p>
+        <span class="k">Pattern 01</span>
+        <h3>Fixed-price appointments</h3>
+        <p>Services with a published price and a calendar: salons, clinics, classes. Pick a slot, approve the price, get a confirmed booking.</p>
       </div>
       <div class="card">
-        <span class="k">Reply handling</span>
-        <h3>Telling a document from a question</h3>
-        <p>An out-of-office is not a reply, and "sending tomorrow" is not a document. Getting this boundary right is what keeps the system from either nagging someone who already answered or going quiet on someone who didn't.</p>
-      </div>
-      <div class="card">
-        <span class="k">State</span>
-        <h3>Knowing where every item stands</h3>
-        <p>One record per client per document: stage, last contact, next due date, who paused it and why. This is what makes the Friday digest possible and what stops two staff members chasing the same person.</p>
-      </div>
-      <div class="card">
-        <span class="k">Your wording</span>
-        <h3>Three templates that sound like your firm</h3>
-        <p>Drafted with you, not for you. Firms that chase gently and firms that chase hard both work, but the escalation has to match how you actually speak to clients, or your staff will quietly turn it off.</p>
+        <span class="k">Pattern 02</span>
+        <h3>Quote-required services</h3>
+        <p>Repairs, renovations, custom work. Businesses return structured quotes with scope, price, timing and expiry — you compare and approve one.</p>
       </div>
     </div>
-
-    <div class="callout">
-      <b>Before anything real sends</b>
-      <p>Every new firm runs two full days in dry-run mode. The workflow executes exactly as above, but instead of sending, it writes each message it <em>would</em> have sent into a file for you to read. Nobody receives anything until you have looked at that file and said go.</p>
+    <div class="two" style="margin-top:24px">
+      <div class="card">
+        <span class="k">Pattern 03</span>
+        <h3>Consultations</h3>
+        <p>Advice-first services: legal, financial, technical. Book time with a professional on stated terms, confirmed by the provider.</p>
+      </div>
+      <div class="card">
+        <span class="k">Not in scope</span>
+        <h3>What Aham won't do</h3>
+        <p>No holding your money, no payments on your behalf, no diagnosis or medical advice, no outreach to businesses that haven't joined the network.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ========== FAQ ========== -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag mono">Questions</p>
+      <h2>Asked often.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is Aham live yet?</summary>
+        <p class="ans">Not yet. Aham is in early development in Hyderabad, and the flows shown on this site are illustrative. If you're a consumer or a service business who wants to shape the pilot, talk to us.</p>
+      </details>
+      <details>
+        <summary>Do businesses need to install an app or change how they work?</summary>
+        <p class="ans">No. Businesses participate through their existing WhatsApp presence plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation.</p>
+      </details>
+      <details>
+        <summary>Who handles payment?</summary>
+        <p class="ans">You do, directly with the provider, on terms you approved. Aham coordinates discovery, offers and booking state — it never holds your money or pays on your behalf.</p>
+      </details>
+      <details>
+        <summary>Can the agent book something I didn't approve?</summary>
+        <p class="ans">No. Deterministic software checks your preferences and spending mandates before anything can proceed, and a booking is only reported as confirmed after the provider confirms it through their own booking path.</p>
+      </details>
+      <details>
+        <summary>Why Hyderabad first?</summary>
+        <p class="ans">Starting in one city lets us get the transaction patterns right with real businesses before expanding. The architecture is designed to support more categories and geographies after validation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
 <section class="final">
   <div class="wrap">
-    <h2>See it run against your own chase list.</h2>
-    <p class="lede">Send your tracker over before the call and I'll have your real clients mapped onto the flow above by the time we talk.</p>
-    <a class="btn lg" href="https://cal.com/boredmutant/automations">Book a 15-minute call</a>
-    <p class="alt">Fifteen minutes, no obligation. <a href="https://cal.com/boredmutant/automations">Pick a time that suits you</a>.</p>
-    <p class="alt">See what this collects for <a href="/document-chasing-for-accounting-firms">CPA and accounting firms</a> or for <a href="/document-chasing-for-staffing-agencies">staffing agencies</a>.</p>
+    <h2>See a booking arranged the careful way.</h2>
+    <p class="lede">Clear offers, explicit approval, provider-confirmed bookings — starting in Hyderabad.</p>
+    <a class="btn lg" href="https://cal.com/boredmutant/automations">Talk about Aham</a>
+    <p class="alt">A BoredMutant project · Hyderabad first · Early development</p>
   </div>
 </section>
 </main>
@@ -768,12 +812,12 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <img class="foot-logo" src="/logo-mark.svg" alt="BoredMutant" width="330" height="47" />
     <div class="foot">
-      <span>Project Aham is a BoredMutant project. Hyderabad first, in early development.</span>
+      <span>Aham is a BoredMutant project. Hyderabad first, in early development.</span>
       <span>
-        <a href="/#model">How it works</a> &nbsp;·&nbsp;
-        <a href="/#businesses">For businesses</a> &nbsp;·&nbsp;
-        <a href="/#stage">Project stage</a> &nbsp;·&nbsp;
-        <a href="https://cal.com/boredmutant/automations">Talk about Project Aham</a>
+        <a href="/">Home</a> &nbsp;·&nbsp;
+        <a href="/how-it-works">How it works</a> &nbsp;·&nbsp;
+        <a href="/about">About</a> &nbsp;·&nbsp;
+        <a href="mailto:pranith@boredmutant.com">pranith@boredmutant.com</a>
       </span>
     </div>
   </div>
@@ -826,69 +870,32 @@ footer a:hover{text-decoration:underline}
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function nodesOf(wf) {
-    // document order = execution order; the fork's three arms light together
-    return Array.prototype.slice.call(wf.querySelectorAll('.wfn'));
-  }
-
-  function play(wf) {
-    var nodes = nodesOf(wf);
-    if (reduced) { nodes.forEach(function (n) { n.classList.add('lit'); }); return; }
-    if (wf.dataset.busy === '1') return;
-    wf.dataset.busy = '1';
-    nodes.forEach(function (n) { n.classList.remove('lit'); });
-    wf.classList.remove('running');
-    void wf.offsetWidth;            // restart the wire animations
-    wf.classList.add('running');
-
-    var step = 620;
-    nodes.forEach(function (n, i) {
-      setTimeout(function () { n.classList.add('lit'); }, 220 + i * step);
-    });
-    setTimeout(function () {
-      wf.classList.remove('running');
-      wf.dataset.busy = '0';
-    }, 400 + nodes.length * step);
-  }
-
   function init() {
-    var canvases = document.querySelectorAll('.wf');
-    if (!canvases.length) return;
-
-    Array.prototype.forEach.call(document.querySelectorAll('[data-replay]'), function (b) {
-      b.addEventListener('click', function () {
-        var wf = document.getElementById(b.getAttribute('data-replay'));
-        if (wf) play(wf);
-      });
-    });
+    var targets = document.querySelectorAll('.card, .datecard, .pstep, .price, .out, .node');
+    var tl = document.getElementById('tl');
 
     if (reduced || !('IntersectionObserver' in window)) {
-      Array.prototype.forEach.call(canvases, function (wf) {
-        nodesOf(wf).forEach(function (n) { n.classList.add('lit'); });
-      });
+      Array.prototype.forEach.call(targets, function (el) { el.classList.add('on'); });
+      if (tl) tl.classList.add('on');
       return;
     }
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
-        io.unobserve(e.target);
-        play(e.target);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -12% 0px' });
-
-    Array.prototype.forEach.call(canvases, function (wf) { io.observe(wf); });
-
-    // generic reveals shared with the rest of the site
-    var rev = document.querySelectorAll('.card, .out, .price');
-    var io2 = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        io2.unobserve(e.target);
-        e.target.classList.add('on');
+        var el = e.target;
+        io.unobserve(el);
+        if (el.id === 'tl') { el.classList.add('on'); return; }
+        var group = Array.prototype.filter.call(el.parentNode.children, function (c) {
+          return c.classList.contains(el.classList[0]);
+        });
+        var i = group.indexOf(el);
+        setTimeout(function () { el.classList.add('on'); }, Math.max(0, i) * 85);
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    Array.prototype.forEach.call(rev, function (el) { io2.observe(el); });
+
+    Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+    if (tl) io.observe(tl);
   }
 
   if ('requestIdleCallback' in window) requestIdleCallback(init, { timeout: 1200 });
