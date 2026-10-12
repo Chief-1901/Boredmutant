@@ -258,6 +258,12 @@ section{padding:64px 0}
 /* ---------- flow diagram ---------- */
 .flow{display:grid;gap:0;align-items:stretch}
 @media(min-width:960px){.flow{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr}}
+/* Five-step variant (How it works page): 5 nodes + 4 connectors = 9 tracks.
+   Without this, the 5th node wraps into a 34px connector column and renders
+   as a crushed vertical strip. */
+@media(min-width:960px){.flow.five{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr}}
+@media(min-width:960px){.flow.five .node{padding:16px 14px 18px}}
+@media(min-width:960px){.flow.five .node p{font-size:.84rem}}
 .node{
   border:1px solid var(--line);background:#fff;border-radius:12px;padding:18px 18px 20px;
   position:relative;opacity:0;transform:translateY(14px);
