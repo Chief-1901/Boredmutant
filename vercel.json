@@ -14,6 +14,16 @@
       "has": [{ "type": "host", "value": "boredmutant.com" }],
       "destination": "https://www.boredmutant.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/document-chasing-for-accounting-firms",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/document-chasing-for-staffing-agencies",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [

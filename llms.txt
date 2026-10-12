@@ -1,6 +1,6 @@
-# Project Aham by BoredMutant
+# Aham by BoredMutant
 
-> Project Aham is an early-stage, WhatsApp-first service transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> Aham is an early-stage, WhatsApp-first service transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
 
 Canonical URL: https://www.boredmutant.com/
 Project: https://github.com/Chief-1901/Boredmutant
@@ -38,4 +38,4 @@ Healthcare is limited to administrative appointment handling only after privacy,
 
 - [Repository README](https://github.com/Chief-1901/Boredmutant/blob/main/README.md)
 
-The full product and technical specification is maintained with the Project Aham working materials and is not published on this site.
+The full product and technical specification is maintained with the Aham working materials and is not published on this site.

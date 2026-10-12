@@ -1,8 +1,8 @@
 # BoredMutant — boredmutant.com
 
-Four-page static site for BoredMutant. The homepage introduces Project Aham, an
-early-stage WhatsApp-first agent transaction network. The three secondary pages
-retain the site's earlier document-chasing content and were not revised here.
+Three-page static site for BoredMutant, the technology company registered in
+India building Aham — an early-stage WhatsApp-first agent transaction network
+for local services, starting in Hyderabad. Pages: home, how-it-works, about.
 
 No framework, no npm, no runtime dependencies. `build.py` assembles each page from
 partials in `src/` and inlines the CSS and JS, so every published page is a single
@@ -11,7 +11,7 @@ self-contained HTML file.
 ## Quick start
 
 ```bash
-python build.py                     # rebuild the four pages + sitemap.xml
+python build.py                     # rebuild the three pages + sitemap.xml
 python -m http.server 4599          # preview on http://localhost:4599
 ```
 
@@ -30,17 +30,15 @@ src/
   header.html             shared header + mobile nav markup
   footer.html             shared footer
   nav.js                  mobile hamburger menu, inlined into every page
-  home.body.html          ─┐ Project Aham landing page
-  how.body.html            │ legacy document-chasing page bodies
-  acc.body.html            │
-  stf.body.html           ─┘
-  abt.body.html           About page — written but NOT published, see below
-  home.js / how.js        page-specific scroll-reveal and demo scripts
-  page.js                 the lighter script used by the two industry pages
+  home.body.html          Aham landing page
+  how.body.html           how-it-works page: the five-step booking flow
+  abt.body.html           about page: the company, the stage, contact
+  home.js                 page-specific scroll-reveal and demo scripts
+  page.js                 the lighter script used by the secondary pages
 
 index.html                ─┐
 how-it-works.html          │ build output — generated, do not hand-edit
-document-chasing-for-…     │
+about.html                ─┘
 sitemap.xml               ─┘
 
 logo-mark.svg, logo.svg, logo.png, og-image.png
@@ -57,13 +55,6 @@ the source and the regenerated HTML.
 Everything lives in the `PAGES` list in `build.py`: output filename, body partial,
 JS partial, URL path, nav token, title, meta description, Open Graph copy, and the
 schema.org graph. Add an entry, add the body partial, run the build.
-
-### The About page
-
-`src/abt.body.html` is written but deliberately unpublished — it is not in `PAGES`,
-not in the nav, not in the footer, and not in `sitemap.xml`. To publish it, restore
-its `PAGES` entry, add the nav link in `src/header.html`, the footer link in
-`src/footer.html`, and `"ABT"` to the nav-token loop in `render()`.
 
 ## Mobile
 
@@ -89,11 +80,10 @@ redirect, and the security headers.
 
 ## Booking and contact
 
-The only contact route is the booking link, `https://cal.com/boredmutant/automations`.
-There is deliberately no email address anywhere on the site: no inbox is monitored,
-so publishing one would collect mail nobody reads. The link appears in the page
-bodies, `src/header.html`, `src/footer.html`, `llms.txt` and the JSON-LD
-`contactPoint` in `build.py`. If it changes, grep for it — there is no single
+Contact routes: the booking link `https://cal.com/boredmutant/automations` and the
+work email `pranith@boredmutant.com` (footer and About page). The link appears in
+the page bodies, `src/header.html`, `src/footer.html`, `llms.txt` and the JSON-LD
+`contactPoint` in `build.py`. If either changes, grep for it — there is no single
 config constant.
 
 ## LLM-friendly notes

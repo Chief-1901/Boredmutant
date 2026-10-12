@@ -2,8 +2,7 @@
 """Assemble the BoredMutant static site from src/ into self-contained HTML pages.
 
 Run:  python3 build.py
-Output: index.html, how-it-works.html, document-chasing-for-accounting-firms.html,
-        document-chasing-for-staffing-agencies.html, sitemap.xml
+Output: index.html, how-it-works.html, about.html, sitemap.xml, llms-full.txt
 """
 import html as html_mod
 import json, pathlib, re
@@ -11,7 +10,7 @@ import json, pathlib, re
 SRC = pathlib.Path("src")
 OUT = pathlib.Path(".")
 SITE = "https://www.boredmutant.com"
-TODAY = "2026-08-01"
+TODAY = "2026-10-12"
 
 CSS = (SRC / "base.css").read_text(encoding="utf-8")
 HEADER = (SRC / "header.html").read_text(encoding="utf-8")
@@ -27,13 +26,13 @@ ORG = {
     "logo": f"{SITE}/logo.png",
     "image": f"{SITE}/og-image.png",
     "foundingDate": "2025",
-    "description": ("BoredMutant builds automated client document collection systems for CPA firms, "
-                    "accounting firms and staffing agencies. Escalating email reminders sent from the "
-                    "firm's own mailbox that stop the moment a document arrives, with no client "
-                    "portal."),
-    "areaServed": {"@type": "Country", "name": "United States"},
-    # Booking URL rather than an email address: there is no monitored inbox, and
-    # publishing a dead one in schema invites mail that nobody will ever read.
+    "description": ("BoredMutant is a technology company registered in India, building Aham — "
+                    "a WhatsApp-first agent transaction network that helps consumers discover "
+                    "local services, compare structured offers from businesses, and book "
+                    "appointments with explicit approval. Starting in Hyderabad."),
+    "areaServed": {"@type": "Country", "name": "India"},
+    # Booking URL rather than an email address in schema: the contact email lives on the
+    # About page; schema keeps the bookable action.
     "contactPoint": {"@type": "ContactPoint", "contactType": "sales",
                      "url": "https://cal.com/boredmutant/automations",
                      "availableLanguage": "English"},
@@ -61,84 +60,61 @@ def faq_schema(body, canonical):
                             "acceptedAnswer": {"@type": "Answer", "text": _plain(a)}}
                            for q, a in pairs]}
 
-def service(name, desc, audience):
-    return {"@type": "Service", "name": name, "serviceType": "Business process automation",
-            "provider": {"@id": f"{SITE}/#org"},
-            "areaServed": {"@type": "Country", "name": "United States"},
-            "audience": {"@type": "BusinessAudience", "name": audience},
-            "description": desc}
-
 PAGES = [
     dict(
         out="index.html", body="home.body.html", js="home.js", path="/",
         nav=None, priority="1.0",
-        title="Project Aham | WhatsApp-First Agent Transaction Network",
-        desc=("Project Aham is an early-stage WhatsApp-first network for coordinating local service "
-              "requests, provider offers, authorization and bookings. Hyderabad first."),
-        og_title="Project Aham: real-world services, arranged by agents",
-        og_desc=("A WhatsApp-first service network in development, with clear offers, explicit "
-                 "authorization and provider-confirmed bookings. Hyderabad first."),
+        title="Aham | WhatsApp-First Agent Transaction Network",
+        desc=("Aham is an early-stage WhatsApp-first agent transaction network by BoredMutant: "
+              "describe what you need in chat, compare structured offers from local businesses, "
+              "approve, and book. Hyderabad first."),
+        og_title="Aham: real-world services, arranged by agents",
+        og_desc=("A WhatsApp-first agent transaction network in development, with clear offers, "
+                 "explicit authorization and provider-confirmed bookings. Hyderabad first."),
         graph=[ORG | {
-                   "description": ("BoredMutant is building Project Aham, a WhatsApp-first network that "
-                                  "coordinates service requests, provider offers, user authorization and "
-                                  "bookings through centrally managed consumer and business agents."),
-                   "areaServed": {"@type": "City", "name": "Hyderabad"}},
-               {"@type": "WebPage", "url": f"{SITE}/", "name": "Project Aham",
-                "description": "An early-stage WhatsApp-first network for coordinating local service requests, provider offers, authorization and bookings.",
+                   "description": ("BoredMutant is building Aham, a WhatsApp-first agent transaction "
+                                  "network that helps consumers discover local services, compare "
+                                  "structured business offers, and book appointments with explicit "
+                                  "approval."),
+                   "areaServed": [{"@type": "Country", "name": "India"},
+                                  {"@type": "City", "name": "Hyderabad"}]},
+               {"@type": "WebPage", "url": f"{SITE}/", "name": "Aham",
+                "description": "An early-stage WhatsApp-first agent transaction network for discovering local services, comparing structured offers, and booking with explicit approval.",
                 "isPartOf": {"@id": f"{SITE}/#website"}},
                {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/", "name": "BoredMutant",
                 "publisher": {"@id": f"{SITE}/#org"}, "inLanguage": "en-IN"}],
     ),
     dict(
-        out="how-it-works.html", body="how.body.html", js="how.js", path="/how-it-works",
+        out="how-it-works.html", body="how.body.html", js="page.js", path="/how-it-works",
         nav="HOW", priority="0.9",
-        title="How automated document collection works | BoredMutant",
-        desc=("A step-by-step walkthrough of the document collection workflow: the daily pass, the "
-              "reply branches, the escalation templates and the Friday digest."),
-        og_title="How automated document collection actually works",
-        og_desc=("The whole workflow drawn out: the daily pass, the reply branches, the escalation "
-                 "templates and the Friday digest."),
+        title="How Aham works | BoredMutant",
+        desc=("How Aham arranges a booking: describe the need on WhatsApp, the orchestrator finds "
+              "eligible businesses, business agents return structured offers, you approve, and the "
+              "provider confirms the booking."),
+        og_title="How Aham works",
+        og_desc=("The booking flow step by step: request, discover, compare, approve, and a "
+                 "provider-confirmed booking. Models interpret; deterministic software enforces."),
         graph=[crumbs([("Home", "/"), ("How it works", "/how-it-works")]),
                {"@type": "WebPage", "url": f"{SITE}/how-it-works",
-                "name": "How the document chaser works",
-                "description": "A step-by-step walkthrough of the automated document chasing workflow.",
-                "isPartOf": {"@id": f"{SITE}/#website"}, "about": {"@id": f"{SITE}/#service"}}],
+                "name": "How Aham works",
+                "description": "A step-by-step walkthrough of how Aham coordinates a service booking across consumer and business agents.",
+                "isPartOf": {"@id": f"{SITE}/#website"}, "about": {"@id": f"{SITE}/#org"}}],
     ),
     dict(
-        out="document-chasing-for-accounting-firms.html", body="acc.body.html", js="page.js",
-        path="/document-chasing-for-accounting-firms", nav="ACC", priority="0.9",
-        title="Client document collection for CPA firms | BoredMutant",
-        desc=("Tax document collection for CPA firms and preparers: 1099s, K-1s, bank statements and "
-              "signed 8879s, chased from your own mailbox."),
-        og_title="Client document collection for CPA firms",
-        og_desc=("Stop paying preparers to write 'just following up'. Automated collection of 1099s, "
-                 "K-1s, bank statements and signed 8879s, all from your own mailbox."),
-        graph=[crumbs([("Home", "/"), ("Accounting firms", "/document-chasing-for-accounting-firms")]),
-               service("Document chasing for accounting firms",
-                       ("Automated escalating email reminders for the source documents and signatures that "
-                        "block tax preparation and filing: 1099s, K-1s, bank statements, prior-year "
-                        "returns, signed 8879s and engagement letters, sent from the firm's own mailbox."),
-                       "Accounting firms and tax preparers")],
+        out="about.html", body="abt.body.html", js="page.js", path="/about",
+        nav="ABT", priority="0.8",
+        title="About BoredMutant | Building Aham",
+        desc=("BoredMutant is a technology company registered in India, building Aham — a "
+              "WhatsApp-first agent transaction network for local services, starting in Hyderabad."),
+        og_title="About BoredMutant",
+        og_desc=("A technology company registered in India, building Aham: a WhatsApp-first agent "
+                 "transaction network for local services."),
+        graph=[crumbs([("Home", "/"), ("About", "/about")]),
+               {"@type": "WebPage", "url": f"{SITE}/about",
+                "name": "About BoredMutant",
+                "description": "BoredMutant is a technology company registered in India, building the Aham agent transaction network.",
+                "isPartOf": {"@id": f"{SITE}/#website"}, "about": {"@id": f"{SITE}/#org"}}],
     ),
-    dict(
-        out="document-chasing-for-staffing-agencies.html", body="stf.body.html", js="page.js",
-        path="/document-chasing-for-staffing-agencies", nav="STF", priority="0.9",
-        title="Document collection for staffing agencies | BoredMutant",
-        desc=("Onboarding paperwork and I-9 collection for staffing agencies. Certifications, "
-              "references and timesheets chased from your own mailbox."),
-        og_title="Onboarding document collection for staffing agencies",
-        og_desc=("I-9s, certifications, references and timesheets chased automatically from your own "
-                 "mailbox, so start dates stop slipping."),
-        graph=[crumbs([("Home", "/"), ("Staffing agencies", "/document-chasing-for-staffing-agencies")]),
-               service("Document chasing for staffing agencies",
-                       ("Automated escalating email reminders for onboarding and compliance paperwork: "
-                        "I-9s, certifications, licenses, references, background check consent and weekly "
-                        "timesheets, sent from the agency's own mailbox."),
-                       "Staffing and recruitment agencies")],
-    ),
-    # NOTE: the About page is built but currently unpublished. See src/abt.body.html.
-    # To bring it back, restore this entry, the nav link in src/header.html, the footer
-    # link in src/footer.html, and "ABT" in the nav-token loop below.
 ]
 
 TPL = """<!doctype html>
@@ -223,7 +199,7 @@ TPL = """<!doctype html>
 
 def render(p):
     header = HEADER
-    for key, token in (("HOW", "__NAV_HOW__"), ("ACC", "__NAV_ACC__"), ("STF", "__NAV_STF__")):
+    for key, token in (("HOW", "__NAV_HOW__"), ("ABT", "__NAV_ABT__")):
         header = header.replace(token, ' aria-current="page"' if p["nav"] == key else "")
     canonical = SITE + "/" if p["path"] == "/" else SITE + p["path"]
     body = (SRC / p["body"]).read_text(encoding="utf-8").strip()
@@ -259,10 +235,12 @@ def llms_full():
     AI crawlers ingest this far more reliably than they parse HTML, and it is
     generated from the same partials as the pages so the two cannot disagree.
     """
-    out = ["# BoredMutant and Project Aham, full site content",
+    out = ["# BoredMutant and Aham, full site content",
            "",
-           "> Project Aham is an early-stage WhatsApp-first network for coordinating local service "
-           "requests, provider offers, authorization and provider-confirmed bookings. Hyderabad first.",
+           "> Aham is an early-stage WhatsApp-first agent transaction network being built by "
+           "BoredMutant. It is intended to connect consumer requests with participating businesses "
+           "whose agents can return structured offers and coordinate bookings. The initial "
+           "operational focus is Hyderabad, India.",
            "",
            f"Canonical: {SITE}/",
            "Booking: https://cal.com/boredmutant/automations",
