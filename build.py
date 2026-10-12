@@ -27,9 +27,11 @@ ORG = {
     "image": f"{SITE}/og-image.png",
     "foundingDate": "2025",
     "description": ("BoredMutant is a technology company registered in India, building Aham — "
-                    "a WhatsApp-first agent transaction network that helps consumers discover "
-                    "local services, compare structured offers from businesses, and book "
-                    "appointments with explicit approval. Starting in Hyderabad."),
+                    "a chat-first agent transaction network that meets consumers in the messaging "
+                    "apps they already use \u2014 starting with WhatsApp, with Telegram and others "
+                    "to follow \u2014 and helps them discover local services, compare structured "
+                    "offers from businesses, and book appointments with explicit approval. "
+                    "Starting in Hyderabad."),
     "areaServed": {"@type": "Country", "name": "India"},
     # Booking URL rather than an email address in schema: the contact email lives on the
     # About page; schema keeps the bookable action.
@@ -64,22 +66,25 @@ PAGES = [
     dict(
         out="index.html", body="home.body.html", js="home.js", path="/",
         nav=None, priority="1.0",
-        title="Aham | WhatsApp-First Agent Transaction Network",
-        desc=("Aham is an early-stage WhatsApp-first agent transaction network by BoredMutant: "
-              "describe what you need in chat, compare structured offers from local businesses, "
-              "approve, and book. Hyderabad first."),
+        title="Aham | Chat-First Agent Transaction Network",
+        desc=("Aham is an early-stage chat-first agent transaction network by BoredMutant: "
+              "describe what you need in your messaging app, compare structured offers from local "
+              "businesses, approve, and book. Starting with WhatsApp; Telegram and others to follow. "
+              "Hyderabad first."),
         og_title="Aham: real-world services, arranged by agents",
-        og_desc=("A WhatsApp-first agent transaction network in development, with clear offers, "
-                 "explicit authorization and provider-confirmed bookings. Hyderabad first."),
+        og_desc=("A chat-first agent transaction network in development, with clear offers, "
+                 "explicit authorization and provider-confirmed bookings. Starting with WhatsApp. "
+                 "Hyderabad first."),
         graph=[ORG | {
-                   "description": ("BoredMutant is building Aham, a WhatsApp-first agent transaction "
-                                  "network that helps consumers discover local services, compare "
-                                  "structured business offers, and book appointments with explicit "
-                                  "approval."),
+                   "description": ("BoredMutant is building Aham, a chat-first agent transaction "
+                                  "network \u2014 starting with WhatsApp, with Telegram and others "
+                                  "to follow \u2014 that helps consumers discover local services, "
+                                  "compare structured business offers, and book appointments with "
+                                  "explicit approval."),
                    "areaServed": [{"@type": "Country", "name": "India"},
                                   {"@type": "City", "name": "Hyderabad"}]},
                {"@type": "WebPage", "url": f"{SITE}/", "name": "Aham",
-                "description": "An early-stage WhatsApp-first agent transaction network for discovering local services, comparing structured offers, and booking with explicit approval.",
+                "description": "An early-stage chat-first agent transaction network \u2014 starting with WhatsApp \u2014 for discovering local services, comparing structured offers, and booking with explicit approval.",
                 "isPartOf": {"@id": f"{SITE}/#website"}},
                {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/", "name": "BoredMutant",
                 "publisher": {"@id": f"{SITE}/#org"}, "inLanguage": "en-IN"}],
@@ -88,7 +93,7 @@ PAGES = [
         out="how-it-works.html", body="how.body.html", js="page.js", path="/how-it-works",
         nav="HOW", priority="0.9",
         title="How Aham works | BoredMutant",
-        desc=("How Aham arranges a booking: describe the need on WhatsApp, the orchestrator finds "
+        desc=("How Aham arranges a booking: describe the need in chat, the orchestrator finds "
               "eligible businesses, business agents return structured offers, you approve, and the "
               "provider confirms the booking."),
         og_title="How Aham works",
@@ -105,9 +110,9 @@ PAGES = [
         nav="ABT", priority="0.8",
         title="About BoredMutant | Building Aham",
         desc=("BoredMutant is a technology company registered in India, building Aham — a "
-              "WhatsApp-first agent transaction network for local services, starting in Hyderabad."),
+              "chat-first agent transaction network for local services, starting in Hyderabad."),
         og_title="About BoredMutant",
-        og_desc=("A technology company registered in India, building Aham: a WhatsApp-first agent "
+        og_desc=("A technology company registered in India, building Aham: a chat-first agent "
                  "transaction network for local services."),
         graph=[crumbs([("Home", "/"), ("About", "/about")]),
                {"@type": "WebPage", "url": f"{SITE}/about",
@@ -237,7 +242,7 @@ def llms_full():
     """
     out = ["# BoredMutant and Aham, full site content",
            "",
-           "> Aham is an early-stage WhatsApp-first agent transaction network being built by "
+           "> Aham is an early-stage chat-first agent transaction network being built by "
            "BoredMutant. It is intended to connect consumer requests with participating businesses "
            "whose agents can return structured offers and coordinate bookings. The initial "
            "operational focus is Hyderabad, India.",

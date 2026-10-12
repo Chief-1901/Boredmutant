@@ -1,6 +1,6 @@
 # Aham by BoredMutant
 
-> Aham is an early-stage, WhatsApp-first service transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> Aham is an early-stage, chat-first service transaction network being built by BoredMutant — starting with WhatsApp, with Telegram and other messaging apps to follow. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
 
 Canonical URL: https://www.boredmutant.com/
 Project: https://github.com/Chief-1901/Boredmutant
@@ -8,11 +8,11 @@ Conversation: https://cal.com/boredmutant/automations
 
 ## Product direction
 
-- Consumers describe a real-world service need in WhatsApp, including relevant location, timing and budget constraints.
+- Consumers describe a real-world service need in their messaging app (starting with WhatsApp), including relevant location, timing and budget constraints.
 - A central orchestrator is designed to find eligible participating businesses and ask their agents for current availability and structured offers.
 - Offers should state scope, price, timing, terms and expiry. Consumers compare offers and authorize actions according to their preferences and time-bounded mandates.
 - A booking is reported as confirmed only after the provider's authoritative booking path confirms it and the result is recorded.
-- Businesses are intended to configure services, availability, pricing and escalation rules. Onboarding may begin conversationally, but WhatsApp, calendar or booking connections can require a secure provider handoff or browser-based authorization.
+- Businesses are intended to configure services, availability, pricing and escalation rules. Onboarding may begin conversationally, but messaging, calendar or booking connections can require a secure provider handoff or browser-based authorization.
 
 ## Safety and transaction rules
 
