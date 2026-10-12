@@ -1,6 +1,6 @@
 # BoredMutant and Aham, full site content
 
-> Aham is an early-stage WhatsApp-first agent transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> Aham is an early-stage chat-first agent transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
 
 Canonical: https://www.boredmutant.com/
 Booking: https://cal.com/boredmutant/automations
@@ -14,11 +14,11 @@ URL: https://www.boredmutant.com/
 
 Introducing Aham
 
-Real-world services, arranged by agents. Aham is a WhatsApp-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses. Talk about Aham How the network works Hyderabad first · Built for many service categories · Early development Illustrative request WhatsApp → agents 01 · Requestconsumer Find a car service near Kondapur tomorrow afternoon, under ₹8,000. 02 · Discoverorchestrator Eligible business agents are asked for current availability and a structured offer. 03 · Compareconsumer approval Offers are checked against the consumer's preferences and authorization limits. Provider confirms the booking Outcome sent on WhatsApp Illustrative product flow No live bookings yet The network
+Real-world services, arranged by agents. Aham is a chat-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses — starting with WhatsApp, with Telegram and other messaging apps to follow. Talk about Aham How the network works Hyderabad first · Built for many service categories · Early development Illustrative request Chat → agents 01 · Requestconsumer Find a car service near Kondapur tomorrow afternoon, under ₹8,000. 02 · Discoverorchestrator Eligible business agents are asked for current availability and a structured offer. 03 · Compareconsumer approval Offers are checked against the consumer's preferences and authorization limits. Provider confirms the booking Outcome sent in chat Illustrative product flow No live bookings yet The network
 
-A familiar chat on the surface. Clear rules underneath. People use WhatsApp to describe what they need. Aham coordinates the request, business responses, approvals and booking state behind the conversation. 01 · Consumer
+A familiar chat on the surface. Clear rules underneath. People describe what they need in a chat message. Aham coordinates the request, business responses, approvals and booking state behind the conversation. 01 · Consumer
 
-Describe the job Share the service, area, timing and budget in a WhatsApp conversation. The agent asks for essential missing details. WhatsApp firstConsumer Agent 02 · Orchestrator
+Describe the job Share the service, area, timing and budget in a chat conversation. The agent asks for essential missing details. Chat-firstConsumer Agent 02 · Orchestrator
 
 Find eligible providers The network routes structured requests to participating businesses with a matching service and location. Business registryA2A direction 03 · Business
 
@@ -30,9 +30,9 @@ Make your services understandable to authorized agents. A participating business
 
 Start with a conversation Onboarding is designed to collect a structured business profile and service catalog conversationally, with owner review before public activation. Services and areasHours and capacityPricing rulesHuman escalation Supported patterns, planned
 
-Appointments, quotes and consultations The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered. DiscoverOfferAuthorizeBook or escalate Connecting a business WhatsApp account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat. Where the project stands
+Appointments, quotes and consultations The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered. DiscoverOfferAuthorizeBook or escalate Connecting a business messaging account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat. Where the project stands
 
-Building the transaction foundation first. Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo. Current foundation and product boundary BuiltLocal deterministic transaction demo and API foundations NextReliable asynchronous workflows and real integrations LaterVerified business onboarding and pilot bookings TodayDemo offers and bookings are mock data, not live transactions Not production-ready: the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work. WhatsApp-firstConsumers and business owners can begin with a familiar messaging channel. Secure integration steps may still need a handoff. Real offers onlyAvailability and terms must come from the provider. Ambiguous or unsupported cases go to a person. Permission before actionUser mandates and business policies are checked in deterministic software before a transaction can proceed. Hyderabad firstThe architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad. A careful first release
+Building the transaction foundation first. Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo. Current foundation and product boundary BuiltLocal deterministic transaction demo and API foundations NextReliable asynchronous workflows and real integrations LaterVerified business onboarding and pilot bookings TodayDemo offers and bookings are mock data, not live transactions Not production-ready: the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work. Chat-firstMeet consumers in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow. Secure integration steps may still need a handoff. Real offers onlyAvailability and terms must come from the provider. Ambiguous or unsupported cases go to a person. Permission before actionUser mandates and business policies are checked in deterministic software before a transaction can proceed. Hyderabad firstThe architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad. A careful first release
 
 A broad foundation, a deliberately limited launch. Designed for the first release
 
@@ -55,7 +55,7 @@ A: Not yet. Aham is in early development in Hyderabad, and the flows shown on th
 
 **Q: Do businesses need to install an app or change how they work?**
 
-A: No. Businesses participate through their existing WhatsApp presence plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation.
+A: No. Businesses participate through their existing messaging presence (starting with WhatsApp) plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation.
 
 **Q: Who handles payment?**
 
@@ -71,11 +71,11 @@ A: Starting in one city lets us get the transaction patterns right with real bus
 
 Home / How it works
 
-From a WhatsApp message to a confirmed booking. Aham coordinates five steps between your request and a provider-confirmed booking. You see a familiar chat; the network enforces the rules underneath. The booking flow
+From a chat message to a confirmed booking. Aham coordinates five steps between your request and a provider-confirmed booking. You see a familiar chat; the network enforces the rules underneath. The booking flow
 
 Five steps. One approval that matters: yours. 01 · You
 
-Describe the job Tell Aham what you need on WhatsApp — the service, area, timing and budget. Your consumer agent asks for anything essential that's missing. WhatsAppConsumer agent 02 · Orchestrator
+Describe the job Tell Aham what you need in your messaging app — the service, area, timing and budget. Your consumer agent asks for anything essential that's missing. Messaging appConsumer agent 02 · Orchestrator
 
 Find eligible businesses The orchestrator routes a structured request to participating businesses with a matching service and location — no broadcast spam, no cold calls. Business registryStructured request 03 · Businesses
 
@@ -108,7 +108,7 @@ URL: https://www.boredmutant.com/about
 
 Home / About
 
-BoredMutant is building Aham. BoredMutant is a technology company registered in India. We are building Aham — a WhatsApp-first agent transaction network that helps people discover local services, compare structured offers from businesses, and book appointments with explicit approval. Starting in Hyderabad. Why this exists
+BoredMutant is building Aham. BoredMutant is a technology company registered in India. We are building Aham — a chat-first agent transaction network that meets people in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow — and helps them discover local services, compare structured offers from businesses, and book appointments with explicit approval. Starting in Hyderabad. Why this exists
 
 Booking a local service shouldn't be a research project. Finding a trustworthy electrician, comparing quotes for a repair, or booking a clinic slot in India today means switching between search results, WhatsApp chats, phone calls and guesswork. Meanwhile, the actual negotiation already happens on WhatsApp — it's where India does business. Aham meets people where they are: describe what you need in a chat, and let software do the legwork — finding eligible businesses, collecting structured offers, and recording a provider-confirmed booking. The people decide; the agents do the work. How we work
 
