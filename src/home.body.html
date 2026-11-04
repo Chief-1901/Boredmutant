@@ -1,193 +1,214 @@
-<!-- ========== PROJECT AHAM HERO ========== -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow mono"><span class="pip" aria-hidden="true"></span>Introducing Aham</p>
-      <h1>Real-world services, <em>arranged by agents.</em></h1>
-      <p class="lede">Aham is a chat-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses — starting with WhatsApp, with Telegram and other messaging apps to follow.</p>
-      <div class="cta-row">
-        <a class="btn lg" href="https://cal.com/boredmutant/automations">Talk about Aham</a>
-        <a class="btn ghost lg" href="#model">How the network works</a>
-      </div>
-      <p class="cta-meta">Hyderabad first · Built for many service categories · Early development</p>
-    </div>
-
-    <div class="inbox" role="img" aria-label="Illustrative Aham flow: a consumer asks for a service, business agents return offers, the consumer approves one, and a booking is confirmed only after the provider confirms it. This is a concept, not a live service.">
-      <div class="inbox-bar">
-        <span class="who"><span class="led" aria-hidden="true"></span>Illustrative request</span>
-        <span class="who">Chat → agents</span>
-      </div>
-      <div class="inbox-body" id="demo">
-        <div class="msg" data-step="0">
-          <div class="m-top"><b>01 · Request</b><span>consumer</span></div>
-          <p>Find a car service near Kondapur tomorrow afternoon, under ₹8,000.</p>
-        </div>
-        <div class="msg" data-step="1">
-          <div class="m-top"><b>02 · Discover</b><span>orchestrator</span></div>
-          <p>Eligible business agents are asked for current availability and a structured offer.</p>
-        </div>
-        <div class="msg esc" data-step="2">
-          <div class="m-top"><b>03 · Compare</b><span>consumer approval</span></div>
-          <p>Offers are checked against the consumer's preferences and authorization limits.</p>
-        </div>
-        <div class="attach" data-step="3">Provider confirms the booking</div>
-        <div class="halt" data-step="4">Outcome sent in chat</div>
-      </div>
-      <div class="inbox-foot">
-        <span>Illustrative product flow</span>
-        <span>No live bookings yet</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== OPERATING MODEL ========== -->
-<section id="model">
+<section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
-    <div class="head">
-      <p class="tag mono">The network</p>
-      <h2>A familiar chat on the surface. Clear rules underneath.</h2>
-      <p class="lede">People describe what they need in a chat message. Aham coordinates the request, business responses, approvals and booking state behind the conversation.</p>
+    <h1 id="hero-title">AI agents for the back-office work your team keeps retyping.</h1>
+    <p class="lede">Quotes, orders, documents, support replies and follow-ups. Our agents do the work inside the systems you already use. A person on your team approves every output, and can see exactly where each answer came from.</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://cal.com/boredmutant/automations">Book a workflow review</a>
+      <p class="price-note">Start with a two-week <strong>Workflow Sprint, from $1,500</strong>. You get a working prototype on your own examples.</p>
     </div>
 
-    <div class="flow" id="flow">
-      <div class="node">
-        <span class="n-num">01 · Consumer</span>
-        <h3>Describe the job</h3>
-        <p>Share the service, area, timing and budget in a chat conversation. The agent asks for essential missing details.</p>
-        <div class="chips"><span>Chat-first</span><span>Consumer Agent</span></div>
+    <div class="demo" id="demo" data-demo>
+      <div class="demo-tabs" role="tablist" aria-label="Sample workflows">
+        {{DEMO_TABS}}
       </div>
-      <div class="conn c1" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
-
-      <div class="node engine">
-        <span class="n-num">02 · Orchestrator</span>
-        <h3>Find eligible providers</h3>
-        <p>The network routes structured requests to participating businesses with a matching service and location.</p>
-        <div class="chips"><span>Business registry</span><span>A2A direction</span></div>
+      <div class="demo-stage" id="demo-panel" role="tabpanel" aria-labelledby="tab-quote">
+        {{DEMO_STAGE}}
       </div>
-      <div class="conn c2" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
-
-      <div class="node">
-        <span class="n-num">03 · Business</span>
-        <h3>Return a real offer</h3>
-        <p>A business agent checks its configured rules and availability, then responds with scope, price, timing and terms.</p>
-        <div class="chips"><span>Business Agent</span><span>Fresh availability</span></div>
-      </div>
-      <div class="conn c3" aria-hidden="true"><i class="track"></i><i class="pip"></i></div>
-
-      <div class="node">
-        <span class="n-num">04 · Authorization</span>
-        <h3>Approve, then confirm</h3>
-        <p>Deterministic policy checks decide what is allowed. The provider's confirmed result is recorded before the consumer is told it's booked.</p>
-        <div class="chips"><span>Explicit approval</span><span>Auditable state</span></div>
-      </div>
-    </div>
-
-    <div class="branch" id="branch">
-      <div class="out stop">
-        <span class="ic" aria-hidden="true">■</span>
-        <div>
-          <b>Models interpret and communicate</b>
-          <p>AI can clarify a request, summarize offers and draft a response. It cannot authorize spending, invent availability or confirm a booking.</p>
+      <div class="demo-foot">
+        <p class="status" data-state="waiting" aria-live="polite"><span class="dot" aria-hidden="true"></span><span class="status-text">{{DEMO_STATUS}}</span></p>
+        <div class="demo-actions">
+          <button class="btn sm approve" type="button" disabled>{{DEMO_ACTION}}</button>
+          <button class="btn sm ghost replay" type="button" hidden>Replay</button>
         </div>
       </div>
-      <div class="out hand">
-        <span class="ic" aria-hidden="true">↗</span>
-        <div>
-          <b>Software enforces rules and records actions</b>
-          <p>Transaction state, user mandates, business policies and provider confirmations govern side effects.</p>
-        </div>
-      </div>
+      <p class="demo-caption">Sample workflow with made-up companies and data. Point at or tap a drafted field to see where it came from.</p>
     </div>
   </div>
 </section>
 
-<!-- ========== BUSINESS PARTICIPATION ========== -->
-<section id="businesses" style="padding-top:0">
+<section class="section" id="workflows" aria-labelledby="wf-title">
   <div class="wrap">
-    <div class="head">
-      <p class="tag mono">For service businesses</p>
-      <h2>Make your services understandable to authorized agents.</h2>
-      <p class="lede">A participating business configures its services, availability, pricing rules, booking terms and escalation path. Its agent can answer within those rules and hand uncertain cases to a person.</p>
+    <div class="section-head">
+      <h2 id="wf-title">Five workflows we build</h2>
+      <p class="lede">Each one starts the same way: something arrives, someone on your team reads it, types it into another system and sends a reply. We hand the reading, typing and drafting to an agent, and keep the decision with your team.</p>
     </div>
-    <div class="two">
-      <div class="card">
-        <span class="k">Business setup</span>
-        <h3>Start with a conversation</h3>
-        <p>Onboarding is designed to collect a structured business profile and service catalog conversationally, with owner review before public activation.</p>
-        <ul><li>Services and areas</li><li>Hours and capacity</li><li>Pricing rules</li><li>Human escalation</li></ul>
+    <div class="ledger" role="table" aria-label="Workflows">
+      <div class="ledger-row ledger-head" role="row">
+        <span role="columnheader">Workflow</span><span role="columnheader">What comes in</span><span role="columnheader">What the agent produces</span><span role="columnheader">Who approves</span>
       </div>
-      <div class="card">
-        <span class="k">Supported patterns, planned</span>
-        <h3>Appointments, quotes and consultations</h3>
-        <p>The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered.</p>
-        <ul><li>Discover</li><li>Offer</li><li>Authorize</li><li>Book or escalate</li></ul>
+      <div class="ledger-row" role="row">
+        <h3 role="cell">Quote and order intake</h3>
+        <p class="ledger-cell" role="cell"><span class="k">What comes in</span>Requests by email, PDF or customer portal</p>
+        <p class="ledger-cell" role="cell"><span class="k">What the agent produces</span>Draft quotes and sales orders in your CRM or ERP, priced from your lists</p>
+        <p class="ledger-cell" role="cell"><span class="k">Who approves</span>Sales or order desk</p>
+      </div>
+      <div class="ledger-row" role="row">
+        <h3 role="cell">Document processing</h3>
+        <p class="ledger-cell" role="cell"><span class="k">What comes in</span>Leases, contracts, policies, invoices, forms</p>
+        <p class="ledger-cell" role="cell"><span class="k">What the agent produces</span>Checked summaries and filed records, with missing clauses flagged</p>
+        <p class="ledger-cell" role="cell"><span class="k">Who approves</span>The document owner</p>
+      </div>
+      <div class="ledger-row" role="row">
+        <h3 role="cell">Customer support</h3>
+        <p class="ledger-cell" role="cell"><span class="k">What comes in</span>Order, account and status questions</p>
+        <p class="ledger-cell" role="cell"><span class="k">What the agent produces</span>Replies drafted from live order and account data, with tricky cases routed to a person</p>
+        <p class="ledger-cell" role="cell"><span class="k">Who approves</span>Support lead</p>
+      </div>
+      <div class="ledger-row" role="row">
+        <h3 role="cell">Sales follow-up</h3>
+        <p class="ledger-cell" role="cell"><span class="k">What comes in</span>Open quotes, renewals and leads in your CRM</p>
+        <p class="ledger-cell" role="cell"><span class="k">What the agent produces</span>Timed follow-ups that use the deal's own history, plus CRM updates</p>
+        <p class="ledger-cell" role="cell"><span class="k">Who approves</span>The account owner</p>
+      </div>
+      <div class="ledger-row" role="row">
+        <h3 role="cell">HR and recruiting coordination</h3>
+        <p class="ledger-cell" role="cell"><span class="k">What comes in</span>Offer acceptances, interview requests, policy questions</p>
+        <p class="ledger-cell" role="cell"><span class="k">What the agent produces</span>Scheduling, onboarding checklists and document requests, with expiry dates tracked</p>
+        <p class="ledger-cell" role="cell"><span class="k">Who approves</span>HR or the office manager</p>
       </div>
     </div>
-    <p class="wf-more" style="max-width:none;text-align:left;margin-top:24px">Connecting a business messaging account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat.</p>
   </div>
 </section>
 
-<!-- ========== PROJECT STAGE ========== -->
-<section id="stage" style="padding-top:0">
+<section class="section" id="process" aria-labelledby="process-title">
   <div class="wrap">
-    <div class="head">
-      <p class="tag mono">Where the project stands</p>
-      <h2>Building the transaction foundation first.</h2>
-      <p class="lede">Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo.</p>
+    <div class="section-head">
+      <h2 id="process-title">One workflow, three steps</h2>
+      <p class="lede">You see it working on your own examples before you commit to a build, and you pay for results once it runs.</p>
     </div>
-    <div class="tl" id="tl">
-      <p class="mono muted">Current foundation and product boundary</p>
-      <div class="tl-rail"><span class="tl-fill"></span></div>
-      <div class="tl-marks">
-        <div class="tl-mark"><b>Built</b><span>Local deterministic transaction demo and API foundations</span></div>
-        <div class="tl-mark"><b>Next</b><span>Reliable asynchronous workflows and real integrations</span></div>
-        <div class="tl-mark"><b>Later</b><span>Verified business onboarding and pilot bookings</span></div>
-        <div class="tl-mark"><b>Today</b><span>Demo offers and bookings are mock data, not live transactions</span></div>
-      </div>
-      <p class="tl-note"><strong>Not production-ready:</strong> the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work.</p>
-    </div>
+    <ol class="steps">
+      <li class="step">
+        <h3>Workflow Sprint</h3>
+        <p class="when">2 weeks</p>
+        <p>We map one workflow with the people who do it, measure time and error rates, and build a prototype that runs on your real examples. If agents aren't a good fit, you hear it here.</p>
+        <span class="price">From $1,500</span>
+      </li>
+      <li class="step">
+        <h3>Build and launch</h3>
+        <p class="when">3 to 6 weeks, fixed price quoted after the sprint</p>
+        <p>We connect your systems with the least access needed, add the approval step, test on cases the agent hasn't seen, and run side by side with your team before go-live.</p>
+      </li>
+      <li class="step">
+        <h3>Run and improve</h3>
+        <p class="when">Monthly</p>
+        <p>We monitor every run, report volume, time saved and corrections each month, and adjust as your process changes. Once volumes are steady, you can pay per result.</p>
+      </li>
+    </ol>
+    <p class="more"><a href="/how-it-works">See what happens in each step</a></p>
   </div>
 </section>
 
-<!-- ========== PRINCIPLES ========== -->
-<section class="trust">
-  <div class="wrap grid">
-    <div class="item"><b>Chat-first</b><p>Meet consumers in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow. Secure integration steps may still need a handoff.</p></div>
-    <div class="item"><b>Real offers only</b><p>Availability and terms must come from the provider. Ambiguous or unsupported cases go to a person.</p></div>
-    <div class="item"><b>Permission before action</b><p>User mandates and business policies are checked in deterministic software before a transaction can proceed.</p></div>
-    <div class="item"><b>Hyderabad first</b><p>The architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad.</p></div>
-  </div>
-</section>
-
-<!-- ========== SCOPE ========== -->
-<section id="scope">
+<section class="section" id="industries" aria-labelledby="ind-title">
   <div class="wrap">
-    <div class="head">
-      <p class="tag mono">A careful first release</p>
-      <h2>A broad foundation, a deliberately limited launch.</h2>
+    <div class="section-head">
+      <h2 id="ind-title">Where we work</h2>
+      <p class="lede">Firms with 20 to 500 people, where skilled staff spend hours a week moving information between inboxes, documents and systems.</p>
     </div>
-    <div class="two">
-      <div class="card">
-        <span class="k">Designed for the first release</span>
-        <h3>Three reusable transaction patterns</h3>
-        <p>Fixed-price appointments, quote-required services, and consultations give the network a controlled starting point. General services, auto repair and home repair may be piloted only after category checks.</p>
+    <div class="industries">
+      <div class="industry" id="professional-services">
+        <h3>Professional services</h3>
+        <p>Client intake, engagement letters, document requests and billing follow-up for accounting, legal, engineering and consulting firms.</p>
       </div>
-      <div class="card">
-        <span class="k">Not an initial promise</span>
-        <h3>No blanket automation or open-ended commitments</h3>
-        <p>Healthcare is limited to administrative appointment handling after privacy and safety review. No diagnosis, medical advice, arbitrary business outreach, customer fund custody or unapproved payment handling.</p>
+      <div class="industry" id="finance-insurance">
+        <h3>Finance and insurance</h3>
+        <p>Quote comparisons, policy and loan document checks, and renewal follow-up for agencies, brokers and lenders.</p>
       </div>
+      <div class="industry" id="real-estate">
+        <h3>Real estate</h3>
+        <p>Lease abstraction, maintenance triage and lead follow-up for brokerages and property managers.</p>
+      </div>
+      <div class="industry" id="healthcare-admin">
+        <h3>Healthcare administration</h3>
+        <p>Intake paperwork, scheduling, staff onboarding and billing follow-up for clinics and billing companies. Administrative work only.</p>
+      </div>
+      <div class="industry" id="manufacturing">
+        <h3>Manufacturing and distribution</h3>
+        <p>RFQ to quote, order entry from email and PDF, and supplier follow-up for manufacturers and wholesale distributors.</p>
+      </div>
+    </div>
+    <p class="fit-note">Not on the list? If your team spends its week reading, retyping and chasing, the workflow review is a good place to find out whether it fits.</p>
+  </div>
+</section>
+
+<section class="section" id="trust" aria-labelledby="trust-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="trust-title">Built to be checked</h2>
+      <p class="lede">Agents make mistakes. The way to use them safely is to make every output easy to review and every action easy to trace.</p>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <h3>A person approves every output</h3>
+        <p>Nothing is sent, filed or changed until someone on your team approves it. You decide later which steps, if any, can run on their own.</p>
+      </div>
+      <div class="principle">
+        <h3>Every answer shows its source</h3>
+        <p>Each drafted value links back to the line of the email, document or record it came from, so review takes seconds, not a re-read.</p>
+      </div>
+      <div class="principle">
+        <h3>Exceptions go to a person</h3>
+        <p>When something doesn't match your rules, such as terms, prices or expiry dates, the agent flags it instead of guessing.</p>
+      </div>
+      <div class="principle">
+        <h3>Your data stays yours</h3>
+        <p>NDA and data-processing terms come before any data. We use model providers' business APIs, which don't train on your data, and delete our copies when we finish.</p>
+      </div>
+      <div class="principle">
+        <h3>Least access, fully logged</h3>
+        <p>Agents get only the permissions the workflow needs, with their own credentials you can revoke. Every action is logged.</p>
+      </div>
+      <div class="principle">
+        <h3>You own what we build</h3>
+        <p>The code, prompts, configuration and data are yours. If we stop working together, we hand everything over.</p>
+      </div>
+    </div>
+    <p class="more"><a href="/security">Read how we handle security and data</a></p>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Questions buyers ask</h2>
+    <div class="faq">
+      <details>
+        <summary>What does the Workflow Sprint cost, and what do we get?</summary>
+        <p class="ans">It starts at $1,500 and runs for two weeks. You get a map of one workflow with time and error rates measured, a working prototype tested on your own examples, and a fixed quote for the full build. If the workflow isn't a good fit for agents, we tell you during the sprint.</p>
+      </details>
+      <details>
+        <summary>Do you use our data to train AI models?</summary>
+        <p class="ans">No. We use model providers' business APIs, whose terms exclude training on customer data, and we never put your data into consumer chat tools. Your data is used only to run your workflow.</p>
+      </details>
+      <details>
+        <summary>Which systems do you work with?</summary>
+        <p class="ans">Usually the ones you already have: email, your CRM or ERP, accounting and practice software, shared drives and spreadsheets. If a system has an API or a reliable export, we can usually work with it. We confirm this during the sprint, before you commit to a build.</p>
+      </details>
+      <details>
+        <summary>What happens when the agent gets something wrong?</summary>
+        <p class="ans">Nothing goes out without a person approving it, and every value links back to its source, so mistakes are caught at review. Corrections are logged and used to improve the workflow.</p>
+      </details>
+      <details>
+        <summary>Who owns what you build?</summary>
+        <p class="ans">You do: the code, prompts, configuration and data. If you stop working with us, we hand everything over and delete our copies of your data.</p>
+      </details>
+      <details>
+        <summary>How is the work priced after launch?</summary>
+        <p class="ans">The build is a fixed price, quoted at the end of the sprint. After launch, a monthly fee covers running, monitoring and changes. Once volumes are steady, we can price per result instead, such as per quote or per document.</p>
+      </details>
+      <details>
+        <summary>Where are you based?</summary>
+        <p class="ans">In Hyderabad, India. We work with firms in the US, UK and India, and schedule calls in your time zone.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- ========== FINAL CTA ========== -->
-<section class="final">
+<section class="cta-band" aria-labelledby="cta-title">
   <div class="wrap">
-    <h2>Help shape a more useful way to book local services.</h2>
-    <p class="lede">Aham is being built around clear offers, explicit permission and reliable provider confirmation. If you're exploring the idea as a service business or integration partner, start a conversation.</p>
-    <a class="btn lg" href="https://cal.com/boredmutant/automations">Talk about Aham</a>
-    <p class="alt">A BoredMutant project · Hyderabad first · Early development</p>
+    <h2 id="cta-title">Bring one workflow. We'll map it with you.</h2>
+    <p class="lede">On the call we walk through how the work happens today, what it costs your team in hours, and whether an agent can take it over. You leave with a clear yes or no.</p>
+    <div class="hero-actions">
+      <a class="btn light" href="https://cal.com/boredmutant/automations">Book a workflow review</a>
+      <p class="price-note">Or email <a href="mailto:pranith@boredmutant.com">pranith@boredmutant.com</a></p>
+    </div>
   </div>
 </section>

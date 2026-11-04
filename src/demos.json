@@ -1,0 +1,164 @@
+[
+  {
+    "id": "quote",
+    "tab": "Quote intake",
+    "sources": [
+      {
+        "kind": "Email",
+        "meta": [["From", "Dana Ortiz, Kessler Pumps"], ["Subject", "RFQ: brackets for the Dayton line"]],
+        "paras": [
+          ["Hi team,"],
+          ["Could you quote ", ["q1", "1,200 units of BR-2210"], " (stainless bracket, 2 mm) and ", ["q2", "400 units of BR-2214"], "? We need them ", ["q3", "delivered to our Dayton plant by March 14"], "."],
+          [["q4", "Payment on our usual net 45 terms."], " Please send the quote to me directly."],
+          ["Thanks,"],
+          [["q0", "Dana Ortiz"], ", Purchasing, ", ["q5", "Kessler Pumps"]]
+        ]
+      }
+    ],
+    "draft": {
+      "title": "Draft quote Q-1042",
+      "where": "Drafted in your CRM",
+      "fields": [
+        {"label": "Customer", "value": "Kessler Pumps", "note": "Matched to account 2291", "src": ["q5"]},
+        {"label": "Contact", "value": "Dana Ortiz, Purchasing", "src": ["q0"]},
+        {"label": "Line 1", "value": "BR-2210 × 1,200 at $3.85 = $4,620.00", "note": "Price from your Q1 list", "src": ["q1"]},
+        {"label": "Line 2", "value": "BR-2214 × 400 at $4.10 = $1,640.00", "note": "Price from your Q1 list", "src": ["q2"]},
+        {"label": "Delivery", "value": "Dayton plant by March 14", "note": "Lead time on file is 3 weeks", "src": ["q3"]},
+        {"label": "Total", "value": "$6,260.00", "src": ["q1", "q2"]}
+      ],
+      "flag": {"title": "Terms don't match", "text": "The email asks for net 45. This account is on net 30.", "src": ["q4"]},
+      "approver": "your sales lead",
+      "action": "Approve and send",
+      "done": "Approved. Quote Q-1042 was sent to Dana Ortiz and logged against the account."
+    }
+  },
+  {
+    "id": "document",
+    "tab": "Document review",
+    "sources": [
+      {
+        "kind": "PDF",
+        "meta": [["File", "Lease, Unit 4B, Harbor Point"], ["Page", "3 of 22"]],
+        "paras": [
+          [["d1", "The Term shall commence on April 1, 2027 and expire on March 31, 2030."]],
+          [["d2", "Base Rent shall be $6,250.00 per month"], ", ", ["d3", "increasing by three percent (3%) on each anniversary of the Commencement Date"], "."],
+          [["d4", "Tenant shall deposit $12,500.00 as security"], " upon execution of this Lease."],
+          [["d5", "After the twenty-fourth month of the Term, Tenant may terminate this Lease upon ninety (90) days' written notice"], " to Landlord."]
+        ]
+      }
+    ],
+    "draft": {
+      "title": "Lease summary, Unit 4B",
+      "where": "Drafted in your property records",
+      "fields": [
+        {"label": "Term", "value": "Apr 1, 2027 to Mar 31, 2030", "src": ["d1"]},
+        {"label": "Base rent", "value": "$6,250.00 per month", "src": ["d2"]},
+        {"label": "Increase", "value": "3% every April 1, starting 2028", "src": ["d3"]},
+        {"label": "Deposit", "value": "$12,500.00", "src": ["d4"]},
+        {"label": "Early exit", "value": "After month 24, with 90 days' notice", "src": ["d5"]}
+      ],
+      "flag": {"title": "Clause not found", "text": "No renewal option appears on the pages read. Check the full lease before filing.", "src": []},
+      "approver": "your property manager",
+      "action": "Approve and file",
+      "done": "Approved. The summary was filed to Unit 4B, with a reminder for the April 1, 2028 increase."
+    }
+  },
+  {
+    "id": "support",
+    "tab": "Customer support",
+    "sources": [
+      {
+        "kind": "Email",
+        "meta": [["From", "Marcus Lee, Brightline HVAC"], ["Subject", "Where is order 48817?"]],
+        "paras": [
+          ["Hi, ", ["c1", "order 48817"], " was supposed to arrive Tuesday and we still don't have it. ", ["c2", "We have a crew waiting on those parts."], " Can you check?"],
+          ["Marcus"]
+        ]
+      },
+      {
+        "kind": "Order system",
+        "meta": [["Record", "Order 48817"]],
+        "paras": [
+          [["r1", "Shipped Monday by UPS"]],
+          [["r2", "Tracking 1Z84A9E30311924471"]],
+          [["r3", "Carrier delay: weather. New delivery estimate Thursday"]]
+        ]
+      }
+    ],
+    "draft": {
+      "title": "Reply to Marcus Lee",
+      "where": "Drafted in your shared inbox",
+      "fields": [
+        {"label": "Order", "value": "48817, shipped Monday by UPS", "src": ["c1", "r1"]},
+        {"label": "Tracking", "value": "1Z84A9E30311924471", "src": ["r2"]},
+        {"label": "New estimate", "value": "Thursday, after a weather delay", "src": ["r3"]},
+        {"label": "Reply", "value": "Sorry for the wait, Marcus. Order 48817 shipped Monday, but UPS has a weather delay and now expects to deliver Thursday. Tracking: 1Z84A9E30311924471.", "src": ["c1", "r1", "r2", "r3"]}
+      ],
+      "flag": {"title": "Crew waiting", "text": "This is a key account with a crew on hold. Copy the account manager and decide whether to offer a partial shipment.", "src": ["c2"]},
+      "approver": "your support lead",
+      "action": "Approve and send",
+      "done": "Approved. The reply went to Marcus Lee, with the account manager copied."
+    }
+  },
+  {
+    "id": "followup",
+    "tab": "Sales follow-up",
+    "sources": [
+      {
+        "kind": "CRM record",
+        "meta": [["Opportunity", "Fleet renewal, Northgate Logistics"]],
+        "paras": [
+          [["f1", "Quote sent 6 days ago: commercial auto renewal, $48,200 premium"]],
+          [["f2", "No reply since. Email last opened 4 days ago"]],
+          [["f3", "Current policy renews January 15"]],
+          [["f4", "Contact: Priya Shah, Operations Director"]],
+          [["f5", "Call note: comparing deductibles with their current carrier"]]
+        ]
+      }
+    ],
+    "draft": {
+      "title": "Follow-up for Priya Shah",
+      "where": "Drafted in your CRM",
+      "fields": [
+        {"label": "Contact", "value": "Priya Shah, Operations Director", "src": ["f4"]},
+        {"label": "Why now", "value": "Quote opened but unanswered for 4 days", "src": ["f1", "f2"]},
+        {"label": "Deadline", "value": "Renewal on January 15", "src": ["f3"]},
+        {"label": "Email", "value": "Hi Priya, following up on the renewal quote for Northgate's fleet. Since you're comparing deductibles, I've added the premium at $1,000 and $2,500 side by side. Would a 15-minute call this week help before the January 15 renewal?", "src": ["f1", "f3", "f5"]}
+      ],
+      "flag": {"title": "Check the numbers", "text": "The $2,500 deductible option comes from your rating tool. Confirm it before sending.", "src": ["f5"]},
+      "approver": "the account owner",
+      "action": "Approve and queue",
+      "done": "Approved. The email is queued and a call task was added to the opportunity."
+    }
+  },
+  {
+    "id": "onboarding",
+    "tab": "HR coordination",
+    "sources": [
+      {
+        "kind": "Email",
+        "meta": [["From", "Jordan Ellis"], ["Subject", "Re: Offer, Medical Assistant"]],
+        "paras": [
+          ["Hi Sarah, ", ["h1", "I'm happy to accept the offer."], " ", ["h2", "I can start on Monday the 7th."]],
+          [["h3", "My CMA certification renews at the end of December"], ", so I'll send the new card once I have it. ", ["h4", "I'm free Thursday or Friday afternoon for paperwork."]],
+          ["Thanks, Jordan"]
+        ]
+      }
+    ],
+    "draft": {
+      "title": "Onboarding, Jordan Ellis",
+      "where": "Drafted in your HR system",
+      "fields": [
+        {"label": "Role", "value": "Medical Assistant, offer accepted", "src": ["h1"]},
+        {"label": "Start date", "value": "Monday the 7th", "src": ["h2"]},
+        {"label": "Paperwork", "value": "Thursday at 2:00 pm, calendar hold placed", "src": ["h4"]},
+        {"label": "Documents", "value": "ID and work authorization, signed policies, direct deposit form", "note": "From your onboarding checklist", "src": []},
+        {"label": "Certification", "value": "CMA renewal due end of December", "src": ["h3"]}
+      ],
+      "flag": {"title": "Expiry after start date", "text": "The certification renews after Jordan starts. Add a reminder to collect the new card by December 31.", "src": ["h3"]},
+      "approver": "your office manager",
+      "action": "Approve and send",
+      "done": "Approved. Jordan received the welcome email and paperwork invite, and the reminder is set."
+    }
+  }
+]
