@@ -1,25 +1,27 @@
 # BoredMutant — boredmutant.com
 
-Three-page static site for BoredMutant, the technology company registered in
-India building Aham — an early-stage WhatsApp-first agent transaction network
-for local services, starting in Hyderabad. Pages: home, how-it-works, about.
+Four-page static site for BoredMutant, a technology company registered in India
+and based in Hyderabad. BoredMutant builds department software, workflow
+automations, AI agents and company brains for firms of 50 to 500 people.
+Pages: home, how-it-works, security, about.
 
 No framework, no npm, no runtime dependencies. `build.py` assembles each page from
 partials in `src/` and inlines the CSS and JS, so every published page is a single
-self-contained HTML file.
+self-contained HTML file. The only external asset is the self-hosted Archivo
+variable font in `fonts/` (SIL Open Font License, see `fonts/OFL.txt`).
 
 ## Quick start
 
 ```bash
-python build.py                     # rebuild the three pages + sitemap.xml
+python build.py                     # rebuild the four pages, sitemap.xml, llms-full.txt
 python -m http.server 4599          # preview on http://localhost:4599
 ```
 
 There is no watch mode. Edit a file in `src/`, re-run `python build.py`, reload.
 
-Note that the local preview server does not do clean URLs, so links like
-`/how-it-works` 404 there. Vercel serves them via `cleanUrls` in `vercel.json`.
-Append `.html` when clicking around locally.
+The local preview server does not do clean URLs, so links like `/how-it-works`
+404 there. Vercel serves them via `cleanUrls` in `vercel.json`. Append `.html`
+when clicking around locally.
 
 ## What's in the box
 
@@ -30,21 +32,34 @@ src/
   header.html             shared header + mobile nav markup
   footer.html             shared footer
   nav.js                  mobile hamburger menu, inlined into every page
-  home.body.html          Aham landing page
-  how.body.html           how-it-works page: the five-step booking flow
-  abt.body.html           about page: the company, the stage, contact
-  home.js                 page-specific scroll-reveal and demo scripts
-  page.js                 the lighter script used by the secondary pages
+  home.body.html          home page (demo placeholders filled by build.py)
+  home.js                 interactive demo: tabs, fill-in, source highlighting, approval
+  demos.json              sample scenarios for the demo (made-up companies and data)
+  how.body.html           how-it-works page: Sprint, Build, Run
+  security.body.html      security page: access, data, review, current limits
+  abt.body.html           about page: the company and contact
+fonts/                    Archivo variable font (latin, latin-ext) + OFL.txt
 
 index.html                ─┐
 how-it-works.html          │ build output — generated, do not hand-edit
-about.html                ─┘
-sitemap.xml               ─┘
+security.html              │
+about.html                 │
+sitemap.xml, llms-full.txt ─┘
 
 logo-mark.svg, logo.svg, logo.png, og-image.png
 robots.txt, llms.txt      hand-maintained
 vercel.json               hosting config: clean URLs, apex→www, security headers
 ```
+
+## The demo
+
+The home page demo shows seven sample builds (department software, company brain,
+quote intake, document review, customer support, sales follow-up, HR coordination).
+Each scenario in `src/demos.json` has source documents and a drafted record; every
+drafted field lists the source passages it came from, and pointing at or focusing a
+field highlights them. `build.py` server-renders the first scenario so the page works
+without JS, then injects the full data as `var DEMOS`. Reduced-motion users get the
+finished state without animation.
 
 Generated files are committed so the repo can deploy without a build step on
 Vercel. If you edit anything under `src/`, run `python build.py` and commit both
@@ -64,8 +79,8 @@ panel (`src/nav.js`); at 900px and up the panel becomes the normal horizontal ba
 The header CTA and the in-panel CTA are the same link at two breakpoints — exactly
 one of the two is ever displayed.
 
-Verified with no horizontal overflow at 320, 360, 390, 414, 768, 899, 900 and
-1024px on all four pages.
+Verified with no horizontal overflow at 320, 390, 768, 1024 and 1440px on all
+four pages.
 
 ## Deploy
 
@@ -95,6 +110,4 @@ config constant.
   hand-maintained; update it when page copy changes materially.
 - Every page carries a schema.org `@graph` (Organization, Service, WebSite,
   BreadcrumbList) generated in `build.py`.
-- Pages are server-rendered static HTML, so no crawler needs to execute JS. The
-  scroll-reveal animations start at `opacity:0`, and a `<noscript>` block resets
-  them to visible for any client that does not run scripts.
+- Pages are server-rendered static HTML, so no crawler needs to execute JS.

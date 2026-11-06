@@ -1,6 +1,6 @@
-# BoredMutant and Aham, full site content
+# BoredMutant, full site content
 
-> Aham is an early-stage chat-first agent transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> BoredMutant builds department software, workflow automations, AI agents and company brains for firms of 50 to 500 people, on top of the systems they already run. Based in Hyderabad, India; works with firms in the US, UK and India.
 
 Canonical: https://www.boredmutant.com/
 Booking: https://cal.com/boredmutant/automations
@@ -8,96 +8,141 @@ Booking: https://cal.com/boredmutant/automations
 
 ---
 
-## Aham
+## BoredMutant
 
 URL: https://www.boredmutant.com/
 
-Introducing Aham
+**Q: What does the Workflow Sprint cost, and what do we get?**
 
-Real-world services, arranged by agents. Aham is a chat-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses — starting with WhatsApp, with Telegram and other messaging apps to follow. Talk about Aham How the network works Hyderabad first · Built for many service categories · Early development Illustrative request Chat → agents 01 · Requestconsumer Find a car service near Kondapur tomorrow afternoon, under ₹8,000. 02 · Discoverorchestrator Eligible business agents are asked for current availability and a structured offer. 03 · Compareconsumer approval Offers are checked against the consumer's preferences and authorization limits. Provider confirms the booking Outcome sent in chat Illustrative product flow No live bookings yet The network
+A: It starts at $1,500 and runs for two weeks. You get a map of one workflow or department with time and error rates measured, a working prototype tested on your own data, and a fixed quote for the full build. If the workflow isn't a good fit for agents, we tell you during the sprint.
 
-A familiar chat on the surface. Clear rules underneath. People describe what they need in a chat message. Aham coordinates the request, business responses, approvals and booking state behind the conversation. 01 · Consumer
+**Q: Do you use our data to train AI models?**
 
-Describe the job Share the service, area, timing and budget in a chat conversation. The agent asks for essential missing details. Chat-firstConsumer Agent 02 · Orchestrator
+A: No. We use model providers' business APIs, whose terms exclude training on customer data, and we never put your data into consumer chat tools. Your data is used only to run your workflow.
 
-Find eligible providers The network routes structured requests to participating businesses with a matching service and location. Business registryA2A direction 03 · Business
+**Q: Which systems do you work with?**
 
-Return a real offer A business agent checks its configured rules and availability, then responds with scope, price, timing and terms. Business AgentFresh availability 04 · Authorization
+A: Usually the ones you already have: email, your CRM or ERP, accounting and practice software, shared drives and spreadsheets. If a system has an API or a reliable export, we can usually work with it. We confirm this during the sprint, before you commit to a build.
 
-Approve, then confirm Deterministic policy checks decide what is allowed. The provider's confirmed result is recorded before the consumer is told it's booked. Explicit approvalAuditable state ■ Models interpret and communicate AI can clarify a request, summarize offers and draft a response. It cannot authorize spending, invent availability or confirm a booking. ↗ Software enforces rules and records actions Transaction state, user mandates, business policies and provider confirmations govern side effects. For service businesses
+**Q: Will you replace our ERP or accounting system?**
 
-Make your services understandable to authorized agents. A participating business configures its services, availability, pricing rules, booking terms and escalation path. Its agent can answer within those rules and hand uncertain cases to a person. Business setup
+A: No. We build around it. Your ERP or accounting software stays the system of record, and the department software and agents we build read from it and write back to it.
 
-Start with a conversation Onboarding is designed to collect a structured business profile and service catalog conversationally, with owner review before public activation. Services and areasHours and capacityPricing rulesHuman escalation Supported patterns, planned
+**Q: What is a company brain?**
 
-Appointments, quotes and consultations The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered. DiscoverOfferAuthorizeBook or escalate Connecting a business messaging account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat. Where the project stands
+A: A private assistant that answers questions from your documents, email and systems, with links to the sources. It respects existing permissions, so people only see answers drawn from what they can already access. Over time it becomes the shared memory your agents and workflows use.
 
-Building the transaction foundation first. Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo. Current foundation and product boundary BuiltLocal deterministic transaction demo and API foundations NextReliable asynchronous workflows and real integrations LaterVerified business onboarding and pilot bookings TodayDemo offers and bookings are mock data, not live transactions Not production-ready: the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work. Chat-firstMeet consumers in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow. Secure integration steps may still need a handoff. Real offers onlyAvailability and terms must come from the provider. Ambiguous or unsupported cases go to a person. Permission before actionUser mandates and business policies are checked in deterministic software before a transaction can proceed. Hyderabad firstThe architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad. A careful first release
+**Q: What happens when the agent gets something wrong?**
 
-A broad foundation, a deliberately limited launch. Designed for the first release
+A: Nothing goes out without a person approving it, and every value links back to its source, so mistakes are caught at review. Corrections are logged and used to improve the workflow.
 
-Three reusable transaction patterns Fixed-price appointments, quote-required services, and consultations give the network a controlled starting point. General services, auto repair and home repair may be piloted only after category checks. Not an initial promise
+**Q: Who owns what you build?**
 
-No blanket automation or open-ended commitments Healthcare is limited to administrative appointment handling after privacy and safety review. No diagnosis, medical advice, arbitrary business outreach, customer fund custody or unapproved payment handling.
+A: You do: the code, prompts, configuration and data. If you stop working with us, we hand everything over and delete our copies of your data.
 
-Help shape a more useful way to book local services. Aham is being built around clear offers, explicit permission and reliable provider confirmation. If you're exploring the idea as a service business or integration partner, start a conversation. Talk about Aham A BoredMutant project · Hyderabad first · Early development
+**Q: How is the work priced after launch?**
+
+A: The build is a fixed price, quoted at the end of the sprint. After launch, a monthly fee covers running, monitoring and changes. Once volumes are steady, we can price per result instead, such as per quote or per document.
+
+**Q: Where are you based?**
+
+A: In Hyderabad, India. We work with firms in the US, UK and India, and schedule calls in your time zone.
+
+The software team your company never got around to hiring. We build department software, workflow automations, AI agents and a company brain for firms of 50 to 500 people, on top of the systems you already run. A person on your team approves everything the agents do, and can see where every answer came from. Book a workflow review Start with a two-week Workflow Sprint, from $1,500. You see a working prototype on your own data. {{DEMO_TABS}} {{DEMO_STAGE}} {{DEMO_STATUS}} {{DEMO_ACTION}} Replay Sample builds with made-up companies and data. Point at or tap a drafted field to see where it came from.
+
+Four things we build Every build sits on the same base: connectors to your systems, an approval and audit log, and a shared company memory. So the second thing we build for you is faster than the first. What we buildWhat it isFor exampleWhat it replaces
+
+Department software What it isA system for one team, with records, approvals and reports, connected to your ERP or accounting software For exampleProcurement, job tracking, onboarding or renewals What it replacesSpreadsheets, email threads and SaaS seats nobody fully uses
+
+Workflow automations What it isRule-based flows that move data and tasks between the tools you have For exampleA won deal creates the job, the invoice and the kickoff email What it replacesCopying the same details into three systems
+
+AI agents What it isAgents that read, draft and route work, with a person approving every output For exampleQuote intake, document review, support replies, sales follow-up, HR coordination What it replacesHours of reading and retyping each week
+
+Company brain What it isAnswers from your documents, email and systems, respecting who is allowed to see what For example"Why did we lose this account, and what has changed since?" What it replacesAsking the one person who remembers
+
+One project, three steps You see it working on your own examples before you commit to a build, and you pay for results once it runs.
+
+Workflow Sprint 2 weeks We map one workflow or department with the people who do it, measure time and error rates, and build a prototype that runs on your real examples. If agents aren't a good fit, you hear it here. From $1,500
+
+Build and launch 3 to 6 weeks, fixed price quoted after the sprint We connect your systems with the least access needed, add the approval step, test on cases the agent hasn't seen, and run side by side with your team before go-live.
+
+Run and improve Monthly We monitor every run, report volume, time saved and corrections each month, and adjust as your process changes. Once volumes are steady, you can pay per result. See what happens in each step
+
+Where we work Firms with 50 to 500 people and no in-house engineering team, where skilled staff spend hours a week moving information between inboxes, spreadsheets and systems.
+
+Professional services Client intake, engagement letters, document requests and billing follow-up for accounting, legal, engineering and consulting firms.
+
+Finance and insurance Quote comparisons, policy and loan document checks, and renewal follow-up for agencies, brokers and lenders.
+
+Real estate Lease abstraction, maintenance triage and lead follow-up for brokerages and property managers.
+
+Healthcare administration Intake paperwork, scheduling, staff onboarding and billing follow-up for clinics and billing companies. Administrative work only.
+
+Manufacturing and distribution RFQ to quote, order entry from email and PDF, and supplier follow-up for manufacturers and wholesale distributors. Not on the list? If your team spends its week reading, retyping and chasing, the workflow review is a good place to find out whether it fits.
+
+Built to be checked Agents make mistakes. The way to use them safely is to make every output easy to review and every action easy to trace.
+
+A person approves every output Nothing is sent, filed or changed until someone on your team approves it. You decide later which steps, if any, can run on their own.
+
+Every answer shows its source Each drafted value links back to the line of the email, document or record it came from, so review takes seconds, not a re-read.
+
+Exceptions go to a person When something doesn't match your rules, such as terms, prices or expiry dates, the agent flags it instead of guessing.
+
+Your data stays yours NDA and data-processing terms come before any data. We use model providers' business APIs, which don't train on your data, and delete our copies when we finish.
+
+Least access, fully logged Agents get only the permissions the work needs, with their own credentials you can revoke. The company brain shows each person only what they can already see. Every action is logged.
+
+You own what we build The code, prompts, configuration and data are yours. If we stop working together, we hand everything over. Read how we handle security and data
+
+Questions buyers ask
+
+Bring one workflow or department. We'll map it with you. On the call we walk through how the work happens today, what it costs your team in hours, and whether software or an agent can take it over. You leave with a clear yes or no. Book a workflow review Or email pranith@boredmutant.com
 
 
 ---
 
-## How Aham works
+## How an engagement works
 
 URL: https://www.boredmutant.com/how-it-works
 
-**Q: Is Aham live yet?**
-
-A: Not yet. Aham is in early development in Hyderabad, and the flows shown on this site are illustrative. If you're a consumer or a service business who wants to shape the pilot, talk to us.
-
-**Q: Do businesses need to install an app or change how they work?**
-
-A: No. Businesses participate through their existing messaging presence (starting with WhatsApp) plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation.
-
-**Q: Who handles payment?**
-
-A: You do, directly with the provider, on terms you approved. Aham coordinates discovery, offers and booking state — it never holds your money or pays on your behalf.
-
-**Q: Can the agent book something I didn't approve?**
-
-A: No. Deterministic software checks your preferences and spending mandates before anything can proceed, and a booking is only reported as confirmed after the provider confirms it through their own booking path.
-
-**Q: Why Hyderabad first?**
-
-A: Starting in one city lets us get the transaction patterns right with real businesses before expanding. The architecture is designed to support more categories and geographies after validation.
-
 Home / How it works
 
-From a chat message to a confirmed booking. Aham coordinates five steps between your request and a provider-confirmed booking. You see a familiar chat; the network enforces the rules underneath. The booking flow
+How an engagement works We take one workflow or department at a time. You see a prototype working on your own examples before you commit to a build, and every output is approved by your team once it runs.
 
-Five steps. One approval that matters: yours. 01 · You
+1. Workflow Sprint 2 weeks From $1,500 The sprint answers one question with evidence: is this worth building, and should it be software, an automation or an agent? Week 1: map and measure. We sit with the people who do the work, walk through 20 to 30 real examples, and record each step, the systems involved, time per item and how often things go wrong. Week 2: prototype on your data. We build a working prototype and run it on examples it hasn't seen. You see where it is right, where it is wrong and why.
 
-Describe the job Tell Aham what you need in your messaging app — the service, area, timing and budget. Your consumer agent asks for anything essential that's missing. Messaging appConsumer agent 02 · Orchestrator
+What you get A map of the workflow, with today's hours and error rate A working prototype and a recorded walkthrough of it on your examples A fixed price and timeline for the full build A plain recommendation, including "don't build this" when that's the answer
 
-Find eligible businesses The orchestrator routes a structured request to participating businesses with a matching service and location — no broadcast spam, no cold calls. Business registryStructured request 03 · Businesses
+What we need from you One person who owns the workflow, for about two hours a week 20 to 30 real examples, anonymized if you prefer Read-only access or exports from the systems involved
 
-Return real offers Each business agent checks its configured rules and live availability, then responds with scope, price, timing and terms. Nothing is invented. Business agentLive availability 04 · You
+2. Build and launch 3 to 6 weeks, fixed price quoted after the sprint Connect. We connect the agent to your systems with its own credentials and only the permissions the workflow needs. Build the review step. Every output lands as a draft with its sources linked and exceptions flagged, wherever your team already works. Test on unseen cases. We hold back real examples and measure accuracy on them before anyone relies on the agent. Run side by side. For about a week the agent drafts while your team works as usual, so you can compare before go-live. Go live. Your team approves drafts instead of producing them. We train the people involved and document the workflow.
 
-Compare and approve Offers arrive side by side in chat. You compare and approve one — deterministic checks run against your preferences and spending mandates first. Explicit approvalYour mandate 05 · Provider
+3. Run and improve Monthly Monitoring. We watch every run, and failures alert us before they reach your team. A monthly report. Volume handled, time saved, corrections made and what changed. Changes as you change. New price lists, new document types and new rules are part of the monthly fee. Per-result pricing. Once volumes are steady, you can pay per quote, document or ticket instead of a flat fee. You can stop at any point. The code, prompts, configuration and data are yours, and we hand them over.
 
-Booking confirmed The provider confirms through their own authoritative booking path. Only then is the booking recorded and reported to you as confirmed. Provider-confirmedRecorded ■ Models interpret and communicate AI clarifies requests, summarizes offers and drafts messages. It cannot authorize spending, invent availability, or confirm a booking. ↗ Software enforces rules and records actions Transaction state, your mandates, business policies and provider confirmations govern every side effect — in deterministic code, not in a model's judgment. What you can book
+Start with one workflow review. Tell us which work your team keeps retyping. We'll tell you whether a sprint makes sense, and what it would cost. Book a workflow review Or email pranith@boredmutant.com
 
-Three transaction patterns to start. Aham launches with a deliberately limited set of booking patterns. Each one has its own readiness checks before it is offered. Pattern 01
 
-Fixed-price appointments Services with a published price and a calendar: salons, clinics, classes. Pick a slot, approve the price, get a confirmed booking. Pattern 02
+---
 
-Quote-required services Repairs, renovations, custom work. Businesses return structured quotes with scope, price, timing and expiry — you compare and approve one. Pattern 03
+## Security and data handling
 
-Consultations Advice-first services: legal, financial, technical. Book time with a professional on stated terms, confirmed by the provider. Not in scope
+URL: https://www.boredmutant.com/security
 
-What Aham won't do No holding your money, no payments on your behalf, no diagnosis or medical advice, no outreach to businesses that haven't joined the network. Questions
+Home / Security
 
-Asked often.
+How we handle your data and access Agents that touch your inbox, CRM or documents need clear limits. Here is what we do on every engagement, and what we don't yet have.
 
-See a booking arranged the careful way. Clear offers, explicit approval, provider-confirmed bookings — starting in Hyderabad. Talk about Aham A BoredMutant project · Hyderabad first · Early development
+Agreements first We sign an NDA before any discovery call that involves your data. We sign data-processing terms before we receive any examples or system access. We're happy to use yours. We complete your security questionnaire as part of the sprint.
+
+Access Each agent gets its own credentials, never a person's login. Permissions are limited to what the workflow needs. Read-only wherever the workflow allows. You can revoke access at any time from your own admin settings. Every action an agent takes is logged with the input it used and the person who approved it.
+
+Data and models Your data is used only to run your workflow. We use model providers' business APIs, whose terms exclude training on customer data. We never put your data into consumer chat tools. We keep only what the workflow needs, for as long as it needs it, and delete our copies when the engagement ends. We choose models per workflow, and the system is built so models can be swapped without a rebuild.
+
+Human review Every output starts as a draft that a named person on your team approves. Each drafted value links to its source, and anything that breaks your rules is flagged for a person. Any move to automatic approval is your decision, made one step at a time, based on measured accuracy.
+
+What we don't have yet We're a small studio. We don't hold SOC 2 or ISO 27001 certification. Instead, we work under your policies and agreements, answer your security questionnaire in full, and keep our scope narrow. Patient health records and payment card data are out of scope unless the right agreements are in place first. In healthcare we work on administrative workflows only. Questions about a specific requirement? Email pranith@boredmutant.com and we'll answer in writing.
+
+Talk it through on a workflow review. Bring your security team if you like. We'll cover access, data flow and approvals for the workflow you have in mind. Book a workflow review
 
 
 ---
@@ -108,22 +153,18 @@ URL: https://www.boredmutant.com/about
 
 Home / About
 
-BoredMutant is building Aham. BoredMutant is a technology company registered in India. We are building Aham — a chat-first agent transaction network that meets people in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow — and helps them discover local services, compare structured offers from businesses, and book appointments with explicit approval. Starting in Hyderabad. Why this exists
+The software team for companies without one BoredMutant builds custom software, workflow automations, AI agents and company brains for firms that run on spreadsheets, email and too many SaaS tools. We're a technology company registered in India, based in Hyderabad.
 
-Booking a local service shouldn't be a research project. Finding a trustworthy electrician, comparing quotes for a repair, or booking a clinic slot in India today means switching between search results, WhatsApp chats, phone calls and guesswork. Meanwhile, the actual negotiation already happens on WhatsApp — it's where India does business. Aham meets people where they are: describe what you need in a chat, and let software do the legwork — finding eligible businesses, collecting structured offers, and recording a provider-confirmed booking. The people decide; the agents do the work. How we work
+Who you work with BoredMutant is founder-led. The person who maps your workflow is the person who designs and builds it, so nothing gets lost in a handoff. We work with firms of 50 to 500 people in the US, UK and India, and schedule calls in your time zone.
 
-One team, built in the open about its stage. Team
+How we work
 
-Solo founder, Hyderabad BoredMutant is founded and run by a solo engineer in Hyderabad, working full-time on Aham alongside deep experience building AI systems and automation. Small team, short feedback loops, no theatre. Stage
+One workflow at a time We'd rather make one workflow or department run reliably than start five half-finished projects.
 
-In development, honestly Aham is not live yet. The transaction foundations — request routing, offer structuring, authorization rules — are being built and tested locally before any real booking touches the network. This site says what's real today. Principle
+Measured before and after We record hours and error rates before we build, so the results are numbers, not impressions.
 
-Permission before action Nothing books, charges or commits without explicit approval. Models interpret and communicate; deterministic software enforces the rules and records what happened. Principle
+People stay in charge Agents draft. Your team approves. Automation grows only as fast as the accuracy you've seen.
 
-Real offers only Availability, pricing and terms come from the provider — never invented. Ambiguous or unsupported cases go to a person, not through a workaround. Contact
+We say when it isn't a fit Some work needs judgment that agents can't supply yet. When that's the case, we'll tell you in the sprint, not after the build.
 
-Talk to us. Whether you're a consumer who wants to shape the pilot, a service business in Hyderabad, or an integration partner — start a conversation. Email
-
-pranith@boredmutant.com For anything — product questions, business onboarding, partnerships. Call
-
-Book a conversation Pick a time that suits you and we'll talk about Aham. Book a call BoredMutant · Hyderabad, India · GitHub
+Contact Book a workflow review pranith@boredmutant.com Hyderabad, India

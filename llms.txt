@@ -1,41 +1,32 @@
-# Aham by BoredMutant
+# BoredMutant
 
-> Aham is an early-stage, chat-first service transaction network being built by BoredMutant — starting with WhatsApp, with Telegram and other messaging apps to follow. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> BoredMutant builds department software, workflow automations, AI agents and company brains for firms of 50 to 500 people that have no in-house engineering team. Every build runs on top of the systems a company already uses, and a person on the client's team approves what the agents do. BoredMutant is a technology company registered in India and based in Hyderabad, working with clients in the US, UK and India.
 
 Canonical URL: https://www.boredmutant.com/
-Project: https://github.com/Chief-1901/Boredmutant
-Conversation: https://cal.com/boredmutant/automations
+Book a workflow review: https://cal.com/boredmutant/automations
+Contact: pranith@boredmutant.com
 
-## Product direction
+## What we build
 
-- Consumers describe a real-world service need in their messaging app (starting with WhatsApp), including relevant location, timing and budget constraints.
-- A central orchestrator is designed to find eligible participating businesses and ask their agents for current availability and structured offers.
-- Offers should state scope, price, timing, terms and expiry. Consumers compare offers and authorize actions according to their preferences and time-bounded mandates.
-- A booking is reported as confirmed only after the provider's authoritative booking path confirms it and the result is recorded.
-- Businesses are intended to configure services, availability, pricing and escalation rules. Onboarding may begin conversationally, but messaging, calendar or booking connections can require a secure provider handoff or browser-based authorization.
+- Department software: a system for one team (procurement, job tracking, onboarding, renewals) with records, approvals and reports, connected to the client's ERP or accounting software.
+- Workflow automations: rule-based flows that move data and tasks between existing tools, so details are not retyped into several systems.
+- AI agents: agents that read, draft and route work such as quote intake, document review, support replies, sales follow-up and HR coordination. A person approves every output.
+- Company brain: answers drawn from a company's documents, email and systems, respecting who is allowed to see what.
 
-## Safety and transaction rules
+## How a project runs
 
-- LLMs may interpret requests, ask clarifying questions, summarize offers and draft communication.
-- Deterministic application rules govern authorization, transaction state and side effects. A model cannot approve spending, fabricate availability or confirm a booking.
-- Ambiguous, unsupported or out-of-policy cases should be declined or escalated to a person.
-- A2A is the primary agent interoperability direction; UCP compatibility is intended where capabilities match, with MCP and REST for tools and integrations.
+1. Workflow Sprint (2 weeks, from $1,500): map one workflow or department, measure time and error rates, and build a working prototype on the client's real examples.
+2. Build and launch (3 to 6 weeks, fixed price quoted after the sprint): connect systems with the least access needed, add the approval step, test, and run side by side before go-live.
+3. Run and improve (monthly): monitor every run, report volume, time saved and corrections, and adjust as the process changes.
 
-## Current implementation
+## Limits
 
-- The repository has a Fastify API, separate worker process, shared Zod schemas, transaction and policy primitives, and PostgreSQL migrations for the planned production data model.
-- A deterministic local demo uses Node's built-in SQLite support and mock offers/bookings. It is not a production booking service.
-- A WhatsApp Cloud API adapter and webhook routes are present. The current local inbound flow calls no LLM; it is restricted to the configured demo phone.
-- Live customer transactions, verified business onboarding, production provider integrations and production use of PostgreSQL remain future work. The project is not production-ready.
+BoredMutant does not yet hold SOC 2 or ISO 27001 certification. Patient health records and payment card data are out of scope. Demos on the site use made-up companies and data.
 
-## Initial scope and limits
+## Pages
 
-The first planned transaction patterns are fixed-price appointments, quote-required services and consultations. Hyderabad is the first operational market, while the architecture is intended to support additional geographies and service categories after validation.
-
-Healthcare is limited to administrative appointment handling only after privacy, consent, provider verification and operational review. No diagnosis, triage or medical advice. The initial release does not include arbitrary outreach to non-member businesses, holding customer funds, or unreviewed payment processing.
-
-## Technical context
-
-- [Repository README](https://github.com/Chief-1901/Boredmutant/blob/main/README.md)
-
-The full product and technical specification is maintained with the Aham working materials and is not published on this site.
+- [Home](https://www.boredmutant.com/)
+- [How it works](https://www.boredmutant.com/how-it-works)
+- [Security](https://www.boredmutant.com/security)
+- [About](https://www.boredmutant.com/about)
+- [Full text](https://www.boredmutant.com/llms-full.txt)

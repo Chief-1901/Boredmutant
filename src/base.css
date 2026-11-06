@@ -128,7 +128,7 @@ header.site{
 /* ---------- hero ---------- */
 .hero{padding:52px 0 0}
 @media(min-width:900px){.hero{padding:84px 0 0}}
-.hero h1{max-width:13.5ch}
+.hero h1{max-width:17ch;font-size:clamp(2.3rem,5.4vw,4.1rem)}
 .hero .lede{margin-top:24px}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:32px}
 .price-note{color:var(--muted);font-size:.95rem;max-width:30em}
