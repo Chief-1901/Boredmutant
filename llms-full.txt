@@ -1,129 +1,178 @@
-# BoredMutant and Aham, full site content
+# BoredMutant
 
-> Aham is an early-stage chat-first agent transaction network being built by BoredMutant. It is intended to connect consumer requests with participating businesses whose agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+Canonical URL: https://www.boredmutant.com/
+Book a call: https://cal.com/boredmutant/automations
+Email: pranith@boredmutant.com
 
-Canonical: https://www.boredmutant.com/
-Booking: https://cal.com/boredmutant/automations
 
+## Own the software your company runs on.
 
----
+Our engineers replace the software you rent with systems you own.
 
-## Aham
+Book a 15-minute call
+See how it happens
 
-URL: https://www.boredmutant.com/
+## Every problem got a subscription.
 
-Introducing Aham
+One tool for forms. One for approvals. One for the spreadsheet nobody trusts. Each one cheap on its own, each one asking your team to work its way.
 
-Real-world services, arranged by agents. Aham is a chat-first network in development that helps people find and book local services through centrally managed AI agents representing consumers and businesses — starting with WhatsApp, with Telegram and other messaging apps to follow. Talk about Aham How the network works Hyderabad first · Built for many service categories · Early development Illustrative request Chat → agents 01 · Requestconsumer Find a car service near Kondapur tomorrow afternoon, under ₹8,000. 02 · Discoverorchestrator Eligible business agents are asked for current availability and a structured offer. 03 · Compareconsumer approval Offers are checked against the consumer's preferences and authorization limits. Provider confirms the booking Outcome sent in chat Illustrative product flow No live bookings yet The network
+## Then the bill came due.
 
-A familiar chat on the surface. Clear rules underneath. People describe what they need in a chat message. Aham coordinates the request, business responses, approvals and booking state behind the conversation. 01 · Consumer
+$9,455 Median SaaS spend per employee, every year. Zylo, 2026 SaaS Management Index
 
-Describe the job Share the service, area, timing and budget in a chat conversation. The agent asks for essential missing details. Chat-firstConsumer Agent 02 · Orchestrator
+Prices rise over 12% a year, and close to half of the seats you pay for sit underused.
 
-Find eligible providers The network routes structured requests to participating businesses with a matching service and location. Business registryA2A direction 03 · Business
+## Meanwhile, building got cheap.
 
-Return a real offer A business agent checks its configured rules and availability, then responds with scope, price, timing and terms. Business AgentFresh availability 04 · Authorization
+32% Of companies skipped a software purchase because AI coding tools let them build it. McKinsey, The state of AI in 2026
 
-Approve, then confirm Deterministic policy checks decide what is allowed. The provider's confirmed result is recorded before the consumer is told it's booked. Explicit approvalAuditable state ■ Models interpret and communicate AI can clarify a request, summarize offers and draft a response. It cannot authorize spending, invent availability or confirm a booking. ↗ Software enforces rules and records actions Transaction state, user mandates, business policies and provider confirmations govern side effects. For service businesses
+What took a team a quarter now takes a few engineers a few weeks. The math that made renting the default has flipped.
 
-Make your services understandable to authorized agents. A participating business configures its services, availability, pricing rules, booking terms and escalation path. Its agent can answer within those rules and hand uncertain cases to a person. Business setup
+## So we replace what bends your process.
 
-Start with a conversation Onboarding is designed to collect a structured business profile and service catalog conversationally, with owner review before public activation. Services and areasHours and capacityPricing rulesHuman escalation Supported patterns, planned
+We retire the tools that make your team work their way, and build one system that works yours. The tools that do one job well, you keep.
 
-Appointments, quotes and consultations The first transaction patterns are fixed-price appointments, quote-required services and consultations. Each category needs its own readiness checks before it is offered. DiscoverOfferAuthorizeBook or escalate Connecting a business messaging account or calendar can require a secure provider handoff or browser-based authorization; setup is not guaranteed to happen entirely in chat. Where the project stands
+## What we build.
 
-Building the transaction foundation first. Aham is in early development. The repository contains the initial API, worker, shared schemas and transaction rules, PostgreSQL migrations, and a deterministic local demo. Current foundation and product boundary BuiltLocal deterministic transaction demo and API foundations NextReliable asynchronous workflows and real integrations LaterVerified business onboarding and pilot bookings TodayDemo offers and bookings are mock data, not live transactions Not production-ready: the local demo uses SQLite and mock offers/bookings. PostgreSQL is the planned production source of truth. WhatsApp integration code exists, but live customer bookings, business onboarding and production integrations are still future work. Chat-firstMeet consumers in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow. Secure integration steps may still need a handoff. Real offers onlyAvailability and terms must come from the provider. Ambiguous or unsupported cases go to a person. Permission before actionUser mandates and business policies are checked in deterministic software before a transaction can proceed. Hyderabad firstThe architecture is intended to support more service categories and geographies, while the initial operational focus is Hyderabad. A careful first release
+Four kinds of system. Each runs on your stack, in your accounts, and replaces something you rent today.
 
-A broad foundation, a deliberately limited launch. Designed for the first release
+### Workflow automation
 
-Three reusable transaction patterns Fixed-price appointments, quote-required services, and consultations give the network a controlled starting point. General services, auto repair and home repair may be piloted only after category checks. Not an initial promise
+Moves records between the systems you keep, on rules you set. An order arrives by email, gets checked, and lands in the ERP without anyone retyping it.
 
-No blanket automation or open-ended commitments Healthcare is limited to administrative appointment handling after privacy and safety review. No diagnosis, medical advice, arbitrary business outreach, customer fund custody or unapproved payment handling.
+Replaces: workflow tools, copy-paste, the integration nobody maintains.
 
-Help shape a more useful way to book local services. Aham is being built around clear offers, explicit permission and reliable provider confirmation. If you're exploring the idea as a service business or integration partner, start a conversation. Talk about Aham A BoredMutant project · Hyderabad first · Early development
+### AI agents
 
+Reads the inbox, the PDFs and the tickets, then drafts the reply, the quote or the order. A person approves before anything leaves the building.
 
----
+Replaces: hours in inboxes, seat-priced AI add-ons.
 
-## How Aham works
+### Team software
 
-URL: https://www.boredmutant.com/how-it-works
+One system shaped around how one team actually works: their records, their statuses, their approvals. No workarounds, no second spreadsheet.
 
-**Q: Is Aham live yet?**
+Replaces: trackers, portals, the spreadsheet one person understands.
 
-A: Not yet. Aham is in early development in Hyderabad, and the flows shown on this site are illustrative. If you're a consumer or a service business who wants to shape the pilot, talk to us.
+### Knowledge base
 
-**Q: Do businesses need to install an app or change how they work?**
+Your policies, manuals and past decisions, searchable in plain words. Every answer cites the document and the section it came from.
 
-A: No. Businesses participate through their existing messaging presence (starting with WhatsApp) plus a structured profile: services, areas, hours, pricing rules and an escalation path. Onboarding starts as a conversation, and the owner reviews everything before activation.
+Replaces: wiki seats, asking the longest-serving person.
 
-**Q: Who handles payment?**
+## How it works.
 
-A: You do, directly with the provider, on terms you approved. Aham coordinates discovery, offers and booking state — it never holds your money or pays on your behalf.
+Three phases. You can stop after any of them and keep what you have.
 
-**Q: Can the agent book something I didn't approve?**
+### Audit.
 
-A: No. Deterministic software checks your preferences and spending mandates before anything can proceed, and a booking is only reported as confirmed after the provider confirms it through their own booking path.
+2 weeks, fixed fee.
 
-**Q: Why Hyderabad first?**
+Week 1 We sit with the team doing the work. We list every tool, every seat, and the job each one really does.
 
-A: Starting in one city lets us get the transaction patterns right with real businesses before expanding. The architecture is designed to support more categories and geographies after validation.
+Week 2 We time the work, pick what to replace first, and write a fixed-price spec with the payback.
 
-Home / How it works
+You get the spec. It is yours to keep, even if you never build with us.
 
-From a chat message to a confirmed booking. Aham coordinates five steps between your request and a provider-confirmed booking. You see a familiar chat; the network enforces the rules underneath. The booking flow
+### Replace.
 
-Five steps. One approval that matters: yours. 01 · You
+3 to 6 weeks, fixed price.
 
-Describe the job Tell Aham what you need in your messaging app — the service, area, timing and budget. Your consumer agent asks for anything essential that's missing. Messaging appConsumer agent 02 · Orchestrator
+Build On your stack, connected to the systems you keep. Code goes to your repository from day one.
 
-Find eligible businesses The orchestrator routes a structured request to participating businesses with a matching service and location — no broadcast spam, no cold calls. Business registryStructured request 03 · Businesses
+Test On your past cases, side by side with the old tools, until your team signs off.
 
-Return real offers Each business agent checks its configured rules and live availability, then responds with scope, price, timing and terms. Nothing is invented. Business agentLive availability 04 · You
+Switch We move the data, switch the system on, and cancel the seats it replaced.
 
-Compare and approve Offers arrive side by side in chat. You compare and approve one — deterministic checks run against your preferences and spending mandates first. Explicit approvalYour mandate 05 · Provider
+You get a working system, the code, and a smaller software bill.
 
-Booking confirmed The provider confirms through their own authoritative booking path. Only then is the booking recorded and reported to you as confirmed. Provider-confirmedRecorded ■ Models interpret and communicate AI clarifies requests, summarizes offers and drafts messages. It cannot authorize spending, invent availability, or confirm a booking. ↗ Software enforces rules and records actions Transaction state, your mandates, business policies and provider confirmations govern every side effect — in deterministic code, not in a model's judgment. What you can book
+### Run.
 
-Three transaction patterns to start. Aham launches with a deliberately limited set of booking patterns. Each one has its own readiness checks before it is offered. Pattern 01
+Monthly, flat fee.
 
-Fixed-price appointments Services with a published price and a calendar: salons, clinics, classes. Pick a slot, approve the price, get a confirmed booking. Pattern 02
+Watch We monitor every run and fix what breaks, usually before you notice.
 
-Quote-required services Repairs, renovations, custom work. Businesses return structured quotes with scope, price, timing and expiry — you compare and approve one. Pattern 03
+Improve Small changes ship as your process changes. No change requests, no tickets.
 
-Consultations Advice-first services: legal, financial, technical. Book time with a professional on stated terms, confirmed by the provider. Not in scope
+Report Each month: what ran, what was fixed, and the numbers against week one.
 
-What Aham won't do No holding your money, no payments on your behalf, no diagnosis or medical advice, no outreach to businesses that haven't joined the network. Questions
+You can stop any month. The system keeps running in your accounts.
 
-Asked often.
+## Rent or own: the math.
 
-See a booking arranged the careful way. Clear offers, explicit approval, provider-confirmed bookings — starting in Hyderabad. Talk about Aham A BoredMutant project · Hyderabad first · Early development
+Three years of subscriptions against building once and running it. Change the numbers to match yours.
 
+What you rent
 
----
+Tools to replace
 
-## About BoredMutant
+Seats per tool
 
-URL: https://www.boredmutant.com/about
+Price per seat, per month ($)
 
-Home / About
+What you own
 
-BoredMutant is building Aham. BoredMutant is a technology company registered in India. We are building Aham — a chat-first agent transaction network that meets people in the messaging apps they already use — starting with WhatsApp, with Telegram and others to follow — and helps them discover local services, compare structured offers from businesses, and book appointments with explicit approval. Starting in Hyderabad. Why this exists
+One-time build ($)
 
-Booking a local service shouldn't be a research project. Finding a trustworthy electrician, comparing quotes for a repair, or booking a clinic slot in India today means switching between search results, WhatsApp chats, phone calls and guesswork. Meanwhile, the actual negotiation already happens on WhatsApp — it's where India does business. Aham meets people where they are: describe what you need in a chat, and let software do the legwork — finding eligible businesses, collecting structured offers, and recording a provider-confirmed booking. The people decide; the agents do the work. How we work
+Monthly run fee ($)
 
-One team, built in the open about its stage. Team
+Example values. Your audit sets the real ones. Rent rises 12% a year, the rate Vertice measures for SaaS prices.
 
-Solo founder, Hyderabad BoredMutant is founded and run by a solo engineer in Hyderabad, working full-time on Aham alongside deep experience building AI systems and automation. Small team, short feedback loops, no theatre. Stage
+Three years renting
+$255,000
 
-In development, honestly Aham is not live yet. The transaction foundations — request routing, offer structuring, authorization rules — are being built and tested locally before any real booking touches the network. This site says what's real today. Principle
+Three years owning
+$168,000
 
-Permission before action Nothing books, charges or commits without explicit approval. Models interpret and communicate; deterministic software enforces the rules and records what happened. Principle
+Difference
+$87,000 saved
 
-Real offers only Availability, pricing and terms come from the provider — never invented. Ambiguous or unsupported cases go to a person, not through a workaround. Contact
+Pays back in
+month 18
 
-Talk to us. Whether you're a consumer who wants to shape the pilot, a service business in Hyderabad, or an integration partner — start a conversation. Email
+## What own it means. In writing.
 
-pranith@boredmutant.com For anything — product questions, business onboarding, partnerships. Call
+Every engagement ships under the same five terms.
 
-Book a conversation Pick a time that suits you and we'll talk about Aham. Book a call BoredMutant · Hyderabad, India · GitHub
+01 Your repository
+The code lives in your GitHub from the first commit.
+
+02 Your cloud
+It runs in your accounts, on your bill, not ours.
+
+03 Your data
+It stays in your systems and trains nothing.
+
+04 No seats
+No per-user pricing. Add a hundred people for nothing.
+
+05 No lock-in
+If we part ways, you keep everything, with a runbook.
+
+## Questions, answered.
+
+Who maintains it after launch?
+We do, on the monthly run plan. Or your own team does, with the runbook and the code we hand over. Either way it lives in your accounts.
+
+Is it secure?
+It runs in your cloud, under your security policies. Each connector gets only the access its job needs, and every action is logged with who approved it.
+
+What happens if we stop working together?
+Nothing switches off. You keep the code, the accounts, the data and a runbook. Another engineer can pick it up on day one.
+
+How do you price?
+A fixed fee for the audit, a fixed price for the build, quoted in the spec before you commit, then a flat monthly fee to run it. Never per seat.
+
+What will you not replace?
+Tools that do one job well for everyone: email, payroll, your accounting ledger. We replace the tools that make your team bend its process to fit.
+
+Where does AI come in?
+Two places. Agents that draft work for a person to approve, and AI-assisted engineering, which is why a build takes weeks instead of quarters.
+
+Who is this for?
+US companies of 50 to 500 people whose teams spend their days between too many tools.
+
+## Bring us your software bill.
+
+We will tell you which subscription to replace first, and what it costs to own instead.
+Book a 15-minute call

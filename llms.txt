@@ -1,41 +1,29 @@
-# Aham by BoredMutant
+# BoredMutant
 
-> Aham is an early-stage, chat-first service transaction network being built by BoredMutant — starting with WhatsApp, with Telegram and other messaging apps to follow. It is intended to connect consumer requests with participating businesses whose centrally managed agents can return structured offers and coordinate bookings. The initial operational focus is Hyderabad, India.
+> BoredMutant builds custom software that companies own instead of rent: workflow automations, AI agents, team software and knowledge bases that replace SaaS subscriptions. Engineers audit a company's tools, replace the ones that bend its process with one owned system on its own stack, then run it for a flat monthly fee. For US companies of 50 to 500 people.
 
 Canonical URL: https://www.boredmutant.com/
-Project: https://github.com/Chief-1901/Boredmutant
-Conversation: https://cal.com/boredmutant/automations
+Book a call: https://cal.com/boredmutant/automations
+Email: pranith@boredmutant.com
+Full page text: https://www.boredmutant.com/llms-full.txt
 
-## Product direction
+## How an engagement runs
 
-- Consumers describe a real-world service need in their messaging app (starting with WhatsApp), including relevant location, timing and budget constraints.
-- A central orchestrator is designed to find eligible participating businesses and ask their agents for current availability and structured offers.
-- Offers should state scope, price, timing, terms and expiry. Consumers compare offers and authorize actions according to their preferences and time-bounded mandates.
-- A booking is reported as confirmed only after the provider's authoritative booking path confirms it and the result is recorded.
-- Businesses are intended to configure services, availability, pricing and escalation rules. Onboarding may begin conversationally, but messaging, calendar or booking connections can require a secure provider handoff or browser-based authorization.
+- Audit, 2 weeks, fixed fee: list every tool, seat and the job it does; time the work; write a fixed-price spec with the payback. The client keeps the spec.
+- Replace, 3 to 6 weeks, fixed price: build on the client's stack, test on past cases beside the old tools, move the data, cancel the replaced seats.
+- Run, monthly, flat fee: monitor, fix, improve, report against week one. The client can stop any month.
 
-## Safety and transaction rules
+## Ownership terms
 
-- LLMs may interpret requests, ask clarifying questions, summarize offers and draft communication.
-- Deterministic application rules govern authorization, transaction state and side effects. A model cannot approve spending, fabricate availability or confirm a booking.
-- Ambiguous, unsupported or out-of-policy cases should be declined or escalated to a person.
-- A2A is the primary agent interoperability direction; UCP compatibility is intended where capabilities match, with MCP and REST for tools and integrations.
+- The code lives in the client's repository from the first commit.
+- It runs in the client's cloud accounts.
+- Client data stays in client systems and trains nothing.
+- No per-seat pricing.
+- No lock-in: on exit the client keeps everything, with a runbook.
 
-## Current implementation
+## What it builds
 
-- The repository has a Fastify API, separate worker process, shared Zod schemas, transaction and policy primitives, and PostgreSQL migrations for the planned production data model.
-- A deterministic local demo uses Node's built-in SQLite support and mock offers/bookings. It is not a production booking service.
-- A WhatsApp Cloud API adapter and webhook routes are present. The current local inbound flow calls no LLM; it is restricted to the configured demo phone.
-- Live customer transactions, verified business onboarding, production provider integrations and production use of PostgreSQL remain future work. The project is not production-ready.
-
-## Initial scope and limits
-
-The first planned transaction patterns are fixed-price appointments, quote-required services and consultations. Hyderabad is the first operational market, while the architecture is intended to support additional geographies and service categories after validation.
-
-Healthcare is limited to administrative appointment handling only after privacy, consent, provider verification and operational review. No diagnosis, triage or medical advice. The initial release does not include arbitrary outreach to non-member businesses, holding customer funds, or unreviewed payment processing.
-
-## Technical context
-
-- [Repository README](https://github.com/Chief-1901/Boredmutant/blob/main/README.md)
-
-The full product and technical specification is maintained with the Aham working materials and is not published on this site.
+- Workflow automation between the systems a company keeps.
+- AI agents that draft work for a person to approve.
+- Team software shaped around one team's records, statuses and approvals.
+- A knowledge base whose answers cite the source document and section.
