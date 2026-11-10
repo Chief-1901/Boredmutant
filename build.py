@@ -16,7 +16,7 @@ SITE_DIR = pathlib.Path("site")
 SITE = "https://www.boredmutant.com"
 
 
-def bundle():
+def bundle(name="index.html"):
     page = (SITE_DIR / "page.css").read_text(encoding="utf-8")
     stamp_end = page.index("*/") + 2 if page.startswith("/*") else 0
     rest = re.sub(r'@import url\("\./(tokens|base)\.css"\);\s*', "", page[stamp_end:])
@@ -28,12 +28,12 @@ def bundle():
         return "url(data:font/woff2;base64," + base64.b64encode(data).decode() + ")"
 
     css = re.sub(r'url\("\./(fonts/[^"]+)"\)', font, css)
-    src = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    src = (SITE_DIR / name).read_text(encoding="utf-8")
     link = '<link rel="stylesheet" href="./page.css">'
     assert link in src, "site/index.html must link ./page.css"
     out = src.replace(link, "<style>\n" + css + "</style>")
     assert "./fonts/" not in out
-    pathlib.Path("index.html").write_text(out, encoding="utf-8", newline="\n")
+    pathlib.Path(name).write_text(out, encoding="utf-8", newline="\n")
     return src
 
 
@@ -99,6 +99,8 @@ def llms_full(src):
 
 if __name__ == "__main__":
     src = bundle()
+    bundle("404.html")
+    print(f"404.html written ({pathlib.Path('404.html').stat().st_size:,d} bytes)")
     print(f"index.html written ({pathlib.Path('index.html').stat().st_size:,d} bytes)")
     sitemap()
     print("sitemap.xml written")
