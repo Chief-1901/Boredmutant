@@ -36,3 +36,7 @@ Epicor Prophet 21, Epicor Eclipse, Infor CloudSuite Distribution, NetSuite, Acum
 ## Who it is for
 
 Wholesale distributors in the United States with roughly 50 to 500 staff, and distributors and manufacturers in India running on Tally and WhatsApp. The same approach applies to manufacturers, contractors, logistics and service firms whose work arrives as email and ends as data entry.
+
+## Guides
+
+- [AI order entry for distributors: how it works, what it costs, and how to judge it](https://www.boredmutant.com/blog/ai-order-entry-for-distributors): A plain guide to AI order entry for wholesale distributors: how emailed POs become ERP sales orders, how to put a number on manual entry, buy vs build, and a 10-PO test to judge any vendor.
