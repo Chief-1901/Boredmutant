@@ -5,174 +5,170 @@ Book a call: https://cal.com/boredmutant/automations
 Email: pranith@boredmutant.com
 
 
-## Own the software your company runs on.
+## Orders in. ERP updated. Nobody retyping.
 
-Our engineers replace the software you rent with systems you own.
+Software that reads every PO and enters it into your ERP.
 
 Book a 15-minute call
-See how it happens
+See a PO become an order
 
-## Every problem got a subscription.
+Fixed-price audit in two weeks
 
-One tool for forms. One for approvals. One for the spreadsheet nobody trusts. Each one cheap on its own, each one asking your team to work its way.
+No per-seat fees
 
-## Then the bill came due.
+You own the code
 
-$9,455 Median SaaS spend per employee, every year. Zylo, 2026 SaaS Management Index
+75 %+
 
-Prices rise over 12% a year, and close to half of the seats you pay for sit underused.
+## Most B2B orders still arrive as email.
 
-## Meanwhile, building got cheap.
+PDFs, spreadsheets, voicemails and handwritten notes, then someone types them into the ERP, line by line.
+Share of B2B orders arriving outside standard electronic formats, Distribution Strategy Group, 2026
 
-32% Of companies skipped a software purchase because AI coding tools let them build it. McKinsey, The state of AI in 2026
+## Watch one PO become an order.
 
-What took a team a quarter now takes a few engineers a few weeks. The math that made renting the default has flipped.
+A sample order, the way a real one arrives.
 
-## So we replace what bends your process.
+01
+### It arrives the way it always does.
+An email with a PDF attached. No portal, no template, nothing for your customer to change.
 
-We retire the tools that make your team work their way, and build one system that works yours. The tools that do one job well, you keep.
+02
+### Every field is read.
+Customer, ship-to, need-by date and each line, wherever they sit on the page.
 
-## What we build.
+03
+### Their words, your item numbers.
+“3/4 copper elbow” becomes your SKU, matched against the customer’s past orders and your catalog.
 
-Four kinds of system. Each runs on your stack, in your accounts, and replaces something you rent today.
+04
+### Clear lines go in. Unclear ones go to a person.
+Three lines post to the ERP. One unit of measure is flagged with the question to ask.
 
-### Workflow automation
+## One system for the whole order-to-cash run.
 
-Moves records between the systems you keep, on rules you set. An order arrives by email, gets checked, and lands in the ERP without anyone retyping it.
+01
+### Order entry
+Emailed POs, PDFs and spreadsheets become sales orders in your ERP.
+Replaces retyping orders.
 
-Replaces: workflow tools, copy-paste, the integration nobody maintains.
+02
+### Quoting
+Requests for quote priced from your price lists and history, ready to send.
+Replaces building quotes by hand.
 
-### AI agents
+03
+### Invoices and collections
+Invoices out on time, reminders that follow up, payments matched.
+Replaces chasing payments by phone.
 
-Reads the inbox, the PDFs and the tickets, then drafts the reply, the quote or the order. A person approves before anything leaves the building.
+04
+### Company brain
+Ask about stock, orders, prices or policy and get the answer with its source.
+Replaces asking the one person who knows.
 
-Replaces: hours in inboxes, seat-priced AI add-ons.
+## Built inside your ERP. Nothing to migrate.
 
-### Team software
+Epicor Prophet 21
+Epicor Eclipse
+Infor CloudSuite Distribution
+NetSuite
+Acumatica
+SAP Business One
+Microsoft Dynamics 365
+Tally
 
-One system shaped around how one team actually works: their records, their statuses, their approvals. No workarounds, no second spreadsheet.
+Runs on an API, an import file or the database: whatever your ERP accepts.
 
-Replaces: trackers, portals, the spreadsheet one person understands.
+## Three steps. Fixed prices. No seats.
 
-### Knowledge base
+Two weeks, fixed fee
+### Audit
+We sit with the people who enter orders, time every step and write a fixed-price spec with the payback.
 
-Your policies, manuals and past decisions, searchable in plain words. Every answer cites the document and the section it came from.
+Three to six weeks, fixed price
+### Build
+We connect your inbox and ERP, run on real orders beside your team, then switch it on.
 
-Replaces: wiki seats, asking the longest-serving person.
+Monthly, flat fee
+### Run
+We watch every order, fix what breaks and ship small changes. Stop any month; it stays yours.
 
-## How it works.
+## What retyping costs you.
 
-Three phases. You can stop after any of them and keep what you have.
+Example values. The audit measures yours.
 
-### Audit.
+Orders a day
 
-2 weeks, fixed fee.
+Minutes per order
 
-Week 1 We sit with the team doing the work. We list every tool, every seat, and the job each one really does.
+Cost per hour, with benefits ($)
 
-Week 2 We time the work, pick what to replace first, and write a fixed-price spec with the payback.
+Working days a year
 
-You get the spec. It is yours to keep, even if you never build with us.
+Spent typing orders, every year
+$85,333
 
-### Replace.
+Hours a year
+2,667
 
-3 to 6 weeks, fixed price.
+Full-time people
+1.3
 
-Build On your stack, connected to the systems you keep. Code goes to your repository from day one.
+## Not a distributor?
 
-Test On your past cases, side by side with the old tools, until your team signs off.
+If your work arrives as email and ends as data entry, the same build applies: manufacturers, contractors, logistics and service firms.
+Tell us what you retype
 
-Switch We move the data, switch the system on, and cancel the seats it replaced.
+## In writing, before you sign.
 
-You get a working system, the code, and a smaller software bill.
+I spent four years in B2B sales and operations watching good teams lose their days to retyping. BoredMutant builds them software they own instead.
+Pranith, founder
 
-### Run.
+### You own the code and the data.
+It lives in your repository. Stop working with us and it keeps running.
 
-Monthly, flat fee.
+### Fixed prices, quoted before you commit.
+The audit ends with a spec and a price. No hourly meter.
 
-Watch We monitor every run and fix what breaks, usually before you notice.
+### No per-seat fees.
+Add buyers, reps and branches without paying more.
 
-Improve Small changes ship as your process changes. No change requests, no tickets.
+### A person approves what the system isn’t sure about.
+Nothing uncertain posts to your ERP on its own.
 
-Report Each month: what ran, what was fixed, and the numbers against week one.
-
-You can stop any month. The system keeps running in your accounts.
-
-## Rent or own: the math.
-
-Three years of subscriptions against building once and running it. Change the numbers to match yours.
-
-What you rent
-
-Tools to replace
-
-Seats per tool
-
-Price per seat, per month ($)
-
-What you own
-
-One-time build ($)
-
-Monthly run fee ($)
-
-Example values. Your audit sets the real ones. Rent rises 12% a year, the rate Vertice measures for SaaS prices.
-
-Three years renting
-$255,000
-
-Three years owning
-$168,000
-
-Difference
-$87,000 saved
-
-Pays back in
-month 18
-
-## What own it means. In writing.
-
-Every engagement ships under the same five terms.
-
-01 Your repository
-The code lives in your GitHub from the first commit.
-
-02 Your cloud
-It runs in your accounts, on your bill, not ours.
-
-03 Your data
-It stays in your systems and trains nothing.
-
-04 No seats
-No per-user pricing. Add a hundred people for nothing.
-
-05 No lock-in
-If we part ways, you keep everything, with a runbook.
+### Live beside your team before it goes live.
+It runs on real orders in parallel until you trust it.
 
 ## Questions, answered.
 
-Who maintains it after launch?
-We do, on the monthly run plan. Or your own team does, with the runbook and the code we hand over. Either way it lives in your accounts.
+What is AI order entry?
+AI order entry reads purchase orders that arrive by email, PDF, spreadsheet or WhatsApp, pulls out the customer, items, quantities and dates, matches them to your item numbers and creates the sales order in your ERP. Orders it is unsure about go to a person to confirm.
 
-Is it secure?
-It runs in your cloud, under your security policies. Each connector gets only the access its job needs, and every action is logged with who approved it.
+How much does it cost?
+A fixed fee for a two-week audit, a fixed price for the build quoted in the audit’s spec before you commit, then a flat monthly fee to run it. Never per seat. The price depends mostly on how many order formats and systems are involved.
 
-What happens if we stop working together?
-Nothing switches off. You keep the code, the accounts, the data and a runbook. Another engineer can pick it up on day one.
+Which ERPs do you work with?
+We build around the ERP you already run, such as Epicor Prophet 21 or Eclipse, Infor, NetSuite, Acumatica, SAP Business One, Microsoft Dynamics or Tally. If it accepts orders through an API, an import file or its database, we can connect to it.
 
-How do you price?
-A fixed fee for the audit, a fixed price for the build, quoted in the spec before you commit, then a flat monthly fee to run it. Never per seat.
+Do we have to change our ERP or how customers order?
+No. Customers keep sending orders the way they do today, and orders land in the ERP you already use. Nothing is migrated.
 
-What will you not replace?
-Tools that do one job well for everyone: email, payroll, your accounting ledger. We replace the tools that make your team bend its process to fit.
+What happens when an order is unclear?
+It is not guessed. The line is flagged for a person with the exact question to resolve, such as a unit of measure or an unknown part number, and the answer teaches the system for next time.
 
-Where does AI come in?
-Two places. Agents that draft work for a person to approve, and AI-assisted engineering, which is why a build takes weeks instead of quarters.
+How long until it is running?
+Two weeks for the audit and three to six weeks to build the first workflow, which runs side by side with your team on real orders before it goes live.
 
-Who is this for?
-US companies of 50 to 500 people whose teams spend their days between too many tools.
+Who owns the software and the data?
+You do. The code lives in your repository and your data stays yours. If you stop the monthly service, the system keeps running.
 
-## Bring us your software bill.
+Is it only for distributors?
+Distributors are our focus. The same approach works for manufacturers, contractors, logistics and service firms whose work arrives as email and ends as data entry.
 
-We will tell you which subscription to replace first, and what it costs to own instead.
+## Send us one messy PO.
+
+Book 15 minutes and bring a real order. We’ll show you what the system would do with it.
+
 Book a 15-minute call
+Or email it to us

@@ -1,29 +1,38 @@
 # BoredMutant
 
-> BoredMutant builds custom software that companies own instead of rent: workflow automations, AI agents, team software and knowledge bases that replace SaaS subscriptions. Engineers audit a company's tools, replace the ones that bend its process with one owned system on its own stack, then run it for a flat monthly fee. For US companies of 50 to 500 people.
+> BoredMutant builds AI order entry and order-to-cash software for wholesale distributors. Purchase orders that arrive by email, PDF, spreadsheet or WhatsApp are read, matched to the distributor's item numbers and entered into its ERP; quotes are priced, invoices sent and payments chased. Unclear lines go to a person with the question to resolve. Fixed prices, no per-seat fees, and the client owns the code. Based in Hyderabad; serves the United States and India.
 
 Canonical URL: https://www.boredmutant.com/
+India page (Tally and WhatsApp): https://www.boredmutant.com/india
 Book a call: https://cal.com/boredmutant/automations
 Email: pranith@boredmutant.com
 Full page text: https://www.boredmutant.com/llms-full.txt
 
-## How an engagement runs
-
-- Audit, 2 weeks, fixed fee: list every tool, seat and the job it does; time the work; write a fixed-price spec with the payback. The client keeps the spec.
-- Replace, 3 to 6 weeks, fixed price: build on the client's stack, test on past cases beside the old tools, move the data, cancel the replaced seats.
-- Run, monthly, flat fee: monitor, fix, improve, report against week one. The client can stop any month.
-
-## Ownership terms
-
-- The code lives in the client's repository from the first commit.
-- It runs in the client's cloud accounts.
-- Client data stays in client systems and trains nothing.
-- No per-seat pricing.
-- No lock-in: on exit the client keeps everything, with a runbook.
-
 ## What it builds
 
-- Workflow automation between the systems a company keeps.
-- AI agents that draft work for a person to approve.
-- Team software shaped around one team's records, statuses and approvals.
-- A knowledge base whose answers cite the source document and section.
+- Order entry: emailed POs, PDFs and spreadsheets become sales orders in the ERP.
+- Quoting: requests for quote priced from the distributor's price lists and history.
+- Invoices and collections: invoices out on time, reminders that follow up, payments matched.
+- Company brain: answers about stock, orders, prices and policy, with the source.
+
+## ERPs it is built around
+
+Epicor Prophet 21, Epicor Eclipse, Infor CloudSuite Distribution, NetSuite, Acumatica, SAP Business One, Microsoft Dynamics 365 and Tally. Any ERP that accepts orders through an API, an import file or its database can be connected.
+
+## How an engagement runs
+
+- Audit, two weeks, fixed fee: sit with the people who enter orders, time every step, write a fixed-price spec with the payback.
+- Build, three to six weeks, fixed price: connect the inbox and ERP, run on real orders beside the team, then switch on.
+- Run, monthly, flat fee: watch every order, fix what breaks, ship small changes. The client can stop any month and keep the system.
+
+## Terms
+
+- The client owns the code and the data; the code lives in the client's repository.
+- Prices are fixed and quoted before the client commits.
+- No per-seat fees.
+- A person approves anything the system is unsure about.
+- The system runs in parallel with the team before it goes live.
+
+## Who it is for
+
+Wholesale distributors in the United States with roughly 50 to 500 staff, and distributors and manufacturers in India running on Tally and WhatsApp. The same approach applies to manufacturers, contractors, logistics and service firms whose work arrives as email and ends as data entry.

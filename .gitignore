@@ -16,3 +16,5 @@ _preview*.log
 # Source drop for this migration — its contents now live at the repo root
 claude updated/
 .gstack/
+.hallmark/
+site/.hallmark/
