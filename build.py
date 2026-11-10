@@ -23,9 +23,13 @@ def bundle(name="index.html"):
     css = (page[:stamp_end] + "\n" + (SITE_DIR / "tokens.css").read_text(encoding="utf-8")
            + "\n" + (SITE_DIR / "base.css").read_text(encoding="utf-8") + "\n" + rest)
 
+    # Fonts are served as files from /fonts/ (cached once for every page), not inlined.
+    pathlib.Path("fonts").mkdir(exist_ok=True)
+
     def font(m):
-        data = (SITE_DIR / m.group(1)).read_bytes()
-        return "url(data:font/woff2;base64," + base64.b64encode(data).decode() + ")"
+        src = SITE_DIR / m.group(1)
+        (pathlib.Path("fonts") / src.name).write_bytes(src.read_bytes())
+        return f'url("/fonts/{src.name}")'
 
     css = re.sub(r'url\("\./(fonts/[^"]+)"\)', font, css)
     src = (SITE_DIR / name).read_text(encoding="utf-8")
@@ -43,6 +47,7 @@ def sitemap():
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"  <url>\n    <loc>{SITE}/</loc>\n    <lastmod>{today}</lastmod>\n    <priority>1.0</priority>\n  </url>\n"
+        f"  <url>\n    <loc>{SITE}/india</loc>\n    <lastmod>{today}</lastmod>\n    <priority>0.8</priority>\n  </url>\n"
         "</urlset>\n", encoding="utf-8", newline="\n")
 
 
@@ -100,6 +105,9 @@ def llms_full(src):
 if __name__ == "__main__":
     src = bundle()
     bundle("404.html")
+    if (SITE_DIR / "india.html").exists():
+        bundle("india.html")
+        print("india.html written")
     print(f"404.html written ({pathlib.Path('404.html').stat().st_size:,d} bytes)")
     print(f"index.html written ({pathlib.Path('index.html').stat().st_size:,d} bytes)")
     sitemap()

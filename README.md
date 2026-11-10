@@ -1,11 +1,20 @@
 # BoredMutant: boredmutant.com
 
-One-page static site: own the software your company runs on. Custom software
-that replaces rented SaaS, built and run by BoredMutant.
+Static site: AI order entry and order-to-cash software for wholesale
+distributors (home page) and Tally + WhatsApp order automation for India (/india).
 
-No framework and no runtime dependencies. `build.py` bundles `site/` into one
-self-contained `index.html` (CSS and fonts inlined), and writes `sitemap.xml`
-and `llms-full.txt` from the same source.
+No framework. `build.py` bundles `site/` into `index.html`, `india.html` and
+`404.html` (CSS inlined, fonts copied to `/fonts/`), and writes `sitemap.xml`
+and `llms-full.txt`. The hero's WebGL scene lives in `site/js-src/hero.js` and is
+bundled with Three.js into `/js/hero.js`:
+
+```bash
+npm i three@0.187.0 && NODE_PATH=node_modules npx esbuild site/js-src/hero.js \
+  --bundle --format=esm --minify --target=es2020 --outfile=js/hero.js
+```
+
+Posters (`/img/hero-poster*.webp`) are still frames of the same scene, shown
+before WebGL loads and kept on devices without a hardware GPU.
 
 ## Quick start
 
@@ -23,7 +32,9 @@ site/
   page.css            page styles; imports tokens.css and base.css
   tokens.css          colours, type, spacing
   base.css            resets and shared base rules
-  fonts/              Fredoka and Nunito Sans, self-hosted woff2
+  india.html          the India page
+  js-src/hero.js      the WebGL hero scene (source)
+  fonts/              Geist and Geist Mono, self-hosted woff2
 index.html            built output, served by Vercel
 logo-mark.svg         the BoredMutant wordmark, used in nav and footer
 favicon.svg, *.png    icons
