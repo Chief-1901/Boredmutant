@@ -1,100 +1,44 @@
-# BoredMutant — boredmutant.com
+# BoredMutant: boredmutant.com
 
-Three-page static site for BoredMutant, the technology company registered in
-India building Aham — an early-stage WhatsApp-first agent transaction network
-for local services, starting in Hyderabad. Pages: home, how-it-works, about.
+One-page static site: own the software your company runs on. Custom software
+that replaces rented SaaS, built and run by BoredMutant.
 
-No framework, no npm, no runtime dependencies. `build.py` assembles each page from
-partials in `src/` and inlines the CSS and JS, so every published page is a single
-self-contained HTML file.
+No framework and no runtime dependencies. `build.py` bundles `site/` into one
+self-contained `index.html` (CSS and fonts inlined), and writes `sitemap.xml`
+and `llms-full.txt` from the same source.
 
 ## Quick start
 
 ```bash
-python build.py                     # rebuild the three pages + sitemap.xml
-python -m http.server 4599          # preview on http://localhost:4599
+python3 build.py                    # rebuild index.html, sitemap.xml, llms-full.txt
+python3 -m http.server 4599         # preview on http://localhost:4599
 ```
-
-There is no watch mode. Edit a file in `src/`, re-run `python build.py`, reload.
-
-Note that the local preview server does not do clean URLs, so links like
-`/how-it-works` 404 there. Vercel serves them via `cleanUrls` in `vercel.json`.
-Append `.html` when clicking around locally.
 
 ## What's in the box
 
 ```
-build.py                  the whole build: page list, metadata, JSON-LD, template
-src/
-  base.css                every style on the site, inlined into each page
-  header.html             shared header + mobile nav markup
-  footer.html             shared footer
-  nav.js                  mobile hamburger menu, inlined into every page
-  home.body.html          Aham landing page
-  how.body.html           how-it-works page: the five-step booking flow
-  abt.body.html           about page: the company, the stage, contact
-  home.js                 page-specific scroll-reveal and demo scripts
-  page.js                 the lighter script used by the secondary pages
-
-index.html                ─┐
-how-it-works.html          │ build output — generated, do not hand-edit
-about.html                ─┘
-sitemap.xml               ─┘
-
-logo-mark.svg, logo.svg, logo.png, og-image.png
-robots.txt, llms.txt      hand-maintained
-vercel.json               hosting config: clean URLs, apex→www, security headers
+build.py              the build: bundles site/ into index.html
+site/
+  index.html          page markup and script (edit this, not the root index.html)
+  page.css            page styles; imports tokens.css and base.css
+  tokens.css          colours, type, spacing
+  base.css            resets and shared base rules
+  fonts/              Fredoka and Nunito Sans, self-hosted woff2
+index.html            built output, served by Vercel
+logo-mark.svg         the BoredMutant wordmark, used in nav and footer
+favicon.svg, *.png    icons
+og-image.png          1200x630 share image
+llms.txt              short summary for AI crawlers; llms-full.txt is generated
+vercel.json           clean URLs, redirects (/about and /how-it-works go to /), headers
 ```
-
-Generated files are committed so the repo can deploy without a build step on
-Vercel. If you edit anything under `src/`, run `python build.py` and commit both
-the source and the regenerated HTML.
-
-## Adding a page
-
-Everything lives in the `PAGES` list in `build.py`: output filename, body partial,
-JS partial, URL path, nav token, title, meta description, Open Graph copy, and the
-schema.org graph. Add an entry, add the body partial, run the build.
-
-## Mobile
-
-The stylesheet is mobile-first: base rules target phones and `min-width` queries
-layer on the wider layouts. Below 900px the nav links collapse into a hamburger
-panel (`src/nav.js`); at 900px and up the panel becomes the normal horizontal bar.
-The header CTA and the in-panel CTA are the same link at two breakpoints — exactly
-one of the two is ever displayed.
-
-Verified with no horizontal overflow at 320, 360, 390, 414, 768, 899, 900 and
-1024px on all four pages.
 
 ## Deploy
 
-Vercel's existing Git integration is connected to this repo's `main` branch, so
-commits to `main` trigger deployment automatically. There is no build step: `vercel.json`
-sets `framework`, `buildCommand`, `installCommand` and `outputDirectory` to `null`,
-so the repo root is served as-is. `.vercelignore` keeps `src/` and `build.py` out of
-the deployment, so build inputs are never publicly served.
+Vercel deploys `main` as a static site with no build step, so run
+`python3 build.py` and commit the built `index.html` along with your edits.
 
-`vercel.json` also handles clean URLs, the `boredmutant.com` → `www.boredmutant.com`
-redirect, and the security headers.
+## Design
 
-## Booking and contact
-
-Contact routes: the booking link `https://cal.com/boredmutant/automations` and the
-work email `pranith@boredmutant.com` (footer and About page). The link appears in
-the page bodies, `src/header.html`, `src/footer.html`, `llms.txt` and the JSON-LD
-`contactPoint` in `build.py`. If either changes, grep for it — there is no single
-config constant.
-
-## LLM-friendly notes
-
-- `robots.txt` explicitly allows the major AI search and training crawlers
-  (GPTBot, ClaudeBot, OAI-SearchBot, PerplexityBot, Google-Extended, CCBot,
-  Applebot-Extended, Bytespider, meta-externalagent).
-- `llms.txt` follows the [llmstxt.org](https://llmstxt.org) convention. It is
-  hand-maintained; update it when page copy changes materially.
-- Every page carries a schema.org `@graph` (Organization, Service, WebSite,
-  BreadcrumbList) generated in `build.py`.
-- Pages are server-rendered static HTML, so no crawler needs to execute JS. The
-  scroll-reveal animations start at `opacity:0`, and a `<noscript>` block resets
-  them to visible for any client that does not run scripts.
+Beige paper, warm ink, one cobalt accent. Fredoka headings in sentence case
+over Nunito Sans, matching the logo. The 3D scenes are CSS 3D (no WebGL); every
+state is reachable without motion for visitors who prefer reduced motion.
