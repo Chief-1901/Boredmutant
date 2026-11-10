@@ -122,7 +122,7 @@ Tell us what you retype
 
 ## In writing, before you sign.
 
-I spent four years in B2B sales and operations watching good teams lose their days to retyping. BoredMutant builds them software they own instead.
+I spent four years in B2B sales watching good teams lose their days to retyping. BoredMutant builds them software they own instead.
 Pranith, founder
 
 ### You own the code and the data.
