@@ -39,4 +39,5 @@ Wholesale distributors in the United States with roughly 50 to 500 staff, and di
 
 ## Guides
 
+- [Email order processing: why distributors still retype POs, and how to stop](https://www.boredmutant.com/blog/email-order-processing-for-distributors): Why distributors still retype emailed POs, the four ways to automate email order processing, how an email becomes an ERP sales order, and what retyping costs.
 - [AI order entry for distributors: how it works, what it costs, and how to judge it](https://www.boredmutant.com/blog/ai-order-entry-for-distributors): A plain guide to AI order entry for wholesale distributors: how emailed POs become ERP sales orders, how to put a number on manual entry, buy vs build, and a 10-PO test to judge any vendor.
