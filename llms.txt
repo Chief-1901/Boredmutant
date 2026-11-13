@@ -39,4 +39,5 @@ Wholesale distributors in the United States with roughly 50 to 500 staff, and di
 
 ## Guides
 
+- [Payment reminder messages on WhatsApp: templates, costs and how to send them from Tally](https://www.boredmutant.com/blog/payment-reminder-message-on-whatsapp): Ready-to-use WhatsApp payment reminder messages for distributors, plus how to send them from the Business app, TallyPrime or the API, and what each costs.
 - [AI order entry for distributors: how it works, what it costs, and how to judge it](https://www.boredmutant.com/blog/ai-order-entry-for-distributors): A plain guide to AI order entry for wholesale distributors: how emailed POs become ERP sales orders, how to put a number on manual entry, buy vs build, and a 10-PO test to judge any vendor.
