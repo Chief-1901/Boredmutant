@@ -19,6 +19,17 @@
       "permanent": true
     },
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "boredmutant.vercel.app"
+        }
+      ],
+      "destination": "https://www.boredmutant.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/document-chasing-for-accounting-firms",
       "destination": "/",
       "permanent": true
