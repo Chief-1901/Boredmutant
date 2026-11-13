@@ -62,6 +62,13 @@ def _head(title, desc, url, og_title, jsonld, css, og_type="article", extra=""):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (GTM-NQ9HHZ7P) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NQ9HHZ7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
